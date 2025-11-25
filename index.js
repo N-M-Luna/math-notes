@@ -1,8 +1,7 @@
 import express from 'express';
 import { todos, nextTodoId } from './todos.js';
 
-// Create an instance of the express app
-const app = express();
+const app = express(); // Creates an instance of the express app
 const PORT = process.env.PORT || 3000;
 
 // How to use middleware
@@ -25,19 +24,15 @@ function myMiddlewareFn(req, res, next) {
     res.end() //ends cycle without sending anything.
 }
 */
-//Define the middleware
-const myMindlessMiddleware = (req, res, next) => {
+const myMindlessMiddleware = (req, res, next) => { //Defines the middleware
     console.log('mid ' + req.method + ' ' + req.url)
     next();
 }
-//Register the middleware (bind the middleware to the instance of the express app)
-app.use(myMindlessMiddleware) //Will run any time app.method() is called
-
-// Home route
-app.get('/', (req, res) => {
+app.use(myMindlessMiddleware) //Registers the middleware. (Binds the middleware to the instance of the express app.) That means it will run any time app.method() is called.
+// How to define a '/home' route
+app.get('/home', (req, res) => {
     res.status(200).send('Math is cool!');
 });
-
 // How to handle queries
 app.get('/todos', (req, res) => {
     //If the URL has queries (e.g., http:// ... todos/?key=value )
@@ -53,11 +48,9 @@ app.get('/todos', (req, res) => {
 
     res.send(todos);
 });
-
 app.post('/todos', (req, res) => {
   res.send('Create a new todo item');
 });
-
 // How to handle parameters
 app.put('/todos/:id', (req, res) => {
   const { id } = req.params;
@@ -91,28 +84,33 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 app.use(express.static(path.join(__dirname, 'public')));
-
-app.get('/home', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
 });
 
-//How to use router
-app.get('/mate7', (req, res) => {
-    res.sendFile(__dirname + '/public/mate7/index.html')
+//Render each lesson with ejs templates
+import ejs from 'ejs'
+import { subjectTOC } from './subjectTOC.js';
+app.set('view engine', 'ejs'); // Sets EJS as the templating engine
+app.set('views', __dirname + '/views');
+app.get('/:subjectID', (req, res) => {
+    const subjectID = req.params.subjectID
+    const {subject, n, nOrd, topicTOC} = subjectTOC.find(s => s.subject === subjectID)
+    const units = Object.keys(topicTOC)
+    const topics = units.map(unit => topicTOC[unit])
+    const topicDirs = units.map(unit => topicTOC[unit].map(unitTitle => unitTitle.replaceAll(' ', '_')))
+    res.render('subjectView', {subject, n, nOrd, units, topics, topicDirs})
 })
-app.get('/mate7/:topicID', (req, res) => {
-    const { topicID } = req.params;
-    res.sendFile(__dirname + '/public/mate7/' + topicID + '.html')
+app.get('/:subjectID/:topicID', (req, res) => {
+    const { subjectID, topicID } = req.params;
+    const currentSubject = subjectTOC.find(s => s.subject === subjectID)
+    const contentPath = __dirname + `/public/${subjectID}/${topicID}.ejs`
+    res.render('topicView', {...currentSubject, topicID, contentPath})
 })
 
 app.listen(PORT, () => {
     console.log('Server is running.');
 });
-
-
-/* NatNote
-    - Used https://www.javascripttutorial.net/express-tutorial/ to set up the Express app.
-*/
 
 // var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-8, 8, 8, -8]});
 // var p = board.create('point', [1, 3], {name: 'point'});

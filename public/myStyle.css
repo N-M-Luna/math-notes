@@ -1,7 +1,7 @@
 hr {
     color: green;
 }
-a {
+a, a:visited {
     color: black;
 }
 a:hover {

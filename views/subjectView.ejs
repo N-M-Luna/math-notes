@@ -25,13 +25,17 @@
   <body>
   <!-- <div id="jxgbox" class="jxgbox" style="max-width:500px; aspect-ratio: 1/1;"></div> -->
 
-  <h1>Notas de Matemáticas de Séptimo Grado</h1>
+  <h1>Notas de Matemáticas de <%= nOrd %> Grado</h1>
   <hr>
-  <p> <a href="http://localhost:3000/home">Home</a> > Mate 7</p>
-  <ul>
-    <li><a href='http://localhost:3000/mate7/tema1'>Tema 1</a></li>
-    <li><a href='http://localhost:3000/mate7/tema1'>Tema 2</a></li>
-  </ul>
+  <p> <a href="http://localhost:3000/">Home</a> > Mate <%= n %></p>
+  <% units.forEach((unit, i) => { %>
+    <h2> Unidad <%= i+1 %>: <%= unit %></h2>
+    <ul>
+        <% topics[i].forEach((topicName, j) => { %>
+            <li><a href="http://localhost:3000/<%= subject %>/<%= topicDirs[i][j] %>"><%= topicName %></a></li>
+        <% }) %>
+    </ul>
+  <% }) %>
 
   </body>
 
