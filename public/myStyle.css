@@ -1,0 +1,9 @@
+hr {
+    color: green;
+}
+a {
+    color: black;
+}
+a:hover {
+    color: green;
+}

@@ -1,0 +1,18 @@
+{
+  "name": "math-notes",
+  "version": "1.0.0",
+  "description": "Lecture notes for middle school math",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --watch --env-file=.env index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nathalie Marie Luna Rivera",
+  "license": "CC-BY-NC-SA-4.0",
+  "dependencies": {
+    "express": "^5.1.0",
+    "katex": "^0.16.25",
+    "parser": "^0.1.4"
+  },
+  "type": "module"
+}
