@@ -102,7 +102,8 @@ app.get('/:subjectID', (req, res) => {
     res.render('subjectView', {subject, n, nOrd, units, topics, topicDirs})
 })
 app.get('/:subjectID/:topicID', (req, res) => {
-    const { subjectID, topicID } = req.params;
+    const subjectID = req.params.subjectID;
+    const topicID = req.params.topicID;
     const currentSubject = subjectTOC.find(s => s.subject === subjectID)
     const contentPath = __dirname + `/public/${subjectID}/${topicID}.ejs`
     res.render('topicView', {...currentSubject, topicID, contentPath})
@@ -111,6 +112,3 @@ app.get('/:subjectID/:topicID', (req, res) => {
 app.listen(PORT, () => {
     console.log('Server is running.');
 });
-
-// var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-8, 8, 8, -8]});
-// var p = board.create('point', [1, 3], {name: 'point'});
