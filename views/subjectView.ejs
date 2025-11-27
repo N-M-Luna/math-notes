@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Matemáticas 7</title>
+    <title>Matemáticas <%= n %></title>
     <link rel="stylesheet" href="../myStyle.css">
   </head>
 
@@ -10,7 +10,7 @@
 
   <h1>Notas de Matemáticas de <%= nOrd %> Grado</h1>
   <hr>
-  <p> <a href="http://localhost:3000/">Home</a> > Mate <%= n %></p>
+  <p> <a href="http://localhost:3000/">Home</a> > Matemáticas <%= n %></p>
   <% units.forEach((unit, i) => { %>
     <h2> Unidad <%= i+1 %>: <%= unit %></h2>
     <ul>

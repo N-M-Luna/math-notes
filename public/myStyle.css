@@ -1,9 +1,27 @@
+body {
+    margin: auto;
+    max-width: 650px;
+}
 hr {
-    color: green;
+    border: 2px solid green;
 }
 a, a:visited {
     color: black;
 }
 a:hover {
     color: green;
+}
+h1 {
+    margin-top: 30px;
+}
+h2 {
+    margin-top: 50px;
+}
+li {
+    margin: 15px 0px;
+}
+.squareGraph {
+    aspect-ratio: 1/1;
+    margin: auto;
+    width: 450px;
 }

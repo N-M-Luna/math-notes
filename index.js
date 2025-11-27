@@ -1,6 +1,4 @@
 import express from 'express';
-import { todos, nextTodoId } from './todos.js';
-
 const app = express(); // Creates an instance of the express app
 const PORT = process.env.PORT || 3000;
 
@@ -24,16 +22,17 @@ function myMiddlewareFn(req, res, next) {
     res.end() //ends cycle without sending anything.
 }
 */
-const myMindlessMiddleware = (req, res, next) => { //Defines the middleware
-    console.log('mid ' + req.method + ' ' + req.url)
-    next();
-}
-app.use(myMindlessMiddleware) //Registers the middleware. (Binds the middleware to the instance of the express app.) That means it will run any time app.method() is called.
+// const myMindlessMiddleware = (req, res, next) => { //Defines the middleware
+//     console.log('mid ' + req.method + ' ' + req.url)
+//     next();
+// }
+// app.use(myMindlessMiddleware) //Registers the middleware. (Binds the middleware to the instance of the express app.) That means it will run any time app.method() is called.
 // How to define a '/home' route
 app.get('/home', (req, res) => {
     res.status(200).send('Math is cool!');
 });
 // How to handle queries
+//import { todos, nextTodoId } from './todos.js';
 app.get('/todos', (req, res) => {
     //If the URL has queries (e.g., http:// ... todos/?key=value )
     if (req?.query?.completed) { //If the key is completed (and the value true)
@@ -95,18 +94,29 @@ app.set('view engine', 'ejs'); // Sets EJS as the templating engine
 app.set('views', __dirname + '/views');
 app.get('/:subjectID', (req, res) => {
     const subjectID = req.params.subjectID
-    const {subject, n, nOrd, topicTOC} = subjectTOC.find(s => s.subject === subjectID)
+    const {subject, n, nOrd, topicTOC} = subjectTOC.find(s => s.subject === subjectID) //
     const units = Object.keys(topicTOC)
     const topics = units.map(unit => topicTOC[unit])
     const topicDirs = units.map(unit => topicTOC[unit].map(unitTitle => unitTitle.replaceAll(' ', '_')))
-    res.render('subjectView', {subject, n, nOrd, units, topics, topicDirs})
+    res.render('subjectView', {
+        subject,
+        n,
+        nOrd,
+        units,
+        topics,
+        topicDirs
+    })
 })
 app.get('/:subjectID/:topicID', (req, res) => {
     const subjectID = req.params.subjectID;
     const topicID = req.params.topicID;
     const currentSubject = subjectTOC.find(s => s.subject === subjectID)
     const contentPath = __dirname + `/public/${subjectID}/${topicID}.ejs`
-    res.render('topicView', {...currentSubject, topicID, contentPath})
+    res.render('topicView', {
+        ...currentSubject,
+        topicID,
+        contentPath
+    })
 })
 
 app.listen(PORT, () => {
