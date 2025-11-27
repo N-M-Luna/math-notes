@@ -25,7 +25,11 @@
   <hr>
   <p class="'breadcrumbs"> <a href="http://localhost:3000/">Home</a> > <a href="http://localhost:3000/<%= subject %>"> Matemáticas <%= n %></a> > <%= topicID.replace('_', ' ') %></p>
 
-  <%- include(contentPath) %>
+  <div class="math-content">
+    <%- include(contentPath) %>
+  </div>
+
+  <%- include(footerPath) %>
 
   </body>
 </html>

@@ -82,6 +82,7 @@ app.get('/todos/:id', (req, res) => {//If the URL is .../todos/1,
 import path from 'path';
 import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const footerPath = __dirname + `/views/footer.ejs`
 app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
@@ -104,7 +105,8 @@ app.get('/:subjectID', (req, res) => {
         nOrd,
         units,
         topics,
-        topicDirs
+        topicDirs,
+        footerPath
     })
 })
 app.get('/:subjectID/:topicID', (req, res) => {
@@ -115,7 +117,8 @@ app.get('/:subjectID/:topicID', (req, res) => {
     res.render('topicView', {
         ...currentSubject,
         topicID,
-        contentPath
+        contentPath,
+        footerPath
     })
 })
 
