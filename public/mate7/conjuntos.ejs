@@ -1,27 +1,106 @@
 <h2>¿Qué son los conjuntos?</h2>
 
-<p> Un <strong>conjunto</strong> es una colección de objetos con una característica en común. </p>
-<p>Los objetos de un conjunto pueden ser letras, números, cosas, ...</p>
-<p>Por ejemplo...</p>
+<p class='def'> Un <strong>conjunto</strong> es una colección de objetos con una característica en común. </p>
+<p>La costumbre es usar una letra mayúscula para nombrar un conjunto.</p>
+<div class='eg'>
+<p><i>Por ejemplo</i>, el conjunto X es el conjunto de las vocales:</p>
+$$ X = \{ A, E, I, O, U \} $$
+<p><i>Otro ejemplo</i>, el conjunto Y es el conjunto de numeros pares menores que 10:</p>
+$$ Y = \{ 2, 4, 6, 8 \} $$
+</div>
 
-<p>Un <strong>elemento</strong> es un objecto que está en un conjunto.</p>
-<p>Por ejemplo,</p>
 
-<!-- Boilerplate
-<h2> Sub tema </h2>
+<p class='def'>Un <strong>elemento</strong> es un objecto que está en un conjunto.</p>
+<div class='eg'>
+<p><i>Por ejemplo</i>, la letra A es un <span class='underlined'>elemento</span> en el primer conjunto. </p>
+$$ A \in \{ A, E, I, O, U \} $$
+<p><i>En el otro ejemplo</i>, el número 5 <span class='underlined'>no pertenece</span> al conjunto Y.</p>
+$$ 5 \notin Y $$
+</div>
 
-<p> Podemos usar LaTeX: </p>
-$$ x^2 + y^2 = 1 $$
+<p class='def'>Un conjunto que está <strong>bien definido</strong> es un conjunto tiene claro si un objecto está en él o nó.</p>
+<p>Si nos dan un objecto y un conjunto bien definido, podemos determinar si el objecto pertenece al conjunto o nó.</p>
 
-<p>Y podemos usar jsx graph: </p>
-<div id="box" class="jxgbox squareGraph"></div>
+<div class='ejercicio'>
+    <p>Definimos los siguientes conjuntos:</p>
+    $$ \begin{align*}
+        H &= \{ a, e, i, o, u \} \\
+        X &= \{ 1, 2, 3, 4, 5 \} \\
+        Z &= \{ 2, 4, 6, 8, 10 \}
+    \end{align*} $$
+    <p>Determina si cada objecto es un elemento en el conjunto.</p>
+    <ol>
+        <li class='open-for-answers'>$$ e \quad \underline{\hspace{0.5cm}} \quad H $$</li>
+        <li class='full-of-answers hidden'>$$ e \quad \in \quad H $$</li>
+        <li class='open-for-answers'>$$ 2 \quad \underline{\hspace{0.5cm}} \quad H $$</li>
+        <li class='full-of-answers hidden'>$$ 2 \quad \notin \quad H $$</li>
+        <li class='open-for-answers'>$$ 4 \quad \underline{\hspace{0.5cm}} \quad X $$</li>
+        <li class='full-of-answers hidden'>$$ 4 \quad \in \quad X $$</li>
+        <li class='open-for-answers'>$$ 8 \quad \underline{\hspace{0.5cm}} \quad Z $$</li>
+        <li class='full-of-answers hidden'>$$ 8 \quad \in \quad Z $$</li>
+        <li class='open-for-answers'>$$ a \quad \underline{\hspace{0.5cm}} \quad Z $$</li>
+        <li class='full-of-answers hidden'>$$ a \quad \notin \quad Z $$</li>
+    </ol>
+
+    <button class='see-answer-btn' onclick='showAnswers(0)'>Ver la respuesta</button>
+</div>
+
+<p class='def'>Un conjunto puede ser finito o infinito. Un conjunto <strong>finito</strong> tiene una cantidad específica de elementos. Un conjunto <strong>infinito</strong> tiene un número ilimitado de elementos.</p>
+<div class='eg'>
+<p><i>Por ejemplo</i>, el conjunto de los colores primarios es <span class='underlined'>un conjunto finito</span>. Tiene tres elementos y nada más. </p>
+$$ \{ \text{azul}, \text{amarillo}, \text{rojo} \} $$
+<p><i>Por ejemplo</i>, el conjunto de números pares es <span class='underlined'>un conjunto infinito</span>. Siempre podemos encontrar otro elemento que pertenece al conjunto. </p>
+$$ \{ 2, 4, 6, 8, 10, 12, ... \} $$
+</div>
+
+<p class='def'>Dos conjuntos son <strong>iguales</strong> si ambos conjuntos tienen exactamente los mismos elementos. (El orden de los elementos no importa.)</p>
+<!-- TODO def subconjunto ejercicio con  -->
+
+<h2>Operaciones con conjuntos</h2>
+
+<p class='def'> El <strong>universo</strong> de un conjunto A es cualquier conjunto que contenga todos los elementos de A. Se denomina U al conjunto universo. </p>
+<div id="conjuntoUniverso" class="jxgbox short-graph" <%- graphOpts %> ></div>
+<div class='eg'>
+    <p><i>Por ejemplo</i>, podemos nombrar A al conjunto de todos los numeros pares.</p>
+    $$ A = \{ 2, 4, 6, 8, 10, 12, ... \} $$
+    <p>Entonces, el <span class='underlined'>universo del conjunto A</span> puede ser el conjunto de todos los números.</p>
+    $$ U = \{ 1, 2, 3, 4, 5, 6, 7, ... \} $$
+</div>
 
 <script>
+    //Board 'conjuntoUniverso'
     const board = JXG.JSXGraph.initBoard(
-        'box', {
-        boundingbox: [-10, 10, 10, -10],
-        axis: true
+        'conjuntoUniverso', {
+        boundingbox: [-5, 2.5, 5, -2.5],
+        showInfoBox: false,
+        showNavigation: false
     });
-    let p = board.create('point', [1, 3], {name: 'point'});
+    //Universe
+    const pntCoords = [[-3, 2], [3, 2], [3, -2], [-3, -2]]
+    board.create('polygon', pntCoords, {
+        borders: {highlight: false, strokeColor: '#665B76', strokeWidth: 2},
+        fillColor: '#665B76',
+        fillOpacity: 0.25,
+        highlight: false,
+        vertices: {highlight: false, fillOpacity: 0, strokeWidth: 0},
+    });
+    board.create('point', [2, -1.75], {
+        fillOpacity: 0,
+        name: 'U',
+        label: {fontSize: 20, color: '#665B76'},
+        strokeWidth: 0
+    })
+    //Set A
+    board.create('circle', [[0,0], 1], {
+        fillColor: '#636D55',
+        fillOpacity: 0.25,
+        highlight: false,
+        strokeColor: '#636D55',
+    })
+    board.create('point', [0, 0], {
+        fillOpacity: 0,
+        name: 'A',
+        label: {fontSize: 20, color: '#636D55'},
+        strokeWidth: 0
+    })
 </script>
--->

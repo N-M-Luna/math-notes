@@ -1,17 +1,28 @@
-/*
-Color palette
-Green           #A5B68D
+/*Color palette (green-orange)
+
+Green           #729170
+Light green     #A5B68D
 Pinkish beige   #ECDFCC
-Beige           #FCFAEE
 Orange          #DA8359
+*/
+
+/*Color palette (green-purple)
+
+Dark green      #636D55
+Green           #A5B68D
+Pale green      #C9D3BB
+Bright purple   #9D8CB5
+Pale purple     #BFB4CF
+Dark purple     #665B76
 */
 
 body {
     margin: auto;
+    width: 90%;
     max-width: 650px;
 }
 hr {
-    border: 2px solid #A5B68D;
+    border: 2px solid #729170;
 }
 a, a:visited {
     color: black;
@@ -34,13 +45,57 @@ li {
 .math-content {
     font-size: large;
 }
-.squareGraph {
-    aspect-ratio: 1/1;
-    margin: auto;
-    width: 450px;
+.def {
+    margin-top: 50px;
+}
+.def strong:hover {
+    color: #DA8359;
+}
+.eg {
+    border: 1.5px solid #729170;
+    border-radius: 10px;
+    padding: 15px;
+}
+.ejercicio {
+    border: 2px solid #DA8359;
+    border-radius: 10px;
+    padding: 15px;
+}
+.hidden {
+    display: none;
+}
+.see-answer-btn {
+  background-color: white;
+  border: 1px #DA8359 solid;
+  border-radius: 12px;
+  color: #DA8359;
+  font-size: 14px;
+  margin: 10px auto;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+}
+.see-answer-btn:hover {
+  background-color: #DA8359;
+  color: white;
+}
+.underlined {
+    text-decoration: underline;
+}
+.square-graph {
+    aspect-ratio: 1;
+    max-width: 500px;
+    min-width: 300px;
+    width: 75%;
+}
+.short-graph {
+    aspect-ratio: 2;
+    max-width: 500px;
+    min-width: 300px;
+    width: 75%;
 }
 footer {
-    background-color: #A5B68D;
+    background-color: #729170;
     color: white;
     font-size: small;
     margin-top: 100px;

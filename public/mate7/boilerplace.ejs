@@ -1,0 +1,38 @@
+<h2> Sub tema </h2>
+
+<p> Podemos usar LaTeX: </p>
+$$ x^2 + y^2 = 1 $$
+
+<p>Y podemos usar jsx graph: </p>
+<div id="box" class="jxgbox square-graph"></div>
+
+<p>Para definir vocabulario:</p>
+<p class='def'>Un <strong>elemento</strong> es un objecto que está en un conjunto.</p>
+
+<p>Para dar ejemplos:</p>
+<div class='eg'>
+<p><i>Por ejemplo</i>, el conjunto de los colores primarios es un conjunto finito. Tiene tres elementos y nada más. </p>
+$$ \{ \text{azul}, \text{amarillo}, \text{rojo} \} $$
+</div>
+
+<p>Para dar un ejercicio de practica:</p>
+<div class='ejercicio'>
+    <p>Instrucciones aqui.</p>
+    <ol>
+        <li class='open-for-answers'>$$ 2 \times 2 = \underline{\hspace{1cm}} $$</li>
+        <li class='full-of-answers hidden'>$$  2 \times 2 = 4 $$</li>
+        <li class='open-for-answers'>$$ 2 + 2 = \underline{\hspace{1cm}} $$</li>
+        <li class='full-of-answers hidden'>$$ 2 + 2 = 4 $$</li>
+    </ol>
+
+    <button class='see-answer-btn' onclick='showAnswers(indexOfEjercicio)'>Ver la respuesta</button>
+</div>
+
+<script>
+    const board = JXG.JSXGraph.initBoard(
+        'box', {
+        boundingbox: [-10, 10, 10, -10],
+        axis: true
+    });
+    let p = board.create('point', [1, 3], {name: 'point'});
+</script>
