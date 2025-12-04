@@ -15,3 +15,5 @@ To add new topics:
 
 TODO:
 - Add a 'previous topic' and 'next topic' btn at the end of topicView.ejs
+- Add keywords to each lesson. Add search by keyword
+- Add back to top btn to topicView and to subjectView

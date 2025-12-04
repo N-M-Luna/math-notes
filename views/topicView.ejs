@@ -26,7 +26,9 @@
   <p class="'breadcrumbs"> <a href="http://localhost:3000/">Home</a> > <a href="http://localhost:3000/<%= subject %>"> Matemáticas <%= n %></a> > <%= topicID.replace('_', ' ') %></p>
 
   <div class="math-content">
-    <%- include(contentPath, {graphOpts: "style='border-color: #729170; border-width: 1.5px; margin: 15px auto;'"}) %>
+    <%- include(contentPath, {
+      graphOpts: "style='border-color: #729170; border-width: 1.5px; margin: 15px auto;'"
+    }) %>
   </div>
 
   <%- include(footerPath) %>

@@ -1,27 +1,40 @@
 <h2>¿Qué son los conjuntos?</h2>
 
-<p class='def'> Un <strong>conjunto</strong> es una colección de objetos con una característica en común. </p>
-<p>La costumbre es usar una letra mayúscula para nombrar un conjunto.</p>
-<div class='eg'>
-<p><i>Por ejemplo</i>, el conjunto X es el conjunto de las vocales:</p>
-$$ X = \{ A, E, I, O, U \} $$
-<p><i>Otro ejemplo</i>, el conjunto Y es el conjunto de numeros pares menores que 10:</p>
-$$ Y = \{ 2, 4, 6, 8 \} $$
+<!-- def de conjunto -->
+<div class='def'>
+    <p class='def'> Un <strong>conjunto</strong> es una colección de objetos con una característica en común. </p>
+    <p>La costumbre es usar una letra mayúscula para nombrar un conjunto.</p>
 </div>
 
-
-<p class='def'>Un <strong>elemento</strong> es un objecto que está en un conjunto.</p>
+<!-- eg de conjunto -->
 <div class='eg'>
-<p><i>Por ejemplo</i>, la letra A es un <span class='underlined'>elemento</span> en el primer conjunto. </p>
-$$ A \in \{ A, E, I, O, U \} $$
-<p><i>En el otro ejemplo</i>, el número 5 <span class='underlined'>no pertenece</span> al conjunto Y.</p>
+    <p><i>Ejemplo 1</i>. El conjunto X es el conjunto de las vocales:</p>
+    $$ X = \{ A, E, I, O, U \} $$
+    <p><i>Ejemplo 2</i>. El conjunto Y es el conjunto de numeros pares menores que 10:</p>
+    $$ Y = \{ 2, 4, 6, 8 \} $$
+</div>
+
+<!-- def de elemento -->
+<div class='def'>
+    <p>Un <strong>elemento</strong> es un objecto que está en un conjunto.</p>
+</div>
+
+<!-- eg de elemento -->
+<div class='eg'>
+    <p><i>Ejemplo 1</i>. El día lunes es un <span class='underlined'>elemento</span> en el conjunto de los días de la semana. </p>
+$$ \begin{align*} \text{lunes} \in & \{ \text{lunes}, \text{martes}, \text{miércoles}, \\ & \quad \text{jueves}, \text{viernes}, \text{sábado}, \\ & \quad \text{domingo} \} \end{align*} $$
+    <p><i>Ejemplo 2</i>. Si Y es el conjunto de todos los números pares, el número 5 <span class='underlined'>no pertenece</span> al conjunto Y.</p>
 $$ 5 \notin Y $$
 </div>
 
-<p class='def'>Un conjunto que está <strong>bien definido</strong> es un conjunto tiene claro si un objecto está en él o nó.</p>
-<p>Si nos dan un objecto y un conjunto bien definido, podemos determinar si el objecto pertenece al conjunto o nó.</p>
+<!-- def de conjunto bien definido -->
+<div class='def'>
+    <p>Un conjunto que está <strong>bien definido</strong> es un conjunto que tiene claro si un objecto está en él o nó.</p>
+    <p>En otras palabras, si nos dan un objecto y un conjunto bien definido, podemos determinar si el objecto pertenece al conjunto o nó.</p>
+</div>
 
-<div class='ejercicio'>
+<!-- ejercicio de elemento (de un conjunto) -->
+<div class='ejercicio'><!-- id 0 -->
     <p>Definimos los siguientes conjuntos:</p>
     $$ \begin{align*}
         H &= \{ a, e, i, o, u \} \\
@@ -45,62 +58,262 @@ $$ 5 \notin Y $$
     <button class='see-answer-btn' onclick='showAnswers(0)'>Ver la respuesta</button>
 </div>
 
-<p class='def'>Un conjunto puede ser finito o infinito. Un conjunto <strong>finito</strong> tiene una cantidad específica de elementos. Un conjunto <strong>infinito</strong> tiene un número ilimitado de elementos.</p>
-<div class='eg'>
-<p><i>Por ejemplo</i>, el conjunto de los colores primarios es <span class='underlined'>un conjunto finito</span>. Tiene tres elementos y nada más. </p>
-$$ \{ \text{azul}, \text{amarillo}, \text{rojo} \} $$
-<p><i>Por ejemplo</i>, el conjunto de números pares es <span class='underlined'>un conjunto infinito</span>. Siempre podemos encontrar otro elemento que pertenece al conjunto. </p>
-$$ \{ 2, 4, 6, 8, 10, 12, ... \} $$
+<!-- def de conjunto finito/infinito -->
+<div class='def'>
+    <p>Un conjunto puede ser finito o infinito. Un conjunto <strong>finito</strong> tiene una cantidad específica de elementos. Un conjunto <strong>infinito</strong> tiene un número ilimitado de elementos.</p>
 </div>
 
-<p class='def'>Dos conjuntos son <strong>iguales</strong> si ambos conjuntos tienen exactamente los mismos elementos. (El orden de los elementos no importa.)</p>
-<!-- TODO def subconjunto ejercicio con  -->
+<!-- eg de conjunto finito/infinito -->
+<div class='eg'>
+    <p><i>Ejemplo 1</i>. El conjunto de los colores primarios es <span class='underlined'>un conjunto finito</span>. Tiene tres elementos y nada más. </p>
+    $$ \{ \text{azul}, \text{amarillo}, \text{rojo} \} $$
+    <p><i>Ejemplo 2</i>. El conjunto de números pares es <span class='underlined'>un conjunto infinito</span>. Siempre podemos encontrar otro elemento que pertenece al conjunto. </p>
+    $$ \{ 2, 4, 6, 8, 10, 12, ... \} $$
+</div>
+
+<!-- def de conjunto nulo/vacio -->
+<div class='def'>
+    <p>El <strong>conjunto nulo o vacío</strong> es un conjunto que no tiene elementos. Se denota:</p>
+    $$ \emptyset = \{ \phantom{.} \} $$
+</div>
+
+<!-- def de subconjunto -->
+<div class='def'>
+    <p>El conjunto A es <strong>subconjunto</strong> del conjunto B si todos los elementos de A también pertenecen a B. Se denota:</p>
+    $$ A \subset B $$
+</div>
+
+<!-- eg de subconjunto -->
+<div class='eg'>
+    <p><i>Ejemplo 1</i>. Podemos definir los siguientes conjuntos:
+    $$ A = \{ \text{todos los animales} \}, \\  M = \{ \text{todos los mamíferos} \} $$
+    Entonces, M es <span class='underlined'>subconjunto </span> de A.
+    $$ M \subset A $$</p>
+
+    <p><i>Ejemplo 2</i>. Podemos nombrar N al conjunto de todos los números naturales:
+    $$ N = \{ 1, 2, 3, 4, 5, 6, ... \} $$
+    Y nombraremos P al conjunto de todos los números pares:
+    $$ P = \{ 2, 4, 6, 8, 10, ... \} $$
+    Entonces P es un <span class='underlined'>subconjunto</span> de N.
+    $$ P \subset N $$</p>
+</div>
+
+<!-- def de conjuntos iguales-->
+<div class='def'>
+    <p>Dos conjuntos son <strong>iguales</strong> si ambos conjuntos tienen exactamente los mismos elementos. (El orden de los elementos no importa.)</p>
+</div>
 
 <h2>Operaciones con conjuntos</h2>
 
-<p class='def'> El <strong>universo</strong> de un conjunto A es cualquier conjunto que contenga todos los elementos de A. Se denomina U al conjunto universo. </p>
-<div id="conjuntoUniverso" class="jxgbox short-graph" <%- graphOpts %> ></div>
+<div class='def'>
+    <p> El <strong>universo</strong> de un conjunto A es cualquier conjunto que contenga todos los elementos de A. Se denomina U al conjunto universo. </p>
+    <div id="conjuntoUniverso" class="jxgbox short-graph" <%- graphOpts %> ></div>
+</div>
+
+
 <div class='eg'>
-    <p><i>Por ejemplo</i>, podemos nombrar A al conjunto de todos los numeros pares.</p>
+    <p><i>Ejemplo 1</i>. Podemos nombrar A al conjunto de todos los numeros pares.</p>
     $$ A = \{ 2, 4, 6, 8, 10, 12, ... \} $$
     <p>Entonces, el <span class='underlined'>universo del conjunto A</span> puede ser el conjunto de todos los números.</p>
     $$ U = \{ 1, 2, 3, 4, 5, 6, 7, ... \} $$
 </div>
 
+<!-- def de union -->
+<div class='def'>
+    <p> La <strong>unión</strong> de dos conjuntos A y B es el conjunto con todos los elementos que están en A o están en B. Se denota: </p>
+    $$ A \cup B $$
+    <div id="unionConjuntos" class="jxgbox short-graph" <%- graphOpts %> ></div>
+</div>
+
+
+<!-- def de interseccion  -->
+ <div class='def'>
+    <p> La <strong>intersección</strong> de dos conjuntos A y B es el conjunto con todos los elementos que están en A y también están en B. Se denota: </p>
+    $$ A \cap B $$
+    <div id="interseccionConjuntos" class="jxgbox short-graph" <%- graphOpts %> ></div>
+</div>
+
+
+<!-- def de diferencia -->
+ <div class='def'>
+    <p> La <strong>diferencia</strong> de dos conjuntos A y B es el conjunto con todos los elementos que están en A y que <span class='underlined'>no</span> están en B. Se denota: </p>
+    $$ A - B $$
+    <div id="diferenciaConjuntos" class="jxgbox short-graph" <%- graphOpts %> ></div>
+</div>
+
+<!-- TODO? eg interactivo de union, interseccion, y diferencia -->
+
+<!-- eg de operaciones -->
+ <div class='eg'>
+    Definimos los siguentes conjuntos.</p>
+    $$ \begin{align*}
+    A &= \{ 2, 4, 6, 8, 10 \} \\
+    B &= \{ 1, 3, 5, 7, 9 \} \\
+    C &= \{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 \} \\
+    \end{align*}$$
+
+    <p><i>Ejemplo 1</i>. Encuentra <span class='underlined'>la unión de A y B</span>. </p>
+    $$ A \cup B $$
+    <p>La unión contiene cualquier elemento que esté en A ó que esté en B.</p>
+    $$ A \cup B = \{ \underbrace{2, \, 4, \, 6, \, 8, \, 10,}_{A} \, \underbrace{1, \, 3, \, 5, \, 7, \, 9}_{B} \} $$
+    <p>Entonces, la unión de A y B es:</p>
+    $$ A \cup B = \{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 \} $$
+
+    <p><i>Ejemplo 2</i>. Encuentra <span class='underlined'>la intersección de A y C</span>. </p>
+    $$ A \cap C $$
+    <p>La intersección contiene todo elemento que esté en A y también en C. En otras palabras, solamente los elementos que estén en ambos conjuntos.</p>
+    $$ A \cap C = \{ \textcolor{#DA8359}{2, 4, 6, 8, 10} \} \cap \{ 1, \textcolor{#DA8359}{2}, 3, \textcolor{#DA8359}{4}, 5, \textcolor{#DA8359}{6}, 7, \textcolor{#DA8359}{8}, 9, \textcolor{#DA8359}{10} \}  $$
+    <p>Entonces, la intersección de A y C es:</p>
+    $$ A \cap C = \{ 2, 4, 6, 8, 10 \} $$
+
+    <p><i>Ejemplo 3</i>. Encuentra <span class='underlined'>la diferencia de B y C</span>.</p>
+    $$ B - C $$
+    <p>La diferencia contiene todos los elementos que pertenezcan en B y que <span>no pertenezcan</span> a C. Vamos a tachar todo elemento de B que esté en el conjunto C. </p>
+    $$ B - C = \{ \cancel{1}, \cancel{3}, \cancel{5}, \cancel{7}, \cancel{9} \} - \{ \cancel{1}, 2, \cancel{3}, 4, \cancel{5}, 6, \cancel{7}, 8, \cancel{9}, 10 \} $$
+    <p>Entonces, como no sobrevivió ningún elemento en B, la diferencia de B y C es el conjunto vacío:</p>
+    $$ B - C = \emptyset $$
+</div>
+
+<!-- ejercicio de operaciones -->
+<div class='ejercicio'><!-- id 1 -->
+    <p>Definimos los siguientes conjuntos:</p>
+    $$ \begin{align*}
+        F &= \{ 1, 2, 3, 4, 5 \} \\
+        G &= \{ 4, 5, 6, 7, 8, 9 \} \\
+    \end{align*} $$
+    <p>Determina qué elemento está en cada conjunto.</p>
+
+
+    <span class='open-for-answers'>
+        $$ \begin{align*}
+        F \cup G &= \underline{\hspace{3cm}} \\
+        F - G &= \underline{\hspace{3cm}} \\
+        G - F &= \underline{\hspace{3cm}} \\
+        F \cap G &= \underline{\hspace{3cm}} \\
+        \end{align*} $$
+    </span>
+
+    <span class='full-of-answers hidden'>
+        $$ \begin{align*}
+        F \cup G &= \{ 1, 2, 3, 4, 5, 6, 7, 8, 9 \} \\
+        F - G &=  \{ 1, 2, 3 \} \\
+        G - F &= \{ 6, 7, 8, 9 \} \\
+        F \cap G &= \{ 4, 5 \} \\
+        \end{align*} $$
+    </span>
+
+    <button class='see-answer-btn' onclick='showAnswers(1)'>Ver la respuesta</button>
+</div>
+
 <script>
-    //Board 'conjuntoUniverso'
-    const board = JXG.JSXGraph.initBoard(
-        'conjuntoUniverso', {
+    const shortBoardOpts = {
         boundingbox: [-5, 2.5, 5, -2.5],
         showInfoBox: false,
-        showNavigation: false
-    });
+        showNavigation: false,
+    }
+    const pointOpts = {
+        color: 'black',
+        fillOpacity: 0,
+        fixed: true,
+        label: {
+            autoPosition: true,
+            fontSize: 20,
+        },
+        strokeWidth: 0,
+    }
+    const fixedOpts = {
+        fixed: true,
+        highlight: false,
+    }
+
+    //Board 'conjuntoUniverso'
+    const universeBoard = JXG.JSXGraph.initBoard('conjuntoUniverso', shortBoardOpts);
     //Universe
     const pntCoords = [[-3, 2], [3, 2], [3, -2], [-3, -2]]
-    board.create('polygon', pntCoords, {
-        borders: {highlight: false, strokeColor: '#665B76', strokeWidth: 2},
-        fillColor: '#665B76',
+    universeBoard.create('polygon', pntCoords, {
+        borders: {fixed: true, highlight: false, strokeColor: 'black', strokeWidth: 2},
+        fillColor: '#A5B68D',
         fillOpacity: 0.25,
         highlight: false,
-        vertices: {highlight: false, fillOpacity: 0, strokeWidth: 0},
+        vertices: {fixed: true, highlight: false, fillOpacity: 0, strokeWidth: 0},
     });
-    board.create('point', [2, -1.75], {
-        fillOpacity: 0,
+    universeBoard.create('point', [2, -1.75], {
         name: 'U',
-        label: {fontSize: 20, color: '#665B76'},
-        strokeWidth: 0
+        ...pointOpts
     })
     //Set A
-    board.create('circle', [[0,0], 1], {
-        fillColor: '#636D55',
+    universeBoard.create('circle', [[0,0], 1], {
+        fillColor: '#DA8359',
+        strokeColor: 'black',
         fillOpacity: 0.25,
-        highlight: false,
-        strokeColor: '#636D55',
+        ...fixedOpts
     })
-    board.create('point', [0, 0], {
-        fillOpacity: 0,
+    universeBoard.create('point', [0, 0], {
         name: 'A',
-        label: {fontSize: 20, color: '#636D55'},
-        strokeWidth: 0
+        ...pointOpts
     })
+
+    //Board 'union'
+    const setOpts = {
+        fillOpacity: 0,
+        strokeColor: 'black',
+        ...fixedOpts
+    }
+    const setAcoords = {
+        circle: [[-1,0], 2],
+        label: [-4, -1.5]
+    }
+    const setBcoords = {
+        circle: [[1,0], 2],
+        label: [3.25, -1.5]
+    }
+    const unionBoard = JXG.JSXGraph.initBoard('unionConjuntos', shortBoardOpts);
+    //Set A
+    const setAforU = unionBoard.create('circle', setAcoords.circle, setOpts);
+    unionBoard.create('point', setAcoords.label, {
+        name: 'A',
+        ...pointOpts
+    })
+    //Set B
+    const setBforU = unionBoard.create('circle', setBcoords.circle, setOpts);
+    unionBoard.create('point', setBcoords.label, {
+        name: 'B',
+        ...pointOpts
+    })
+    //Union of A and B
+    unionBoard.create('curveunion', [setAforU, setBforU], {fillColor: '#729170', fillOpacity: 0.25});
+
+    //Board 'interseccion'
+    const intersectionBoard = JXG.JSXGraph.initBoard('interseccionConjuntos', shortBoardOpts);
+    //Set A
+    const setAforInt = intersectionBoard.create('circle', setAcoords.circle, setOpts);
+    intersectionBoard.create('point', setAcoords.label, {
+        name: 'A',
+        ...pointOpts
+    })
+    //Set B
+    const setBforInt = intersectionBoard.create('circle', setBcoords.circle, setOpts);
+    intersectionBoard.create('point', setBcoords.label, {
+        name: 'B',
+        ...pointOpts
+    })
+    //Intersection of A and B
+    intersectionBoard.create('curveintersection', [setAforInt, setBforInt], {fillColor: '#729170', fillOpacity: 0.25});
+
+    //Board 'diferencia'
+    const differenceBoard = JXG.JSXGraph.initBoard('diferenciaConjuntos', shortBoardOpts);
+    //Set A
+    const setAforDiff = differenceBoard.create('circle', setAcoords.circle, setOpts);
+    differenceBoard.create('point', setAcoords.label, {
+        name: 'A',
+        ...pointOpts
+    })
+    //Set B
+    const setBforDiff = differenceBoard.create('circle', setBcoords.circle, setOpts);
+    differenceBoard.create('point', setBcoords.label, {
+        name: 'B',
+        ...pointOpts
+    })
+    //Difference of A and B
+    differenceBoard.create('curvedifference', [setAforDiff, setBforDiff], {fillColor: '#729170', fillOpacity: 0.25});
 </script>

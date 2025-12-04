@@ -34,6 +34,7 @@ h1 {
     margin-top: 50px;
 }
 h2 {
+    color: #729170;
     margin-top: 50px;
 }
 .grade-list {
@@ -43,7 +44,11 @@ li {
     margin: 15px 0px;
 }
 .math-content {
-    font-size: large;
+    font-size: 18px;
+}
+.math-content div {
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 .def {
     margin-top: 50px;
@@ -52,13 +57,19 @@ li {
     color: #DA8359;
 }
 .eg {
-    border: 1.5px solid #729170;
+    border: 1.5px dashed #729170;
     border-radius: 10px;
-    padding: 15px;
+    margin: 20px 0px;
+    padding: 15px 25px;
+}
+.eg i {
+    color: #729170;
+    text-decoration: underline;
 }
 .ejercicio {
     border: 2px solid #DA8359;
     border-radius: 10px;
+    margin: 15px 0px;
     padding: 15px;
 }
 .hidden {
@@ -69,7 +80,7 @@ li {
   border: 1px #DA8359 solid;
   border-radius: 12px;
   color: #DA8359;
-  font-size: 14px;
+  font-size: 16px;
   margin: 10px auto;
   padding: 15px 32px;
   text-align: center;
@@ -97,7 +108,6 @@ li {
 footer {
     background-color: #729170;
     color: white;
-    font-size: small;
     margin-top: 100px;
     padding: 30px 10px;
 }
