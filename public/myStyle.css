@@ -110,7 +110,7 @@ li {
 }
 .eg i {
     color: #729170;
-    text-decoration: underline;
+    font-weight: 700;
 }
 .ejercicio {
     border: 2px solid #DA8359;

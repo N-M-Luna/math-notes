@@ -1,1 +1,115 @@
-<p> contenido de patrones </p>
+<h2> ¿Qué es un patrón? </h2>
+<hr class='topic-header'>
+
+<!-- def de patrón -->
+<div class='def'>
+    <p>Un <strong>patrón</strong> es una sucesión de elementos que se construye siguiendo una regla.</p>
+</div>
+
+<!-- eg de patrón -->
+<div class='eg'>
+    <p><i>Ejemplo 1</i>. Podemos definir un patrón donde repetimos dos estrellas verdes y dos estrellas anaranjadas.</p>
+    $$ \textcolor{#729170}{\bigstar}, \textcolor{#729170}{\bigstar}, \textcolor{#DA8359}{\bigstar},  \textcolor{#DA8359}{\bigstar}, \textcolor{#729170}{\bigstar}, \textcolor{#729170}{\bigstar}, \textcolor{#DA8359}{\bigstar},  \textcolor{#DA8359}{\bigstar}, \textcolor{#729170}{\bigstar}, \textcolor{#729170}{\bigstar}, \textcolor{#DA8359}{\bigstar},  \textcolor{#DA8359}{\bigstar}, ...  $$
+
+    <p><i>Ejemplo 2</i>. Podemos definir un patrón donde intercambiamos tréboles verdes y tréboles anaranjados. Y cada vez que cambiamos, añadimos un trébol más.</p>
+    $$ \textcolor{#729170}{\clubs},  \textcolor{#DA8359}{\clubs},  \textcolor{#DA8359}{\clubs}, \textcolor{#729170}{\clubs}, \textcolor{#729170}{\clubs}, \textcolor{#729170}{\clubs}, \textcolor{#DA8359}{\clubs},  \textcolor{#DA8359}{\clubs}, \textcolor{#DA8359}{\clubs},  \textcolor{#DA8359}{\clubs}, ...  $$
+</div>
+
+<!-- def de patrón de repetición -->
+<div class='def'>
+    <p>Un <strong>patrón de repetición</strong> es un patrón en el cual los elementos son presentados de forma periódica.</p>
+</div>
+
+<!-- eg de patrón de repetición -->
+<div class='eg'>
+    <p><i>Ejemplo 1</i>. Los conteos de música repiten los números del 1 al 8. Esto forma un patrón de repetición.</p>
+    $$ \underbrace{1, 2, 3, 4, 5, 6, 7, 8}, \underbrace{1, 2, 3, 4, 5, 6, 7, 8}, ...  $$
+</div>
+
+<!-- def de patrón de recurrencia -->
+<div class='def'>
+    <p>Un <strong>patrón de recurrencia</strong> es un patrón que se forma de acuerdo a una regla establecida.</p>
+</div>
+
+<!-- eg de patrón de recurrencia -->
+<div class='eg'>
+    <p><i>Ejemplo 1</i>. Podemos definir un patrón que empieza en el número 1 y cada elemento se obtiene multiplicando el anterior por 2.</p>
+    $$ 1 \xrightarrow{\textcolor{#729170}{1 \times 2}} 2 \xrightarrow{\textcolor{#729170}{2 \times 2}} 4 \xrightarrow{\textcolor{#729170}{4 \times 2}} 8 \xrightarrow{\textcolor{#729170}{8 \times 2}} 16 ... $$
+</div>
+
+<!-- ejercicio de patrones -->
+<div class='ejercicio'><!-- id 0 -->
+    <h3>Ejercicio. </h3>
+    <p>Kiara tiene $75 y cada semana ahorra $5. </p>
+    <ol>
+        <li>Define el patrón de sus ahorros. </li>
+        <p class='full-of-answers hidden'> El patrón <span class='underlined'>empieza en el número 75</span> porque este es el balance original de los ahorros de Kiara. </p>
+        <p class='full-of-answers hidden'>Cada elemento representa el balance después de cada semana. Como los ahorros aumentan por 5 en cada semana, cada elemento en el patrón se consigue <span class='underlined'>sumándole 5</span> al elemento anterior.
+        $$  75 \xrightarrow{\textcolor{#729170}{75 + 5}} 80 \xrightarrow{\textcolor{#729170}{80 + 5}} 85 \xrightarrow{\textcolor{#729170}{85 + 5}} 90 \xrightarrow{\textcolor{#729170}{90 + 5}} 95...  $$
+        </p>
+        <p class='full-of-answers hidden'>Entonces el patrón de los ahorros de Kiara es el siguiente:
+        $$  75, 80, 85, 90, 95, 100, 105, ...  $$
+        </p>
+
+        <li>¿Cuánto dinero habrá ahorrado Kiara despues de 10 semanas?</li>
+        <p class='full-of-answers hidden'>Para encontrar la cantidad que Kiara ha ahorrado después de 10 semanas, empezamos con 75 y le sumamos 5 por cada semana.
+        $$ 75 \underbrace{+ 5 + 5 + 5 + 5 + 5 + 5 + 5 + 5 + 5 + 5}_{10 \text{ veces}} $$
+        Pero sumar 5 diez veces es lo mismo que multiplicar 5 por diez.
+        $$ 75 + (5 \times 10) $$
+        $$ 75 + 50 $$
+        $$ 125 $$
+        Entonces, después de 10 semanas, Kiara habrá ahorrado $125.
+        </p>
+    </ol>
+
+    <button class='see-answer-btn' onclick='showAnswers(0)'>Ver la respuesta</button>
+</div>
+
+<!-- def de patrón numérico/geométrico -->
+<div class='def'>
+    <p>Los patrónes también se pueden clasificar de acuerdo a sus elementos. Un <strong>patrón numérico</strong> es un patrón cuyos elementos son números. Un <strong>patrón geométrico</strong> es un patrón cuyos elementos son figuras geométricas.</p>
+</div>
+
+<!-- eg de patrón numérico/geométrico -->
+<div class='eg'>
+    <p><i>Ejemplo 1</i>.  Un patrón numérico es:</p>
+    $$ 1, 2, 1, 3, 1, 4, 1, 5, ... $$
+    <p><i>Ejemplo 2</i>.  Un patrón geométrico es:</p>
+    <div id="patronGeometrico" class="jxgbox short-graph" <%- graphOpts %> ></div>
+</div>
+
+<script>
+    const patternBoard = JXG.JSXGraph.initBoard('patronGeometrico', {
+        boundingbox: [-2, 5, 18, -5],
+        showInfoBox: false,
+        showNavigation: false,
+    });
+    const mkTriangle = (x, y) => {
+        const y1 = (2*y - Math.sqrt(3)) / 2
+        patternBoard.create('polygon', [[x, y], [x-0.5, y1], [x+0.5, y1]], {
+            borders: {fixed: true, highlight: false, strokeWidth: 0},
+            fillColor: '#729170',
+            fillOpacity: 1,
+            highlight: false,
+            vertices: {fixed: true, highlight: false, fillOpacity: 0, strokeWidth: 0},
+        })
+    }
+    const mkTriangleRow = (x, y, n) => {
+        for(let i = 0; i < n; i++) {
+            mkTriangle(x + i*(1.3), y)
+        }
+    }
+    const mkTriangleElement = (x, n) => {
+        for(let i = 0; i < n; i++) {
+            mkTriangleRow(x + (i * 0.65), i, n - i)
+        }
+    }
+    const mkTrianglePattern = (n) => {
+        let x = 0
+        for (let i = 1; i <= n; i++) {
+            mkTriangleElement(x, i)
+            x += 1 + (i * 1.3)
+        }
+    }
+    mkTrianglePattern(4)
+</script>
