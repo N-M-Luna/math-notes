@@ -83,6 +83,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const footerPath = __dirname + `/views/footer.ejs`
+const bttButtonPath = __dirname + '/views/backToTopBtn.ejs'
 app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
@@ -106,6 +107,7 @@ app.get('/:subjectID', (req, res) => {
         units, // eg, ['Unidad 1', 'Unidad 2', ...]
         topics, // eg, [ ['Lección 1.1', 'Lección 1.2', ...], [...], ...]
         topicDirs, // eg, [ ['Lección_1.1', 'Lección_1.2', ...], [...], ...]
+        bttButtonPath, //path to view of back-to-top button
         footerPath //path to view of footer
     })
 })
@@ -130,6 +132,7 @@ app.get('/:subjectID/:topicID', (req, res) => {
         contentPath, //path to view of content
         prevTopicID, // eg 'Título de la lección'
         nextTopicID, // eg 'Título de la lección'
+        bttButtonPath, //path to view of back-to-top button
         footerPath//path to view of footer
     })
 })

@@ -12,12 +12,16 @@
     contentPath, //path to view of content
     prevTopicID // eg 'Título de la lección'
     nextTopicID // eg 'Título de la lección'
+    bttButtonPath //path to view of back-to-top button
     footerPath //path to view of footer
   -->
   <head>
     <meta charset="UTF-8">
     <title><%= topicID.replaceAll('_', ' ') %> - Matemáticas <%= n %></title>
     <link rel="stylesheet" href="../myStyle.css">
+
+    <!--Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!--Jsx Graph-->
     <script src="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraphcore.js"></script>
@@ -36,7 +40,7 @@
   <body>
 
   <h1>Notas de Matemáticas de <%= nOrd %> Grado</h1>
-  <hr>
+  <hr class='page-header'>
   <p class="'breadcrumbs"> <a href="http://localhost:3000/">Home</a> > <a href="http://localhost:3000/<%= subject %>"> Matemáticas <%= n %></a> > <%= topicID.replace('_', ' ') %></p>
 
   <div class="math-content">
@@ -48,7 +52,7 @@
   <% if (prevTopicID.length > 0) { %>
   <a href="http://localhost:3000/<%= subject %>/<%= prevTopicID.replaceAll(' ', '_') %>">
     <button class='link-to-adjacent-topic left'>
-      Tema anterior: <span class='topic-name'><%= prevTopicID %></span>
+      <i class="fa-regular fa-circle-left"></i> <br> <%= prevTopicID %>
     </button>
   </a>
   <% } %>
@@ -56,12 +60,13 @@
   <% if (nextTopicID.length > 0) { %>
   <a href="http://localhost:3000/<%= subject %>/<%= nextTopicID.replaceAll(' ', '_') %>">
     <button class='link-to-adjacent-topic right'>
-      Próximo tema: <span class='topic-name'><%= nextTopicID %></span>
+      <i class="fa-regular fa-circle-right"></i> <br> <%= nextTopicID %>
     </button>
   </a>
   <% } %>
 
   <%- include(footerPath) %>
+  <%- include(bttButtonPath) %>
 
   <script src='../index.js'></script>
   </body>

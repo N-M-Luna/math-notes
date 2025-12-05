@@ -19,9 +19,9 @@ Dark purple     #665B76
 body {
     margin: auto;
     width: 90%;
-    max-width: 650px;
+    max-width: 800px;
 }
-hr {
+hr.page-header {
     border: 2px solid #729170;
 }
 a, a:visited {
@@ -30,12 +30,31 @@ a, a:visited {
 a:hover {
     color: #DA8359;
 }
+.btt-btn {
+    background-color: white;
+    border: 1px #729170 solid;
+    border-radius: 12px;
+    bottom: 2%;
+    color: #729170;
+    font-size: 20px;
+    padding: 5px 10px;
+    position: fixed;
+    right: 2%;
+}
+.btt-btn:hover {
+    background-color: #729170;
+    color: white;
+}
 h1 {
     margin-top: 50px;
 }
 h2 {
     color: #729170;
-    margin-top: 50px;
+    margin-bottom: 0px;
+    margin-top: 80px;
+}
+hr.topic-header {
+    border: 1px solid #729170;
 }
 .grade-list {
     margin-top: 50px;
@@ -54,7 +73,8 @@ li {
     background-color: white;
     border: 1px #729170 solid;
     border-radius: 12px;
-    font-size: 16px;
+    color: #729170;
+    font-size: 20px;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -75,9 +95,6 @@ li {
         margin-top: 15px;
         width: 100%;
     }
-}
-.topic-name {
-    font-size: 18px;
 }
 .def {
     margin-top: 50px;
