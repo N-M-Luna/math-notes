@@ -1,5 +1,19 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
+  <!--
+  view served when getting
+    dir/:subjectID/:topicID
+  with params:
+    subject // eg 'mate7'
+    n // eg 7
+    nOrd //eg 'Séptimo'
+    topicTOC //eg {'Unidad 1': ['Lección 1.1', 'Lección 1.2', ...], ...}
+    topicID, // eg 'Título de la lección'
+    contentPath, //path to view of content
+    prevTopicID // eg 'Título de la lección'
+    nextTopicID // eg 'Título de la lección'
+    footerPath //path to view of footer
+  -->
   <head>
     <meta charset="UTF-8">
     <title><%= topicID.replaceAll('_', ' ') %> - Matemáticas <%= n %></title>
@@ -30,6 +44,22 @@
       graphOpts: "style='border-color: #729170; border-width: 1.5px; margin: 15px auto;'"
     }) %>
   </div>
+
+  <% if (prevTopicID.length > 0) { %>
+  <a href="http://localhost:3000/<%= subject %>/<%= prevTopicID.replaceAll(' ', '_') %>">
+    <button class='link-to-adjacent-topic left'>
+      Tema anterior: <span class='topic-name'><%= prevTopicID %></span>
+    </button>
+  </a>
+  <% } %>
+
+  <% if (nextTopicID.length > 0) { %>
+  <a href="http://localhost:3000/<%= subject %>/<%= nextTopicID.replaceAll(' ', '_') %>">
+    <button class='link-to-adjacent-topic right'>
+      Próximo tema: <span class='topic-name'><%= nextTopicID %></span>
+    </button>
+  </a>
+  <% } %>
 
   <%- include(footerPath) %>
 

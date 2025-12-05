@@ -100,13 +100,13 @@ app.get('/:subjectID', (req, res) => {
     const topics = units.map(unit => topicTOC[unit])
     const topicDirs = units.map(unit => topicTOC[unit].map(unitTitle => unitTitle.replaceAll(' ', '_')))
     res.render('subjectView', {
-        subject,
-        n,
-        nOrd,
-        units,
-        topics,
-        topicDirs,
-        footerPath
+        subject, // eg, 'mate7'
+        n, //eg, '7'
+        nOrd, //eg 'Séptimo'
+        units, // eg, ['Unidad 1', 'Unidad 2', ...]
+        topics, // eg, [ ['Lección 1.1', 'Lección 1.2', ...], [...], ...]
+        topicDirs, // eg, [ ['Lección_1.1', 'Lección_1.2', ...], [...], ...]
+        footerPath //path to view of footer
     })
 })
 app.get('/:subjectID/:topicID', (req, res) => {
@@ -114,11 +114,23 @@ app.get('/:subjectID/:topicID', (req, res) => {
     const topicID = req.params.topicID;
     const currentSubject = subjectTOC.find(s => s.subject === subjectID)
     const contentPath = __dirname + `/public/${subjectID}/${topicID}.ejs`
+    const topicList = Object.values(currentSubject.topicTOC).flat()
+    const indx = topicList.indexOf(topicID.replaceAll('_', ' '))
+    const prevTopicID = indx === 0 ? '' : topicList[indx-1]
+    const nextTopicID = indx === topicList.length - 1 ? '' : topicList[indx+1]
     res.render('topicView', {
         ...currentSubject,
-        topicID,
-        contentPath,
-        footerPath
+        /* current subject is an object with:
+            subject // eg 'mate7'
+            n // eg 7
+            nOrd //eg 'Séptimo'
+            topicTOC //eg {'Unidad 1': ['Lección 1.1', 'Lección 1.2', ...], ...}
+        */
+        topicID, // eg 'Título de la lección'
+        contentPath, //path to view of content
+        prevTopicID, // eg 'Título de la lección'
+        nextTopicID, // eg 'Título de la lección'
+        footerPath//path to view of footer
     })
 })
 
