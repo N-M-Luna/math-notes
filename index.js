@@ -111,9 +111,13 @@ app.get('/:subjectID', (req, res) => {
         footerPath //path to view of footer
     })
 })
+function getStringWithAccentedLetters(urlString) {
+    return urlString.replaceAll('%C3%BA', 'ú').replaceAll('%C3%B3', 'ó').replaceAll('%C3%AD', 'í').replaceAll('%C3%A9', 'é').replaceAll('%C3%A1', 'á')
+}
 app.get('/:subjectID/:topicID', (req, res) => {
     const subjectID = req.params.subjectID;
-    const topicID = req.params.topicID;
+    const topicURL = req.params.topicID;
+    const topicID = getStringWithAccentedLetters(topicURL);
     const currentSubject = subjectTOC.find(s => s.subject === subjectID)
     const contentPath = __dirname + `/public/${subjectID}/${topicID}.ejs`
     const topicList = Object.values(currentSubject.topicTOC).flat()
