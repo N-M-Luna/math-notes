@@ -28,14 +28,14 @@
   <h1>Notas de Matemáticas de <%= nOrd %> Grado</h1>
   <hr class='page-header'>
 
-  <p> <a href="http://localhost:3000/">Home</a> > Matemáticas <%= n %></p>
+  <p> <a href="/">Home</a> > Matemáticas <%= n %></p>
   <% units.forEach((unit, i) => { %>
     <h2> Unidad <%= i+1 %>: <%= unit %></h2>
-    <ul>
+    <div class='math-list'>
         <% topics[i].forEach((topicName, j) => { %>
-            <li><a href="http://localhost:3000/<%= subject %>/<%= topicDirs[i][j] %>"><%= topicName %></a></li>
+            <p><a href="/<%= subject %>/<%= topicDirs[i][j] %>"><%= topicName %></a></p>
         <% }) %>
-    </ul>
+        </div>
   <% }) %>
 
   <%- include(footerPath) %>

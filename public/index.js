@@ -25,5 +25,8 @@ function showAnswers(exampleID) {
             elemsToShow[i].classList.add('hidden')
         }
         clickedBtn[0].innerHTML = 'Ver la respuesta'
+
+        //Scroll to the top of the example (in case the answers are long enough to scroll)
+        examples[exampleID].scrollIntoView({ behavior: 'smooth' })
     }
 }

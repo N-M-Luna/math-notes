@@ -1,3 +1,7 @@
+<!--
+Each topic.ejs has access to: 'graphOpts', as well as 'greenHex', 'lightGreenHex', 'pinkishBeigeHex', and 'orangeHex'. These can be called between <%- ... %>.
+-->
+
 <h2> Sub tema </h2>
 <hr class='topic-header'>
 
@@ -36,6 +40,38 @@ $$ 5 \notin Y $$
     </ol>
 
     <button class='see-answer-btn' onclick='showAnswers(0)'>Ver la respuesta</button>
+</div>
+
+<!-- ejercicio de operaciones -->
+<div class='ejercicio'><!-- id 1 -->
+    <h3>Ejercicio. </h3>
+    <p>Definimos los siguientes conjuntos:</p>
+    $$ \begin{align*}
+        F &= \{ 1, 2, 3, 4, 5 \} \\
+        G &= \{ 4, 5, 6, 7, 8, 9 \} \\
+    \end{align*} $$
+    <p>Determina qué elemento está en cada conjunto.</p>
+
+
+    <span class='open-for-answers'>
+        $$ \begin{align*}
+        F \cup G &= \underline{\hspace{3cm}} \\
+        F - G &= \underline{\hspace{3cm}} \\
+        G - F &= \underline{\hspace{3cm}} \\
+        F \cap G &= \underline{\hspace{3cm}} \\
+        \end{align*} $$
+    </span>
+
+    <span class='full-of-answers hidden'>
+        $$ \begin{align*}
+        F \cup G &= \{ 1, 2, 3, 4, 5, 6, 7, 8, 9 \} \\
+        F - G &=  \{ 1, 2, 3 \} \\
+        G - F &= \{ 6, 7, 8, 9 \} \\
+        F \cap G &= \{ 4, 5 \} \\
+        \end{align*} $$
+    </span>
+
+    <button class='see-answer-btn' onclick='showAnswers(1)'>Ver la respuesta</button>
 </div>
 
 <script>

@@ -30,6 +30,12 @@ a, a:visited {
 a:hover {
     color: #DA8359;
 }
+.green-text {
+    color: #729170;
+}
+.orange-text {
+    color: #DA8359;
+}
 .btt-btn {
     background-color: white;
     border: 1px #729170 solid;
@@ -48,6 +54,9 @@ a:hover {
 h1 {
     margin-top: 50px;
 }
+.intro {
+    margin: 50px 0px;
+}
 h2 {
     color: #729170;
     margin-bottom: 0px;
@@ -59,8 +68,9 @@ hr.topic-header {
 .grade-list {
     margin-top: 50px;
 }
-li {
-    margin: 15px 0px;
+.math-list {
+    font-size: 20px;
+    padding-left: 20px;
 }
 .math-content {
     font-size: 18px;
@@ -154,7 +164,7 @@ li {
 footer {
     background-color: #729170;
     color: white;
-    margin-top: 200px;
+    margin-top: 250px;
     padding: 30px 10px;
 }
 footer a {

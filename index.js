@@ -89,7 +89,7 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
 });
 
-//Render each lesson with ejs templates
+//Render each subject and each lesson with ejs templates
 import ejs from 'ejs'
 import { subjectTOC } from './subjectTOC.js';
 app.set('view engine', 'ejs'); // Sets EJS as the templating engine

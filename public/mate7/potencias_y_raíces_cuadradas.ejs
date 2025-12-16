@@ -1,0 +1,137 @@
+<h2> Expresiones exponenciales </h2>
+<hr class='topic-header'>
+
+<!-- def de expresión exponencial, base, exponente, y potencia -->
+<div class='def'>
+    <p>Una <strong>expresión exponencial</strong> es una expresión matemática que tiene una <span class='green-text'>base</span> y un <span class='orange-text'>exponente</span>.</p>
+    $$ \textcolor{<%- greenHex %>}{8}^{\textcolor{<%- orangeHex %>}{3}} $$
+
+    <p>La <strong>base</strong> de una expresión exponencial es un número que se multiplica por sí mismo. El <strong>exponente</strong> es un número que nos dice cuántas veces se multiplica la base.</p>
+    $$ \textcolor{<%- greenHex %>}{8}^{\textcolor{<%- orangeHex %>}{3}} = \underbrace{\textcolor{<%- greenHex %>}{8} \times \textcolor{<%- greenHex %>}{8} \times \textcolor{<%- greenHex %>}{8}}_{\textcolor{<%- orangeHex %>}{3} \text{ veces}} $$
+
+    <p>Una <strong>potencia</strong> de un número es el producto de ese número multiplicado por sí mismo.</p>
+    $$ 8^{3} = 8 \times 8 \times 8 = \underbrace{512}_{\text{potencia de } 8} $$
+</div>
+
+<!-- eg de exponentes -->
+<div class='eg'>
+    <p><i>Ejemplo 1</i>. Calcula: </p>
+    $$ 7^2 $$
+    <p>En este caso, tenemos una expresión exponencial con base 7 y exponente 2. Eso significa que tenemos que multiplicar el 7 por sí mismo solamente dos veces. O sea, </p>
+    $$ 7^2 = 7 \times 7 = 49 $$
+
+    <p><i>Ejemplo 2</i>. Calcula: </p>
+    $$ 5^4 $$
+    <p>En este caso, la base es 5 y el exponente es 4. O sea, que multiplicamos el 5 por sí mismo cuatro veces. </p>
+    $$ 5^4 = 5 \times 5 \times 5 \times 5 = 25 \times 25 = 625 $$
+
+    <p><i>Ejemplo 3</i>. Calcula: </p>
+    $$ 1^7 $$
+    <p>Ahora tenemos al 1 como la base y al 7 como exponente. Entonces, multiplicamos el 1 por sí mismo siete veces. </p>
+    $$ 1^7 = 1 \times 1 \times 1 \times 1 \times 1 \times 1 \times 1 = 1 $$
+</div>
+
+<h2> Propiedades de las potencias </h2>
+<hr class='topic-header'>
+
+<!-- def de prop. de las potencias con exp 0 -->
+<div class='def'>
+    <p><strong>Potencia con exponente 0</strong>: Cualquier número con exponente 0 es 1.</p>
+    $$ a^0 = 1 $$
+
+    <p>Una excepción a esta propiedad es cuando la base también es 0. Esta expresión no está definida:</p>
+    $$ 0^0 = \text{indefinido} $$
+</div>
+
+<!-- def de prop. de las potencias con exp 1 -->
+<div class='def'>
+    <p><strong>Potencia con exponente 1</strong>: Cualquier base con exponente 1 es igual a la base.</p>
+    $$ a^1 = a $$
+</div>
+
+<!-- def de regla del producto -->
+<div class='def'>
+    <p><strong>Regla del producto</strong>: El producto de potencias con la misma base se calcula sumando los exponentes.</p>
+    $$ a^n \times a^m = a^{n+m} $$
+</div>
+
+<!-- eg de regla del producto -->
+<div class='eg'>
+    <p><i>Ejemplo 1</i>. Calcula: </p>
+    $$ 5^2 \times 5^3 $$
+    <p>Tenemos el producto de dos expresiones exponenciales. Las dos tienen base 5. Una tiene exponente 2 y la otra exponente 3. </p>
+    $$ \begin{align*} 5^2 \times 5^3 &= (5 \times 5) \times (5 \times 5 \times 5) \\  &= \underbrace{5 \times 5}_{2} \times \underbrace{5 \times 5 \times 5}_{3} \\ &= \underbrace{5 \times 5 \times 5 \times 5 \times 5}_{2+3} \\ &= 5^{2+3} \\ &= 5^{5} \end{align*} $$
+</div>
+
+<!-- def de regla del cociente -->
+<div class='def'>
+    <p><strong>Regla del cociente</strong>: La división de potencias con la misma base se calcula restando los exponentes.</p>
+    $$ \frac{a^n}{a^m} = a^{n-m} $$
+</div>
+
+<!-- eg de regla del cociente -->
+<div class='eg'>
+    <p><i>Ejemplo 1</i>. Calcula: </p>
+    $$ \frac{3^4}{3^2} $$
+    <p>Tenemos el cociente de dos expresiones exponenciales. Las dos tienen base 3. Una tiene exponente 4 y la otra exponente 2. </p>
+    $$ \begin{align*} \frac{3^4}{3^2} &= \frac{3 \times 3 \times 3 \times 3}{3 \times 3} \\ &= \frac{\cancel{3} \times \cancel{3} \times 3 \times 3}{\cancel{3} \times \cancel{3}} \\ &= 3^{4 - 2} \\ &= 3^{2} \end{align*} $$
+</div>
+
+<!-- def de regla de potencias de un producto -->
+<div class='def'>
+    <p><strong>Regla de potencias de un producto</strong>: La potencia de una potencia se calcula multiplicando los exponentes.</p>
+    $$ \left(a^m\right)^{n} = a^{m \times n} $$
+</div>
+
+<!-- eg de regla de potencias de un producto -->
+<div class='eg'>
+    <p><i>Ejemplo 1</i>. Calcula: </p>
+    $$ \left(6^8 \right)^3 $$
+    <p>Tenemos una expresión exponencial donde la base es una expresión exponencial. Hay una base 6 con exponente 8. Y toda esta expresión tiene el exponente 3. </p>
+    $$ \left(6^8 \right)^3 = 6^8 \times 6^8 \times 6^8 $$
+    Podemos aplicar aquí la regla del producto.
+    $$ \left(6^8 \right)^3 = 6^8 \times 6^8 \times 6^8 = 6^{8+8+8} $$
+    Pero sumar 8 a sí mismo tres veces es lo mismo que multiplicar 8 por 3.
+    $$ \left(6^8 \right)^3 = 6^8 \times 6^8 \times 6^8 = 6^{8+8+8} = 6^{3 \times 8} $$
+</div>
+
+<!-- ejercicio de potencias-->
+<div class='ejercicio'><!-- id 0 -->
+    <h3>Ejercicio. </h3>
+    <p>Calcula las siguientes expresiones.</p>
+    <span class='open-for-answers'>
+        $$ \def\arraystretch{2} \begin{align*}
+        \frac{2^8}{2^6} &= \underline{\hspace{3cm}} \\
+        340^0 &= \underline{\hspace{3cm}} \\
+        5^1 \cdot 5^2 &= \underline{\hspace{3cm}} \\
+        x^1 &= \underline{\hspace{3cm}} \\
+        \left( 2^3 \right)^2 &= \underline{\hspace{3cm}} \\
+        \end{align*} $$
+    </span>
+
+    <span class='full-of-answers hidden'>
+        $$ \def\arraystretch{2} \begin{align*}
+        \frac{2^8}{2^6} &= 2^{8 - 6} = 2^2 = 2 \times 2 = 4  \\
+        340^0 &= 1 \\
+        5^1 \cdot 5^2 &=  5^{1+2} = 5^3 = 5 \times 5 \times 5 = 125 \\
+        x^1 &= x \\
+        \left( 2^3 \right)^2 &= 2^{3 \times 2} = 2^6 = 2 \times 2 \times 2 \times 2 \times 2 \times 2 = 64 \\
+        \end{align*} $$
+    </span>
+
+    <button class='see-answer-btn' onclick='showAnswers(0)'>Ver la respuesta</button>
+</div>
+
+<h2> Raíces cuadradas </h2>
+<hr class='topic-header'>
+
+<!-- def de raíz cuadrada -->
+<div class='def'>
+    <p>Obtener la <strong>raíz cuadrada</strong> de un número es la operación opuesta a elevar al cuadrado.</p>
+    <p>Por ejemplo, sacar la raíz cuadrada de 16 es encontrar qué número tengo que elevar al cuadrado para que me dé 16.</p>
+    $$ \sqrt{16} = \boxed{?} \quad \text{ es equivalente a } \quad \boxed{?}^2 = 16 $$
+
+    Visto de otra manera, las raíces cuadradas nos dan la misma información que las expresiones exponenciales.
+    $$ \sqrt[2]{a} = b \quad \text{ es equivalente a } \quad b^2 = a $$
+
+</div>

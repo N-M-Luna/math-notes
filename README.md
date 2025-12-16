@@ -7,6 +7,8 @@ To view,
 - Run `npm i` and `npm start` on the terminal from the repo directory.
 - Visit http://localhost:3000 to view the site.
 
+-----------
+
 To add new topics:
 - The topic name (str of topicID with spaces instead of _) needs to be included in subjectTOC.js, under the appropriate lesson. (Take a look at the structure in subjectTOC.js)
 - The content needs to be in public/subjectID/topicID.ejs with latex inbetween `$$...$$` and with jsx graphs in `<div class='jxgbox'></div>`. Other styling is in the file 'public/mate7/boilerplate.ejs'
@@ -14,6 +16,9 @@ To add new topics:
 -----------
 
 TODO:
+- Fix internal links
 - Add keywords to each lesson. Add search by keyword.
 - Tag to standards.
 - Add practice problems to each topic.
+- Add English translation.
+- Add a glossary and index

@@ -41,16 +41,20 @@
 
   <h1>Notas de Matemáticas de <%= nOrd %> Grado</h1>
   <hr class='page-header'>
-  <p class="'breadcrumbs"> <a href="http://localhost:3000/">Home</a> > <a href="http://localhost:3000/<%= subject %>"> Matemáticas <%= n %></a> > <%= topicID.replace('_', ' ') %></p>
+  <p class="'breadcrumbs"> <a href="/">Home</a> > <a href="/<%= subject %>"> Matemáticas <%= n %></a> > <%= topicID.replaceAll('_', ' ') %></p>
 
   <div class="math-content">
     <%- include(contentPath, {
-      graphOpts: "style='border-color: #729170; border-width: 1.5px; margin: 15px auto;'"
+      graphOpts: "style='border-color: #729170; border-width: 1.5px; margin: 15px auto;'",
+      greenHex: '#729170',
+      lightGreenHex: '#A5B68D',
+      pinkishBeigeHex: '#ECDFCC',
+      orangeHex: '#DA8359'
     }) %>
   </div>
 
   <% if (prevTopicID.length > 0) { %>
-  <a href="http://localhost:3000/<%= subject %>/<%= prevTopicID.replaceAll(' ', '_') %>">
+  <a href="/<%= subject %>/<%= prevTopicID.replaceAll(' ', '_') %>">
     <button class='link-to-adjacent-topic left'>
       <i class="fa-regular fa-circle-left"></i> <br> <%= prevTopicID %>
     </button>
@@ -58,7 +62,7 @@
   <% } %>
 
   <% if (nextTopicID.length > 0) { %>
-  <a href="http://localhost:3000/<%= subject %>/<%= nextTopicID.replaceAll(' ', '_') %>">
+  <a href="/<%= subject %>/<%= nextTopicID.replaceAll(' ', '_') %>">
     <button class='link-to-adjacent-topic right'>
       <i class="fa-regular fa-circle-right"></i> <br> <%= nextTopicID %>
     </button>

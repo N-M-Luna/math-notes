@@ -9,32 +9,23 @@
 <!-- eg de patrón -->
 <div class='eg'>
     <p><i>Ejemplo 1</i>. Podemos definir un patrón donde repetimos dos estrellas verdes y dos estrellas anaranjadas.</p>
-    $$ \textcolor{#729170}{\bigstar}, \textcolor{#729170}{\bigstar}, \textcolor{#DA8359}{\bigstar},  \textcolor{#DA8359}{\bigstar}, \textcolor{#729170}{\bigstar}, \textcolor{#729170}{\bigstar}, \textcolor{#DA8359}{\bigstar},  \textcolor{#DA8359}{\bigstar}, \textcolor{#729170}{\bigstar}, \textcolor{#729170}{\bigstar}, \textcolor{#DA8359}{\bigstar},  \textcolor{#DA8359}{\bigstar}, ...  $$
+    $$ \textcolor{<%- greenHex %>}{\bigstar}, \textcolor{<%- greenHex %>}{\bigstar}, \textcolor{#DA8359}{\bigstar},  \textcolor{#DA8359}{\bigstar}, \textcolor{<%- greenHex %>}{\bigstar}, \textcolor{<%- greenHex %>}{\bigstar}, \textcolor{#DA8359}{\bigstar},  \textcolor{#DA8359}{\bigstar}, \textcolor{<%- greenHex %>}{\bigstar}, \textcolor{<%- greenHex %>}{\bigstar}, \textcolor{#DA8359}{\bigstar},  \textcolor{#DA8359}{\bigstar}, ...  $$
 
     <p><i>Ejemplo 2</i>. Podemos definir un patrón donde intercambiamos tréboles verdes y tréboles anaranjados. Y cada vez que cambiamos, añadimos un trébol más.</p>
-    $$ \textcolor{#729170}{\clubs},  \textcolor{#DA8359}{\clubs},  \textcolor{#DA8359}{\clubs}, \textcolor{#729170}{\clubs}, \textcolor{#729170}{\clubs}, \textcolor{#729170}{\clubs}, \textcolor{#DA8359}{\clubs},  \textcolor{#DA8359}{\clubs}, \textcolor{#DA8359}{\clubs},  \textcolor{#DA8359}{\clubs}, ...  $$
+    $$ \textcolor{<%- greenHex %>}{\clubs},  \textcolor{#DA8359}{\clubs},  \textcolor{#DA8359}{\clubs}, \textcolor{<%- greenHex %>}{\clubs}, \textcolor{<%- greenHex %>}{\clubs}, \textcolor{<%- greenHex %>}{\clubs}, \textcolor{#DA8359}{\clubs},  \textcolor{#DA8359}{\clubs}, \textcolor{#DA8359}{\clubs},  \textcolor{#DA8359}{\clubs}, ...  $$
 </div>
 
-<!-- def de patrón de repetición -->
+<!-- def de patrón de repetición/recurrencia -->
 <div class='def'>
-    <p>Un <strong>patrón de repetición</strong> es un patrón en el cual los elementos son presentados de forma periódica.</p>
+    <p>Podemos clasificar un patrón como uno de repetición o de recurrencia. Un <strong>patrón de repetición</strong> es un patrón en el cual los elementos son presentados de forma periódica. Un <strong>patrón de recurrencia</strong> es un patrón que se forma de acuerdo a una regla establecida.</p>
 </div>
 
-<!-- eg de patrón de repetición -->
+<!-- eg de patrón de repetición/recurrencia -->
 <div class='eg'>
     <p><i>Ejemplo 1</i>. Los conteos de música repiten los números del 1 al 8. Esto forma un patrón de repetición.</p>
     $$ \underbrace{1, 2, 3, 4, 5, 6, 7, 8}, \underbrace{1, 2, 3, 4, 5, 6, 7, 8}, ...  $$
-</div>
-
-<!-- def de patrón de recurrencia -->
-<div class='def'>
-    <p>Un <strong>patrón de recurrencia</strong> es un patrón que se forma de acuerdo a una regla establecida.</p>
-</div>
-
-<!-- eg de patrón de recurrencia -->
-<div class='eg'>
-    <p><i>Ejemplo 1</i>. Podemos definir un patrón que empieza en el número 1 y cada elemento se obtiene multiplicando el anterior por 2.</p>
-    $$ 1 \xrightarrow{\textcolor{#729170}{1 \times 2}} 2 \xrightarrow{\textcolor{#729170}{2 \times 2}} 4 \xrightarrow{\textcolor{#729170}{4 \times 2}} 8 \xrightarrow{\textcolor{#729170}{8 \times 2}} 16 ... $$
+    <p><i>Ejemplo 2</i>. Podemos definir un patrón que empieza en el número 1 y cada elemento se obtiene multiplicando el anterior por 2.</p>
+    $$ 1 \xrightarrow{\textcolor{<%- greenHex %>}{1 \times 2}} 2 \xrightarrow{\textcolor{<%- greenHex %>}{2 \times 2}} 4 \xrightarrow{\textcolor{<%- greenHex %>}{4 \times 2}} 8 \xrightarrow{\textcolor{<%- greenHex %>}{8 \times 2}} 16 ... $$
 </div>
 
 <!-- ejercicio de patrones -->
@@ -45,7 +36,7 @@
         <li>Define el patrón de sus ahorros. </li>
         <p class='full-of-answers hidden'> El patrón <span class='underlined'>empieza en el número 75</span> porque este es el balance original de los ahorros de Kiara. </p>
         <p class='full-of-answers hidden'>Cada elemento representa el balance después de cada semana. Como los ahorros aumentan por 5 en cada semana, cada elemento en el patrón se consigue <span class='underlined'>sumándole 5</span> al elemento anterior.
-        $$  75 \xrightarrow{\textcolor{#729170}{75 + 5}} 80 \xrightarrow{\textcolor{#729170}{80 + 5}} 85 \xrightarrow{\textcolor{#729170}{85 + 5}} 90 \xrightarrow{\textcolor{#729170}{90 + 5}} 95...  $$
+        $$  75 \xrightarrow{\textcolor{<%- greenHex %>}{75 + 5}} 80 \xrightarrow{\textcolor{<%- greenHex %>}{80 + 5}} 85 \xrightarrow{\textcolor{<%- greenHex %>}{85 + 5}} 90 \xrightarrow{\textcolor{<%- greenHex %>}{90 + 5}} 95...  $$
         </p>
         <p class='full-of-answers hidden'>Entonces el patrón de los ahorros de Kiara es el siguiente:
         $$  75, 80, 85, 90, 95, 100, 105, ...  $$
@@ -72,9 +63,9 @@
 
 <!-- eg de patrón numérico/geométrico -->
 <div class='eg'>
-    <p><i>Ejemplo 1</i>.  Un patrón numérico es:</p>
+    <p><i>Ejemplo 1</i>.  Un patrón numérico puede ser:</p>
     $$ 1, 2, 1, 3, 1, 4, 1, 5, ... $$
-    <p><i>Ejemplo 2</i>.  Un patrón geométrico es:</p>
+    <p><i>Ejemplo 2</i>.  Un patrón geométrico puede ser:</p>
     <div id="patronGeometrico" class="jxgbox short-graph" <%- graphOpts %> ></div>
 </div>
 
