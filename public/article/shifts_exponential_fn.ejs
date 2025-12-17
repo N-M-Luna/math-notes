@@ -1,0 +1,39 @@
+<h2> The OG Exponential Function </h2>
+<hr class='topic-header'>
+
+<!-- def of exponential function -->
+<div class='def'>
+    <p>The <strong>exponential function</strong> is....</p>
+    $$ f(x) = a \cdot b^x $$
+</div>
+
+<h2> Vertical Shifts of the Exponential Function </h2>
+<hr class='topic-header'>
+
+<!-- def of vertical shift -->
+<div class='def'>
+    <p>An exponential function that is <strong>vertically shifted by v units</strong> can be represented as....</p>
+    $$ g(x) = a \cdot b^x + v $$
+</div>
+
+<div id="vShift" class="jxgbox square-graph" <%- graphOpts %> ></div>
+
+<h2> Horizontal Shifts of the Exponential Function </h2>
+<hr class='topic-header'>
+
+<!-- def of horizontal shift -->
+<div class='def'>
+    <p>An exponential function that is <strong>horizontally shifted by h units</strong> can be represented as....</p>
+    $$ g(x) = a \cdot b^{x + h} $$
+</div>
+
+<script>
+    const vShiftBoard = JXG.JSXGraph.initBoard(
+        'vShift', {
+        boundingbox: [-10, 10, 10, -10],
+        axis: true,
+        showInfoBox: false,
+        showNavigation: false,
+    });
+    let p = board.create('point', [1, 3], {name: 'point'});
+</script>

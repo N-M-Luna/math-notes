@@ -1,21 +1,9 @@
-/*Color palette (green-orange)
-
+/*Color palette
 Green           #729170
 Light green     #A5B68D
 Pinkish beige   #ECDFCC
 Orange          #DA8359
 */
-
-/*Color palette (green-purple)
-
-Dark green      #636D55
-Green           #A5B68D
-Pale green      #C9D3BB
-Bright purple   #9D8CB5
-Pale purple     #BFB4CF
-Dark purple     #665B76
-*/
-
 body {
     margin: auto;
     width: 90%;
