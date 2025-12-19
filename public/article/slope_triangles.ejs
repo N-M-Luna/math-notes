@@ -1,0 +1,116 @@
+<!-- <h2> What are slope triangles? </h2>
+<hr class='topic-header'> -->
+
+<!-- def of slope triangles -->
+<div class='def'>
+    <p>We can define a <strong>slope triangle</strong> for any straight line. Slope triangles are right triangles whose <span class='orange-text'>hypotenuse</span> connects any two points on the line. The other legs of the triangle are <span class='green-text'>horizontal and vertical segments</span> that connect each of the two points to the third vertex of the triangle.</p>
+
+    <div id="slopeTriangleDef" class="jxgbox square-graph" <%- graphOpts %> ></div>
+
+    <p>The lengths of its legs are used to write the slope ratio of the line. </p>
+    $$ \text{slope ratio} = \text{length of vertical line} : \text{length of horizontal line} $$
+
+    <p>We can also write the ratio in fraction form:</p>
+    $$ \text{slope ratio} = \frac{\text{length of vertical line}}{\text{length of horizontal line}} $$
+</div>
+
+<!-- eg of using slope triangles to get slope ratio -->
+<div class='eg'>
+    <p><i>Example 1</i>. Let's find the <span class='underlined'>slope ratio</span> of the line below using slope triangles. </p>
+
+    <div id="exampleLine" class="jxgbox square-graph" <%- graphOpts %> ></div>
+
+    <p>The first thing to do is pick any two points on the line. </p>
+
+    <div id="examplePoints" class="jxgbox square-graph" <%- graphOpts %> ></div>
+
+    <p>Now we can draw the slope triangle. The hypotenuse is the segment between the two points we picked. The vertical leg should connect to one of the points we picked, and the horizontal leg should connect to the other one. </p>
+
+    <div id="exampleTriangle" class="jxgbox square-graph" <%- graphOpts %> ></div>
+
+    <p>We can see on the graph above that the vertical leg is 4 units long and the horizontal leg is 6 units long. Now we can find the slope ratio of the line by using the lengths of the legs. </p>
+    $$ \text{slope ratio} =  \frac{\text{length of vertical line}}{\text{length of horizontal line}} = \frac{4}{6}  $$
+
+    <p>So the slope ratio of the line is 4:6.</p>
+</div>
+<!--
+<h2> How do slope triangles of the same line compare to each other? </h2>
+<hr class='topic-header'> -->
+
+
+<script>
+    const lineOpts = {highlight: false, strokeColor: 'black'}
+    const pointOpts = myColor => ({fillColor: myColor, fixed: true, highlight: false, strokeColor: myColor, withLabel: false})
+    const segmentOpts = myColor => ({highlight: false, strokeWidth: 2, strokeColor: myColor})
+
+    // For defining slope triangles
+    const defBoard = JXG.JSXGraph.initBoard(
+        'slopeTriangleDef', {
+        boundingbox: [-6, 6, 6, -6],
+        axis: true,
+        showInfoBox: false,
+        showNavigation: false,
+    });
+    const p1 = defBoard.create('point', [0, -2], pointOpts('#DA8359'));
+    const p2 = defBoard.create('point', [3, 1], pointOpts('#DA8359'));
+    const p3 = defBoard.create('point', [3, -2], pointOpts('#729170'));
+    const ogLine = defBoard.create('line', [p1, p2], lineOpts);
+    const hypo = defBoard.create('segment', [p1, p2], segmentOpts('#DA8359'));
+    const vLeg = defBoard.create('segment', [p3, p2], segmentOpts('#729170'));
+    const hLeg = defBoard.create('segment', [p1, p3], segmentOpts('#729170'));
+
+    // For the example of how to use slope triangles to find the slope ratio
+    const p1Coords = [-4, -3]
+    const p2Coords = [2, 1]
+    const p3Coords = [-4, 1] //[2, -3]
+    const egBoard1 = JXG.JSXGraph.initBoard(
+        'exampleLine', {
+        boundingbox: [-6, 6, 6, -6],
+        axis: true,
+        showInfoBox: false,
+        showNavigation: false,
+    });
+    const egLine = egBoard1.create('line', [p1Coords, p2Coords], lineOpts);
+    const egBoard2 = JXG.JSXGraph.initBoard(
+        'examplePoints', {
+        boundingbox: [-6, 6, 6, -6],
+        axis: true,
+        showInfoBox: false,
+        showNavigation: false,
+    });
+    const p4 = egBoard2.create('point', p1Coords, pointOpts('#729170'));
+    const p5 = egBoard2.create('point', p2Coords, pointOpts('#729170'));
+    const egLine2 = egBoard2.create('line', [p4, p5], lineOpts);
+    const egBoard3 = JXG.JSXGraph.initBoard(
+        'exampleTriangle', {
+        boundingbox: [-6, 6, 6, -6],
+        axis: true,
+        showInfoBox: false,
+        showNavigation: false,
+    });
+    const p6 = egBoard3.create('point', p1Coords, pointOpts('#729170'));
+    const p7 = egBoard3.create('point', p2Coords, pointOpts('#729170'));
+    const egLine3 = egBoard3.create('line', [p6, p7], lineOpts);
+    const p8 = egBoard3.create('point', p3Coords, pointOpts('#729170'));
+    const slopeTriangle = egBoard3.create('polygon', [p6, p7, p8], {borders: segmentOpts('#729170'), ...pointOpts('#729170')})
+    const hypoEG = egBoard3.create('segment', [p6, p7], segmentOpts('#729170'));
+</script>
+
+<!--
+My interest in this co
+
+I believe that math education has left much to be desired by many people. The way it is often taught leaves many frustrated.
+I think Brilliant's solution is excellent because its built for real people who want to work on real skills with their real brains.
+(current class structure and how it failed me and my nephew)
+
+
+I agree with your ... of responding to human's natural instict of solving problems and puzzles. Once I switched my teaching style from "here is a list of math theorems" to "here is a bunch of problems, lets figure it out together" because people learn math by doing.
+I want to apply what ive learned to this company's mission (I saw youre doing geometry next!)
+
+A secondary reason is that I loved everything I read about the company culture. Three things that really stood out to me were
+I am a big proponent of open comunication.
+I love that I live near a hub, which means I can meet my team in person. (While I love the flexibility, I want to connect.)
+I love that you encourage people to continue learning.
+
+
+-->

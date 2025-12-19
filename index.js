@@ -8,17 +8,20 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 app.use(express.static(path.join(__dirname, 'public')));
 
+//Use favicon
+import favicon from 'serve-favicon';
+app.use(favicon(path.join(__dirname, 'public', 'favicon_io', 'favicon.ico')))
+
+
 //Home route
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html')
 });
 
-// Sets EJS as the templating engine
+//Render each article
 import ejs from 'ejs'
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
-
-//Render each article
 import {articleTOC} from './articleTOC.js'
 const footerPath = __dirname + `/views/footer.ejs`
 const pieDePaginaPath = __dirname + `/views/pieDePagina.ejs`

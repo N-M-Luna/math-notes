@@ -15,8 +15,13 @@ export const articleTOC = [
         lang: 'es'
     },
     {
-        title: 'Shifts of the Exponential Function',
-        articleID: 'shifts_exponential_fn',
+        title: 'Slope triangles',
+        articleID: 'slope_triangles',
+        lang: 'en'
+    },
+    {
+        title: 'The x-intercept of a linear function',
+        articleID: 'x_intercept',
         lang: 'en'
     }
 ]

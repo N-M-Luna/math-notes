@@ -5,6 +5,7 @@ Pinkish beige   #ECDFCC
 Orange          #DA8359
 */
 body {
+    line-height: 1.5;
     margin: auto;
     width: 90%;
     max-width: 800px;
