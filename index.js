@@ -10,8 +10,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //Use favicon
 import favicon from 'serve-favicon';
-app.use(favicon(path.join(__dirname, 'public', 'favicon_io', 'favicon.ico')))
-
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 
 //Home route
 app.get('/', (req, res) => {
