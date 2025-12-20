@@ -1,9 +1,13 @@
-<!-- <h2> What are slope triangles? </h2>
-<hr class='topic-header'> -->
+<h2> What are slope triangles? </h2>
+<hr class='topic-header'>
 
 <!-- def of slope triangles -->
 <div class='def'>
-    <p>We can define a <strong>slope triangle</strong> for any straight line. Slope triangles are right triangles whose <span class='orange-text'>hypotenuse</span> connects any two points on the line. The other legs of the triangle are <span class='green-text'>horizontal and vertical segments</span> that connect each of the two points to the third vertex of the triangle.</p>
+
+    <p>For any line, we can define its <strong>slope ratio</strong>, which tells us how fast the graph climbs or goes down as we look at the line from the left to the right.</p>
+    [graph of line with slope arrows]
+
+    <p>One way to find the slope ratio of a line is to draw a slope triangle. A <strong>slope triangle</strong> for any straight line. Slope triangles are right triangles whose <span class='orange-text'>hypotenuse</span> connects any two points on the line. The other legs of the triangle are <span class='green-text'>horizontal and vertical segments</span>.</p>
 
     <div id="slopeTriangleDef" class="jxgbox square-graph" <%- graphOpts %> ></div>
 
@@ -30,13 +34,28 @@
 
     <p>We can see on the graph above that the vertical leg is 4 units long and the horizontal leg is 6 units long. Now we can find the slope ratio of the line by using the lengths of the legs. </p>
     $$ \text{slope ratio} =  \frac{\text{length of vertical line}}{\text{length of horizontal line}} = \frac{4}{6}  $$
+    <p>We can simplify by dividing both numbers by half:</p>
+    $$ \text{slope ratio} = \frac{4}{6} = \frac{4}{6}  = \frac{2}{3}  $$
 
     <p>So the slope ratio of the line is 4:6.</p>
 </div>
-<!--
-<h2> How do slope triangles of the same line compare to each other? </h2>
-<hr class='topic-header'> -->
 
+<h2> How do slope triangles of the same line compare to each other? </h2>
+<hr class='topic-header'>
+
+<div class='intro'>
+    <p>If we pick different slopes triangles in the same line, do we get different slope ratios for the same line? Let's try it and find out.</p>
+</div>
+
+<!-- eg de top/bottom triangle -->
+<div class='eg'>
+    <p><i>Example 2</i>.
+</div>
+
+<!-- eg de small/big triangle -->
+<div class='eg'>
+    <p><i>Example 3</i>.
+</div>
 
 <script>
     const lineOpts = {highlight: false, strokeColor: 'black'}
@@ -95,22 +114,3 @@
     const slopeTriangle = egBoard3.create('polygon', [p6, p7, p8], {borders: segmentOpts('#729170'), ...pointOpts('#729170')})
     const hypoEG = egBoard3.create('segment', [p6, p7], segmentOpts('#729170'));
 </script>
-
-<!--
-My interest in this co
-
-I believe that math education has left much to be desired by many people. The way it is often taught leaves many frustrated.
-I think Brilliant's solution is excellent because its built for real people who want to work on real skills with their real brains.
-(current class structure and how it failed me and my nephew)
-
-
-I agree with your ... of responding to human's natural instict of solving problems and puzzles. Once I switched my teaching style from "here is a list of math theorems" to "here is a bunch of problems, lets figure it out together" because people learn math by doing.
-I want to apply what ive learned to this company's mission (I saw youre doing geometry next!)
-
-A secondary reason is that I loved everything I read about the company culture. Three things that really stood out to me were
-I am a big proponent of open comunication.
-I love that I live near a hub, which means I can meet my team in person. (While I love the flexibility, I want to connect.)
-I love that you encourage people to continue learning.
-
-
--->
