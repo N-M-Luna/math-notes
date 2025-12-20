@@ -3,9 +3,9 @@
 
 <!-- def of slope triangles -->
 <div class='def'>
+    <p>For any line, we can define its <strong>slope ratio</strong>, which tells us how fast the graph climbs or goes down as we look at the line from the left to the right. Use the slider to verify that the higher the slope ratio, the steeper the line will be. Conversely, a flatter line will have a smaller slope ratio.</p>
 
-    <p>For any line, we can define its <strong>slope ratio</strong>, which tells us how fast the graph climbs or goes down as we look at the line from the left to the right.</p>
-    [graph of line with slope arrows]
+    <div id="slopeRatioDef" class="jxgbox square-graph" <%- graphOpts %> ></div>
 
     <p>One way to find the slope ratio of a line is to draw a slope triangle. A <strong>slope triangle</strong> for any straight line. Slope triangles are right triangles whose <span class='orange-text'>hypotenuse</span> connects any two points on the line. The other legs of the triangle are <span class='green-text'>horizontal and vertical segments</span>.</p>
 
@@ -20,24 +20,24 @@
 
 <!-- eg of using slope triangles to get slope ratio -->
 <div class='eg'>
-    <p><i>Example 1</i>. Let's find the <span class='underlined'>slope ratio</span> of the line below using slope triangles. </p>
+    <p><i>Example 1</i>: Let's <span class='underlined'>find the slope ratio of the line</span> below using slope triangles. </p>
 
     <div id="exampleLine" class="jxgbox square-graph" <%- graphOpts %> ></div>
 
-    <p>The first thing to do is pick any two points on the line. </p>
+    <p>The first thing to do is pick any two points on the line. In the graph below, we plotted two points that we will be two of the triangle's vertices. To plot the third vertex of the triangle, we need a vertical segment that passes through one of these points and a horizontal segment that passes through the other point. We have two options: we can pick <span class='green-text'>the triangle on top of the line</span> or <span class='orange-text'>the triangle below the line</span>.</p>
 
     <div id="examplePoints" class="jxgbox square-graph" <%- graphOpts %> ></div>
 
-    <p>Now we can draw the slope triangle. The hypotenuse is the segment between the two points we picked. The vertical leg should connect to one of the points we picked, and the horizontal leg should connect to the other one. </p>
+    <p>Say we pick the triangle on top of the line. Now, to get the slope ratio, we need the lengths of the horizontal and vertical legs.</p>
 
     <div id="exampleTriangle" class="jxgbox square-graph" <%- graphOpts %> ></div>
 
     <p>We can see on the graph above that the vertical leg is 4 units long and the horizontal leg is 6 units long. Now we can find the slope ratio of the line by using the lengths of the legs. </p>
     $$ \text{slope ratio} =  \frac{\text{length of vertical line}}{\text{length of horizontal line}} = \frac{4}{6}  $$
     <p>We can simplify by dividing both numbers by half:</p>
-    $$ \text{slope ratio} = \frac{4}{6} = \frac{4}{6}  = \frac{2}{3}  $$
+    $$ \text{slope ratio} = \frac{4}{6} = \frac{4 \div 2}{6 \div 2}  = \frac{2}{3}  $$
 
-    <p>So the slope ratio of the line is 4:6.</p>
+    <p>So the slope ratio of the line is 4:6, which can be written in fraction form as &frac23;.</p>
 </div>
 
 <h2> How do slope triangles of the same line compare to each other? </h2>
@@ -49,68 +49,214 @@
 
 <!-- eg de top/bottom triangle -->
 <div class='eg'>
-    <p><i>Example 2</i>.
+    <p><i>Example 2</i>: What happens if we pick <span class='underlined'>slope triangle below versus the one above the line</span>?</p>
+
+    <p>Say we have picked the two points shown on the line below. That gives us a <span class='green-text'>slope triangle above the line</span> and a <span class='orange-text'>slope triangle below</span>.</p>
+
+    <div id="topBottomTriangles" class="jxgbox square-graph" <%- graphOpts %> ></div>
+
+    <p>The slope ratio from the <span class='green-text'>slope triangle above the line</span> is:</p>
+    $$ \text{slope ratio} =  \frac{\text{vertical line}}{\text{horizontal line}} = \frac{4}{5} $$
+
+    <p>The slope ratio from the <span class='orange-text'>slope triangle below the line</span> is:</p>
+    $$ \text{slope ratio} =  \frac{\text{vertical line}}{\text{horizontal line}} = \frac{4}{5} $$
+
+    <p>Why do we get the same ratio? Notice that the slope triangles form a rectangle. So both of the vertical segments will have the same length; and both of the horizontal segments will also be of equal length.</p>
+</div>
+
+<div class='intro'>
+    <p>In the example above, we drew two different triangles using the same two points on the line and we got the same slope ratio. But what happens if we pick triangles from different points? What happens if the two slope triangles are of different size? Would we get the same slope ratio? Let's try it and find out. </p>
 </div>
 
 <!-- eg de small/big triangle -->
 <div class='eg'>
-    <p><i>Example 3</i>.
+    <p><i>Example 3</i>: What happens if we pick <span class='underlined'>a smaller slope triangle versus a bigger one</span>?</p>
+
+    <p>We have a new line below. Let's draw a small slope triangle by picking two points on the line that are close together.</p>
+
+    <div id="smTriangle" class="jxgbox square-graph" <%- graphOpts %> ></div>
+
+    <p>The triangle has a vertical leg that is 1 unit long and a horizontal leg that is 2 units long. The slope ratio is:</p>
+    $$ \text{slope ratio} =  \frac{\text{vertical line}}{\text{horizontal line}} = \frac{1}{2} $$
+
+    <p>So, using the small triangle, we got that the slope ratio of the line is &frac12;. Let's pick points that are farther away from each other to make a bigger slope triangle.</p>
+
+    <div id="lgTriangle" class="jxgbox square-graph" <%- graphOpts %> ></div>
+
+    <p>The bigger triangle has a vertical leg that is 4 units long and a horizontal leg that is 8 units long. The slope ratio is:</p>
+    $$ \text{slope ratio} =  \frac{\text{vertical line}}{\text{horizontal line}} = \frac{4}{8} $$
+
+    <p>We can simplify the ratio by dividing both numbers by half.</p>
+    $$ \text{slope ratio} = \frac{4}{8} = \frac{4 \div 2}{8 \div 2} = \frac{1}{2} $$
+</div>
+
+<div class='outro'>
+    <p>In the examples, we noticed that any given line will have one (and just one) slope ratio that describes it. Different slope triangles might have different dimensions, but the slope ratios we calculate will be the same or equivalent.</p>
 </div>
 
 <script>
-    const lineOpts = {highlight: false, strokeColor: 'black'}
-    const pointOpts = myColor => ({fillColor: myColor, fixed: true, highlight: false, strokeColor: myColor, withLabel: false})
-    const segmentOpts = myColor => ({highlight: false, strokeWidth: 2, strokeColor: myColor})
+    const greenHex = '#729170';
+    const orangeHex = '#DA8359';
+    const boardOpts = {
+        boundingbox: [-6, 6, 6, -6],
+        axis: true,
+        showInfoBox: false,
+        showNavigation: false,
+    };
+    const lineOpts = (strokeColor = 'black') => ({highlight: false, strokeColor});
+    const pointOpts = myColor => ({fillColor: myColor, fixed: true, highlight: false, strokeColor: myColor, withLabel: false});
+    const segmentOpts = (myColor, strokeWidth = 2) => ({fixed: true, highlight: false, strokeWidth, strokeColor: myColor});
+    const dahsedSegmentOpts = myColor => ({dash: 2, ...segmentOpts(myColor)})
+    const invisiblePointOpts = {fillOpacity: 0, strokeWidth: 0};
 
-    // For defining slope triangles
-    const defBoard = JXG.JSXGraph.initBoard(
-        'slopeTriangleDef', {
-        boundingbox: [-6, 6, 6, -6],
-        axis: true,
-        showInfoBox: false,
-        showNavigation: false,
+    //For defining slope ratio
+    const ratioBoard = JXG.JSXGraph.initBoard('slopeRatioDef', boardOpts);
+    var slidingY = ratioBoard.create('slider', [[-5, -4], [-2, -4], [-3, -3, 3]], {
+        fillColor: orangeHex,
+        snapWidth: 1,
+        strokeColor: 'black',
+        withLabel: false
     });
-    const p1 = defBoard.create('point', [0, -2], pointOpts('#DA8359'));
-    const p2 = defBoard.create('point', [3, 1], pointOpts('#DA8359'));
-    const p3 = defBoard.create('point', [3, -2], pointOpts('#729170'));
-    const ogLine = defBoard.create('line', [p1, p2], lineOpts);
-    const hypo = defBoard.create('segment', [p1, p2], segmentOpts('#DA8359'));
-    const vLeg = defBoard.create('segment', [p3, p2], segmentOpts('#729170'));
-    const hLeg = defBoard.create('segment', [p1, p3], segmentOpts('#729170'));
+    const randoLine = ratioBoard.create('functiongraph', [function(x){
+        return slidingY.Value() / 3 * (x + 2)
+    }], segmentOpts(greenHex, 3));
+    const ratioArrow = ratioBoard.create('segment', [[-2, 2], [1, function(){ return slidingY.Value() + 2}]], segmentOpts('black', 3));
+    ratioArrow.setAttribute({lastArrow: {size: 10, type: 2}});
+    const ratioLabel = ratioBoard.create('point', [-5, -5], {
+        fillOpacity: 0,
+        label: {fontSize: 18, offset: [0, 55]},
+        name: function() {
+            const num = Math.abs(slidingY.Value())
+            const denom = 3
+            if (Math.ceil(num/denom) === num/denom) {
+                return `Slope ratio = ${num / denom}`
+            } else {
+                return `Slope ratio = &frac${num}${denom};`
+            }
+        },
+        strokeWidth: 0,
+        withLabel: true
+    });
 
-    // For the example of how to use slope triangles to find the slope ratio
-    const p1Coords = [-4, -3]
-    const p2Coords = [2, 1]
-    const p3Coords = [-4, 1] //[2, -3]
-    const egBoard1 = JXG.JSXGraph.initBoard(
-        'exampleLine', {
-        boundingbox: [-6, 6, 6, -6],
-        axis: true,
-        showInfoBox: false,
-        showNavigation: false,
+    //For defining slope triangles
+    const defBoard = JXG.JSXGraph.initBoard('slopeTriangleDef', boardOpts);
+    const p1 = defBoard.create('point', [0, -2], pointOpts(orangeHex));
+    const p2 = defBoard.create('point', [3, 1], pointOpts(orangeHex));
+    const p3 = defBoard.create('point', [3, -2], pointOpts(greenHex));
+    const ogLine = defBoard.create('line', [p1, p2], lineOpts());
+    const hypo = defBoard.create('segment', [p1, p2], segmentOpts(orangeHex));
+    const vLeg = defBoard.create('segment', [p3, p2], segmentOpts(greenHex));
+    const hLeg = defBoard.create('segment', [p1, p3], segmentOpts(greenHex));
+
+    //For the example of how to use slope triangles to find the slope ratio
+    const p1Coords = [-4, -3] //On the line (bottom)
+    const p2Coords = [2, 1] //On the line (top)
+    const p3Coords = [-4, 1] //Triangle vertex (top)
+    const p4Coords = [2, -3] //Triangle vertex (bottom)
+    //Step 1
+    const egBoard1 = JXG.JSXGraph.initBoard('exampleLine', boardOpts);
+    const egLine = egBoard1.create('line', [p1Coords, p2Coords], lineOpts());
+    //Step 2
+    const egBoard2 = JXG.JSXGraph.initBoard('examplePoints', boardOpts);
+    const p4 = egBoard2.create('point', p1Coords, pointOpts(greenHex));
+    const p5 = egBoard2.create('point', p2Coords, pointOpts(greenHex));
+    const egLine2 = egBoard2.create('line', [p4, p5], lineOpts());
+    const drawingLines = [p1Coords, p2Coords].map(coord => {
+        egBoard2.create('line', [coord, [coord[0], coord[1] + 1]], {dash: 2, ...lineOpts(greenHex)})
+        egBoard2.create('line', [[coord[0] + 1, coord[1]], coord], {dash: 2, ...lineOpts(greenHex)})
+    })
+    const triangleOpts = [p3Coords, p4Coords].map((coord, i) => {
+        const myColor = [greenHex, orangeHex][i]
+        egBoard2.create('polygon', [p1Coords, p2Coords, coord], {
+            fillColor: myColor,
+            fillOpacity: 0.25,
+            vertices: {visible: false},
+            withLines: false
+        })
+        egBoard2.create('point', coord, pointOpts(myColor))
+    })
+    //Step 3
+    const egBoard3 = JXG.JSXGraph.initBoard('exampleTriangle', boardOpts);
+    const p6 = egBoard3.create('point', p1Coords, pointOpts(greenHex));
+    const p7 = egBoard3.create('point', p2Coords, pointOpts(greenHex));
+    const egLine3 = egBoard3.create('line', [p6, p7], lineOpts());
+    const p8 = egBoard3.create('point', p3Coords, pointOpts(greenHex));
+    const slopeTriangle = egBoard3.create('polygon', [p6, p7, p8], {
+        withLines: false,
+        ...pointOpts(greenHex)
+    })
+    const hypoEG = egBoard3.create('segment', [p6, p7], segmentOpts(greenHex));
+    const hLineEG = egBoard3.create('segment', [p8, p7], {
+        label: {fontSize: 20, color: greenHex, offset: [-5, 70]},
+        name: '6',
+        ...segmentOpts(greenHex),
+        withLabel: true
     });
-    const egLine = egBoard1.create('line', [p1Coords, p2Coords], lineOpts);
-    const egBoard2 = JXG.JSXGraph.initBoard(
-        'examplePoints', {
-        boundingbox: [-6, 6, 6, -6],
-        axis: true,
-        showInfoBox: false,
-        showNavigation: false,
+    const vLineEG = egBoard3.create('segment', [p6, p8], {
+        label: {fontSize: 20, color: greenHex, offset: [-20, 50]},
+        name: '4',
+        ...segmentOpts(greenHex),
+        withLabel: true
     });
-    const p4 = egBoard2.create('point', p1Coords, pointOpts('#729170'));
-    const p5 = egBoard2.create('point', p2Coords, pointOpts('#729170'));
-    const egLine2 = egBoard2.create('line', [p4, p5], lineOpts);
-    const egBoard3 = JXG.JSXGraph.initBoard(
-        'exampleTriangle', {
-        boundingbox: [-6, 6, 6, -6],
-        axis: true,
-        showInfoBox: false,
-        showNavigation: false,
+
+    //For the example of bottom vs top slope triangle
+    const midPnt = ([x1, y1], [x2, y2]) => [(x1 + x2) / 2, (y1 + y2) / 2]
+    const p5Coords = [-3, 2] //on line (top)
+    const p6Coords = [2, -2] //on line (bottom)
+    const p7Coords = [-3, -2] //triangle (bottom)
+    const p8Coords = [2, 2] //triangle (top)
+    const topBottomBoard = JXG.JSXGraph.initBoard('topBottomTriangles', boardOpts);
+    const topLinePnt = topBottomBoard.create('point', p5Coords, pointOpts('black'));
+    const bottomLinePnt = topBottomBoard.create('point', p6Coords, pointOpts('black'));
+    const fullLine = topBottomBoard.create('line', [topLinePnt, bottomLinePnt], lineOpts());
+    const topTrianglePnt = topBottomBoard.create('point', p7Coords, pointOpts(orangeHex));
+    const bottomTrianglePnt = topBottomBoard.create('point', p8Coords, pointOpts(greenHex));
+    const triangles = [p5Coords, p6Coords].map(coords => {
+        topBottomBoard.create('segment', [coords, p7Coords], dahsedSegmentOpts(orangeHex))
+        topBottomBoard.create('segment', [coords, p8Coords], dahsedSegmentOpts(greenHex))
     });
-    const p6 = egBoard3.create('point', p1Coords, pointOpts('#729170'));
-    const p7 = egBoard3.create('point', p2Coords, pointOpts('#729170'));
-    const egLine3 = egBoard3.create('line', [p6, p7], lineOpts);
-    const p8 = egBoard3.create('point', p3Coords, pointOpts('#729170'));
-    const slopeTriangle = egBoard3.create('polygon', [p6, p7, p8], {borders: segmentOpts('#729170'), ...pointOpts('#729170')})
-    const hypoEG = egBoard3.create('segment', [p6, p7], segmentOpts('#729170'));
+    const topLen = topBottomBoard.create('point', midPnt(p5Coords, p8Coords), {
+        ...invisiblePointOpts,
+        label: {color: greenHex, fontSize: 20, offset: [-3, 65]},
+        name: '5',
+        withLabel: true
+    });
+    const leftLen = topBottomBoard.create('point', midPnt(p5Coords, p7Coords), {
+        ...invisiblePointOpts,
+        label: {color: orangeHex, fontSize: 20, offset: [-20, 65]},
+        name: '4',
+        withLabel: true
+    });
+    const bottomLen = topBottomBoard.create('point', midPnt(p6Coords, p7Coords), {
+        ...invisiblePointOpts,
+        label: {color: orangeHex, fontSize: 20, offset: [-3, 35]},
+        name: '5',
+        withLabel: true
+    });
+    const rightLen = topBottomBoard.create('point', midPnt(p6Coords, p8Coords), {
+        ...invisiblePointOpts,
+        label: {color: greenHex, fontSize: 20, offset: [10, 65]},
+        name: '4',
+        withLabel: true
+    });
+
+    //For the example of small vs big slope triangles
+    const lineCoords = [[-4, -4], [4, 0]];
+    const smCoords = [-2, -3];
+    const smVertex = [-2, -4];
+    //Small triangle
+    const smallBoard = JXG.JSXGraph.initBoard('smTriangle', boardOpts);
+    const baseLine = smallBoard.create('line', lineCoords, lineOpts());
+    const smPoints = [lineCoords[0], smCoords].map(pnt => smallBoard.create('point', pnt, pointOpts(greenHex)));
+    const smVertexPnt = smallBoard.create('point', smVertex, pointOpts(greenHex));
+    const smTriangle = smPoints.map(pnt => smallBoard.create('segment', [pnt, smVertex], dahsedSegmentOpts(greenHex)));
+    //Big triangle
+    const largeBoard = JXG.JSXGraph.initBoard('lgTriangle', boardOpts);
+    const sameBaseLine = largeBoard.create('line', lineCoords, lineOpts());
+    const smallerPoints = [lineCoords[0], smCoords].map(pnt => largeBoard.create('point', pnt, pointOpts(greenHex)));
+    const smallerVertexPnt = largeBoard.create('point', smVertex, pointOpts(greenHex));
+    const smallerTriangle = smallerPoints.map(pnt => largeBoard.create('segment', [pnt, smVertex], dahsedSegmentOpts(greenHex)));
+    const lgVertex = [4, -4]
+    const biggerPnts = lineCoords.concat([lgVertex]).map(coord => largeBoard.create('point', coord, pointOpts(orangeHex)));
+    const lgTriange = lineCoords.map(pnt => {largeBoard.create('segment', [pnt, lgVertex], dahsedSegmentOpts(orangeHex))})
 </script>
