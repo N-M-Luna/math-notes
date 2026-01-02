@@ -1,14 +1,209 @@
-What is a linear equation?
+<h2> What is a linear equation? </h2>
+<hr class='topic-header'>
 
-An equation that describes a line
-[graph of line]
+<!-- def of linear eqn -->
+<div class='def'>
+    <p>A <strong>linear equation</strong> is any equation that describes a line.</p>
 
-Example {in context}
+    <p>One way to describe a line is by identifying <span class='green-text'>where it crosses the y-axis</span> and <span class='orange-text'>how steep it is</span>.</p>
 
-What is the x-intercept?
+    <div id="linearEqnDef" class="jxgbox square-graph" <%- graphOpts %> ></div>
 
-How can we find the {x-intercept in context}? We need the value of y that corresponds to x.
+    <p>The <span class='green-text'>y-intercept</span> is the number on the y-axis where the line passes through. The <span class='orange-text'>slope</span> compares how fast the line travels to the right to how fast it travels up or down. </p>
+</div>
 
-Example
+<!-- eg of linear equation (in context) -->
+<div class='eg'>
+    <p><i>Example 1</i>. <strong> Omar is building a tree house. For every plank that he puts on, Omar is using four nails. Can we use a linear equation to represent <span class='underlined'>the relation between number of planks and number of nails</span>? </strong> </p>
 
-Exercise
+    <p>We can create a graph or an equation to represent the linear equation. For this, we need to find the slope and the y-intercept.</p>
+
+    <p> <strong>Part 1: Set up.</strong> </p>
+    <p> We can describe the situation using a linear equation on a graph where the y-axis represents the number of nails and the x-axis represents the number of planks.</p>
+    <div id="egLabels" class="jxgbox square-graph" <%- graphOpts %> ></div>
+    <p>The equation will look like this, where y represents the number of nails and the x represents the number of planks.</p>
+    $$ y = \textcolor{#DA8359}{\left[ \text{slope} \right]}x + \textcolor{#729170}{\left[ y\text{-intercept} \right]} $$
+
+    <p><strong>Part 2: Find the y-intercept.</strong> </p>
+    <p> The y-intercept is the value of y that corresponds to when x is 0. </p>
+    <p>If x is 0, then there are no planks. How many nails would Omar need to put up 0 planks? The answer is none! Omar needs 0 nails to put up 0 planks. </p>
+    <p> So, in this case, the y-value that corresponds to when x is 0 is also 0. That means that the linear equation crosses the y-axis at 0. We can plot the y-intercept in the graph. </p>
+    <div id="egYint" class="jxgbox square-graph" <%- graphOpts %> ></div>
+    <p>And we can substitute the y-intercept into the equation:</p>
+    $$ y = \textcolor{#DA8359}{\left[ \text{slope} \right]}x + \textcolor{#729170}{\left[ y\text{-intercept} \right]} $$
+    <p>Since the y-intercept is 0, the equation becomes:</p>
+    $$ y = \textcolor{#DA8359}{\left[ \text{slope} \right]}x + \textcolor{#729170}{0} $$
+    <p>The equation can be simplified as:</p>
+    $$ y = \textcolor{#DA8359}{\left[ \text{slope} \right]}x $$
+
+    <p><strong>Part 3: Find the slope.</strong> </p>
+    <p> As we move to the right of the graph, we are increasing the number of planks. We are told that for every plank, Omar is using 4 nails. Therefore, every time we <span class='underlined'>move 1 unit to the right</span>, the line <span class='underlined'>climbs up 4 units</span>.</p>
+    <div id="egSlope" class="jxgbox square-graph" <%- graphOpts %> ></div>
+    <p>The slope is defined as how much we moved vertically over how much we moved horizontally.</p>
+    $$\text{slope} = \frac{\text{vertical travel}}{\text{horizontal travel}} = \frac{4}{1} = 4 $$
+    <p>So the slope of the linear equation is 4. Finally, we can substitute the slope into the equation:</p>
+    $$ y = \textcolor{#DA8359}{\left[ \text{slope} \right]}x $$
+    <p>After substituting, we have:</p>
+    $$ y = \textcolor{#DA8359}{4}x $$
+
+    <p><strong>Part 4: The linear equation.</strong></p>
+    <p>In conclusion, we have the following linear graph to describe the relation of the number of planks that Omar is using for this tree house and the number of nails he uses.</p>
+    <div id="egLine" class="jxgbox square-graph" <%- graphOpts %> ></div>
+    <p>The same relation can be described by the following linear equation:</p>
+    $$ \textcolor{#729170}{y = 4x} $$
+</div>
+
+<!-- TODO exercise to find a linear equation given context -->
+
+<h2>How do we find the x-intercept of a linear equation?</h2>
+<hr class='topic-header'>
+
+<!--TODO Find x-int given a graph-->
+<!--TODO Find x-int given an equation-->
+
+<script>
+    const greenHex = '#729170';
+    const orangeHex = '#DA8359';
+
+    //Definition of linear equation
+    const linearDefBoard = JXG.JSXGraph.initBoard( 'linearEqnDef', {
+        boundingbox: [-5, 5, 5, -5],
+        axis: true,
+        showInfoBox: false,
+        showNavigation: false,
+    });
+    const xIntCoords = [0, 1];
+    const dX = 3;
+    const dY = 2; //TODO make this interactive
+    const pntCoord = [xIntCoords[0] + dX, xIntCoords[1] + dY];
+    const lineGraph = linearDefBoard.create('line', [xIntCoords, pntCoord], {
+        fixed: true,
+        highlight: false,
+        strokeColor: 'black'
+    });
+    const xInt = linearDefBoard.create('point', xIntCoords, {
+        fillColor: greenHex,
+        fixed: true,
+        highlight: false,
+        label: {color: greenHex, fontSize: 20, offset: [3, 75]},
+        name: `${xIntCoords[1]}`,
+        strokeColor: greenHex
+    });
+    const slopePntCoord = [xIntCoords[0] + dX, xIntCoords[1] + dY];
+    const deltaX = linearDefBoard.create('segment', [xIntCoords, [slopePntCoord[0], xIntCoords[1]]], {
+        fixed: true,
+        highlight: false,
+        label: {color: orangeHex, fontSize: 20, offset: [0, 30]},
+        lastArrow: {anchorX: 'middle', type: 2, size: 8},
+        name: `${dX}`,
+        strokeColor: orangeHex,
+        withLabel: true
+    });
+    const deltaY = linearDefBoard.create('segment', [[slopePntCoord[0], xIntCoords[1]], slopePntCoord], {
+        fixed: true,
+        highlight: false,
+        label: {color: orangeHex, fontSize: 20, offset: [10, 40]},
+        lastArrow: {type: 2, size: 8},
+        name: `${dY}`,
+        strokeColor: orangeHex,
+        withLabel: true
+    });
+    const lineEqn = linearDefBoard.create('point', [1, -3.75], {
+        fillOpacity: 0,
+        fixed: true,
+        highlight: false,
+        label: {fontSize: 25},
+        name: `y = <span class='orange-text'> &frac${dY}${dX}; </span> x + <span class='green-text'> ${xIntCoords[1]}</span>`,
+        strokeWidth: 0,
+        withLabel: true
+    });
+
+    //For example 1
+    const boundingbox = [-1.5, 8, 8, -1.5];
+    const makeLabels = boardName => {
+        const labelOpts = {fixed: true, fontSize: 14, highlight: false}
+        boardName.create('text', [2, 0.2, 'number of planks'], labelOpts)
+        boardName.create('text', [-0.75, 3, 'number of nails'], {...labelOpts, rotate: 90})
+    }
+    const makeYint = boardName => {
+        boardName.create('point', [0, 0], {
+            fillColor: greenHex,
+            fixed: true,
+            highlight: false,
+            strokeColor: greenHex,
+            strokeWidth: 1.5,
+            withLabel: false
+        })
+    }
+    //1.0 Axes' labels
+    const egLabelsBoard = JXG.JSXGraph.initBoard( 'egLabels', {
+        boundingbox,
+        axis: true,
+        showInfoBox: false,
+        showNavigation: false,
+    });
+    makeLabels(egLabelsBoard);
+    //1.1 Y intercept
+    const egYintBoard = JXG.JSXGraph.initBoard( 'egYint', {
+        boundingbox,
+        axis: true,
+        showInfoBox: false,
+        showNavigation: false,
+    });
+    makeLabels(egYintBoard);
+    makeYint(egYintBoard);
+    //1.2 Slope
+    const egSlopeBoard = JXG.JSXGraph.initBoard( 'egSlope', {
+        boundingbox,
+        axis: true,
+        showInfoBox: false,
+        showNavigation: false,
+    });
+    makeLabels(egSlopeBoard);
+    makeYint(egSlopeBoard);
+    egSlopeBoard.create('segment', [[0, 0], [1, 0]], {
+        fixed: true,
+        highlight: false,
+        label: {fonstSize: 16, offset: [-20, 30]},
+        lastArrow: {type: 4},
+        name: '<span class="orange-text">+ 1 plank</span>',
+        strokeColor: orangeHex,
+        withLabel: true
+    });
+    egSlopeBoard.create('segment', [[1, 0], [1, 3.9]], {
+        fixed: true,
+        highlight: false,
+        label: {fonstSize: 16, offset: [10, 20], rotate: 90},
+        lastArrow: {type: 4},
+        name: '<span class="orange-text">+ 4 nails</span>',
+        strokeColor: orangeHex,
+        withLabel: true
+    });
+    egSlopeBoard.create('point', [1, 4], {
+        fixed: true,
+        fillColor: orangeHex,
+        highlight: false,
+        strokeColor: orangeHex,
+        strokeWidth: 1,
+        withLabel: false
+    });
+    egSlopeBoard.create('line', [[0, 0], [1, 4]], {
+        dash: 2,
+        fixed: true,
+        highlight: false,
+        strokeColor: 'black'
+    });
+    //1.3 Complete line
+    const egLineBoard = JXG.JSXGraph.initBoard( 'egLine', {
+        boundingbox,
+        axis: true,
+        showInfoBox: false,
+        showNavigation: false,
+    });
+    makeLabels(egLineBoard);
+    egLineBoard.create('line', [[0, 0], [1, 4]], {
+        fixed: true,
+        highlight: false,
+        strokeColor: greenHex
+    });
+</script>

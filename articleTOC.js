@@ -20,7 +20,7 @@ export const articleTOC = [
         lang: 'en'
     },
     {
-        title: 'The x-intercept of a linear function',
+        title: 'The x-intercept of a linear equation',
         articleID: 'x_intercept',
         lang: 'en'
     }

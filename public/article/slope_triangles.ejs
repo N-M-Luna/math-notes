@@ -24,7 +24,7 @@
 
     <div id="exampleLine" class="jxgbox square-graph" <%- graphOpts %> ></div>
 
-    <p>The first thing to do is pick any two points on the line. In the graph below, we plotted two points that we will be two of the triangle's vertices. To plot the third vertex of the triangle, we need a vertical segment that passes through one of these points and a horizontal segment that passes through the other point. We have two options: we can pick <span class='green-text'>the triangle on top of the line</span> or <span class='orange-text'>the triangle below the line</span>.</p>
+    <p>The first thing to do is pick any two points on the line. In the graph below, we plotted two points in black. Now, we need a vertical segment that passes through one of these points and a horizontal segment that passes through the other point. This gives us two options: we can pick <span class='green-text'>the triangle on top of the line</span> or <span class='orange-text'>the triangle below the line</span>.</p>
 
     <div id="examplePoints" class="jxgbox square-graph" <%- graphOpts %> ></div>
 
@@ -158,15 +158,13 @@
     const egLine = egBoard1.create('line', [p1Coords, p2Coords], lineOpts());
     //Step 2
     const egBoard2 = JXG.JSXGraph.initBoard('examplePoints', boardOpts);
-    const p4 = egBoard2.create('point', p1Coords, pointOpts(greenHex));
-    const p5 = egBoard2.create('point', p2Coords, pointOpts(greenHex));
+    const p4 = egBoard2.create('point', p1Coords, pointOpts('black'));
+    const p5 = egBoard2.create('point', p2Coords, pointOpts('black'));
     const egLine2 = egBoard2.create('line', [p4, p5], lineOpts());
-    const drawingLines = [p1Coords, p2Coords].map(coord => {
-        egBoard2.create('line', [coord, [coord[0], coord[1] + 1]], {dash: 2, ...lineOpts(greenHex)})
-        egBoard2.create('line', [[coord[0] + 1, coord[1]], coord], {dash: 2, ...lineOpts(greenHex)})
-    })
     const triangleOpts = [p3Coords, p4Coords].map((coord, i) => {
         const myColor = [greenHex, orangeHex][i]
+        egBoard2.create('segment', [coord, p1Coords], {dash: 2, ...lineOpts(myColor)})
+        egBoard2.create('segment', [coord, p2Coords], {dash: 2, ...lineOpts(myColor)})
         egBoard2.create('polygon', [p1Coords, p2Coords, coord], {
             fillColor: myColor,
             fillOpacity: 0.25,
