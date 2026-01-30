@@ -3,9 +3,11 @@ This is a website with **notes on middle and high school math**.
 Website uses vanilla HTML, CSS, and JS. It also uses [ExpressJS](https://expressjs.com/), [EJS](https://ejs.co/), [Katex](https://katex.org/) and [JSX graph](https://jsxgraph.uni-bayreuth.de/home/).
 
 To view,
-- Download repo.
-- Run `npm i` and `npm start` on the terminal from the repo directory.
+- Download repo,
+- Run `npm i` and `npm start` on the terminal from the repo directory, and
 - Visit http://localhost:3000 to view the site.
+
+The site can also be viewed at https://math-notes-xi.vercel.app.
 
 -----------
 
@@ -20,3 +22,4 @@ To add new articles:
 TODO:
 - Add practice problems to each article.
 - Add English translations.
+- Add in-line LaTeX expressions.

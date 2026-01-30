@@ -138,6 +138,12 @@ hr.topic-header {
 .underlined {
     text-decoration: underline;
 }
+.big-text {
+    font-size: 20;
+}
+.center-p {
+    text-align: center;
+}
 .square-graph {
     aspect-ratio: 1;
     max-width: 500px;

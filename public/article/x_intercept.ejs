@@ -14,67 +14,223 @@
 
 <!-- eg of linear equation (in context) -->
 <div class='eg'>
-    <p><i>Example 1</i>. <strong> Omar is building a tree house. For every plank that he puts on, Omar is using four nails. Can we use a linear equation to represent <span class='underlined'>the relation between number of planks and number of nails</span>? </strong> </p>
+    <p><i>Example 1</i>. <strong> Omar is building a tree house. For every plank that he puts on, Omar is using four nails. Define a linear equation to represent <span class='underlined'>the relation between number of planks and number of nails</span>. </strong> </p>
 
     <p>We can create a graph or an equation to represent the linear equation. For this, we need to find the slope and the y-intercept.</p>
 
     <p> <strong>Part 1: Set up.</strong> </p>
     <p> We can describe the situation using a linear equation on a graph where the y-axis represents the number of nails and the x-axis represents the number of planks.</p>
     <div id="egLabels" class="jxgbox square-graph" <%- graphOpts %> ></div>
-    <p>The equation will look like this, where y represents the number of nails and the x represents the number of planks.</p>
-    $$ y = \textcolor{#DA8359}{\left[ \text{slope} \right]}x + \textcolor{#729170}{\left[ y\text{-intercept} \right]} $$
 
     <p><strong>Part 2: Find the y-intercept.</strong> </p>
     <p> The y-intercept is the value of y that corresponds to when x is 0. </p>
+    $$ x = 0 \text{ planks} $$
     <p>If x is 0, then there are no planks. How many nails would Omar need to put up 0 planks? The answer is none! Omar needs 0 nails to put up 0 planks. </p>
+    $$ y = 0 \text{ nails} $$
     <p> So, in this case, the y-value that corresponds to when x is 0 is also 0. That means that the linear equation crosses the y-axis at 0. We can plot the y-intercept in the graph. </p>
     <div id="egYint" class="jxgbox square-graph" <%- graphOpts %> ></div>
-    <p>And we can substitute the y-intercept into the equation:</p>
-    $$ y = \textcolor{#DA8359}{\left[ \text{slope} \right]}x + \textcolor{#729170}{\left[ y\text{-intercept} \right]} $$
-    <p>Since the y-intercept is 0, the equation becomes:</p>
-    $$ y = \textcolor{#DA8359}{\left[ \text{slope} \right]}x + \textcolor{#729170}{0} $$
-    <p>The equation can be simplified as:</p>
-    $$ y = \textcolor{#DA8359}{\left[ \text{slope} \right]}x $$
 
     <p><strong>Part 3: Find the slope.</strong> </p>
     <p> As we move to the right of the graph, we are increasing the number of planks. We are told that for every plank, Omar is using 4 nails. Therefore, every time we <span class='underlined'>move 1 unit to the right</span>, the line <span class='underlined'>climbs up 4 units</span>.</p>
     <div id="egSlope" class="jxgbox square-graph" <%- graphOpts %> ></div>
     <p>The slope is defined as how much we moved vertically over how much we moved horizontally.</p>
     $$\text{slope} = \frac{\text{vertical travel}}{\text{horizontal travel}} = \frac{4}{1} = 4 $$
-    <p>So the slope of the linear equation is 4. Finally, we can substitute the slope into the equation:</p>
-    $$ y = \textcolor{#DA8359}{\left[ \text{slope} \right]}x $$
-    <p>After substituting, we have:</p>
-    $$ y = \textcolor{#DA8359}{4}x $$
+    <p>So the slope of the linear equation is 4. </p>
 
     <p><strong>Part 4: The linear equation.</strong></p>
     <p>In conclusion, we have the following linear graph to describe the relation of the number of planks that Omar is using for this tree house and the number of nails he uses.</p>
     <div id="egLine" class="jxgbox square-graph" <%- graphOpts %> ></div>
-    <p>The same relation can be described by the following linear equation:</p>
-    $$ \textcolor{#729170}{y = 4x} $$
+
+    <p>The equation will look like this, where y represents the number of nails and the x represents the number of planks.</p>
+    $$ y = \textcolor{#DA8359}{\left[ \text{slope} \right]}x + \textcolor{#729170}{\left[ y\text{-intercept} \right]} $$
+    <p>Since the y-intercept is 0 and the slope is 4, the equation is:</p>
+    $$ y = \textcolor{#DA8359}{4}x + \textcolor{#729170}{0} $$
+    <p>The equation can be simplified as:</p>
+    $$ y = \textcolor{#DA8359}{4}x $$
 </div>
 
-<!-- TODO exercise to find a linear equation given context -->
+<p>You can use the same approach to solve the exercise below.</p>
+
+<!-- exercise to find a linear equation given context -->
+<div class='ejercicio'><!-- id 0 -->
+    <h3>Exercise. </h3>
+    <p> Jane Lane is going on a trip through the galaxy and brought 8 frozen food packs. Every 2 weeks, she uses up one food pack. </p>
+    <p> Define a linear equation to represent <span class='underlined'>the relation between frozen food packs and weeks spent on the trip</span>. </p>
+        <div class='full-of-answers hidden'>
+            <hr>
+             <p>To create a graph or an equation that represents the linear equation, we need to find the slope and the y-intercept.</p>
+
+            <p> <strong>Part 1: Set up.</strong></p>
+            <p> We can represent the relation between frozen food packs and weeks on the trip as a graph whose axes represent the number of food packs and the number of weeks spent on the trip.</p>
+            <div id='eqnPracticeSetUp' class='jxgbox square-graph' <%- graphOpts %> ></div>
+
+            <p><strong>Part 2: The y-intercept.</strong></p>
+            <p> We need to find the value of y when x is 0. In this case, the y-intercept represents how many frozen food packs does Jane have when they have spent 0 weeks on the trip.
+            $$ x = 0 \text{ weeks} $$
+            This means that the y-intercept is the number of frozen food packs that they started out with; which is 8.</p>
+            $$ y = 8 \text{ food packs} $$
+            <p>Therefore, the intercept is 8 and the line will cross the y-axis at 8. </p>
+            <div id='eqnPracticeYint' class='jxgbox square-graph' <%- graphOpts %> ></div>
+
+            <p><strong>Part 3: The slope.</strong></p>
+            <p>How does the amount on the y-axis (food packs) changes as the amount on the x-axis (weeks) changes? The slope tells us how steep the line is, or how quickly or slowly Jane uses her frozen food packs. </p>
+            <p>We are told that for every two weeks, Jane uses one food pack. So if we move two units to the right, the line drops down by 1 unit.</p>
+            <div id='eqnPracticeSlope' class='jxgbox square-graph' <%- graphOpts %> ></div>
+            <p>The slope is defined as how much we moved vertically over how much we moved horizontally.</p>
+            $$\text{slope} = \frac{\text{vertical travel}}{\text{horizontal travel}} = \frac{2}{-1} = -2 $$
+            <p>So the slope of the linear equation is -2. </p>
+
+            <p><strong>Part 4: Conclusion.</strong></p>
+            <p>The equation will look like this, where y represents the number of food packs left and the x represents the number of weeks of Jane's galactic trip.</p>
+            $$ y = \textcolor{#DA8359}{\left[ \text{slope} \right]}x + \textcolor{#729170}{\left[ y\text{-intercept} \right]} $$
+            <p>Since the y-intercept is 8 and the slope is -2, the equation is:</p>
+            $$ y = -2x + 8 $$
+            <p>And it can be represented as the following graph:</p>
+            <div id='eqnPracticeComplete' class='jxgbox square-graph' <%- graphOpts %> ></div>
+        </div>
+
+    <button class='see-answer-btn' onclick='showAnswers(0)'>See answer</button>
+</div>
 
 <h2>How do we find the x-intercept of a linear equation?</h2>
 <hr class='topic-header'>
 
-<!--TODO Find x-int given a graph-->
-<!--TODO Find x-int given an equation-->
+<!-- def of x-int -->
+<div class='def'>
+    <p>We saw that the y-intercept of linear equation is where the line crosses the y-axis. Similarly, the <strong>x-intercept</strong> is where the line crosses the x-axis.</p>
+    <p>In the graph below, the line crosses the x-axis at -1.</p>
+    <div id="xIntDef" class="jxgbox square-graph" <%- graphOpts %> ></div>
+    <p>So the line has an x-intercept of -1.</p>
+</div>
+
+<!--eg of x-int (in context)-->
+<div class='eg'>
+    <p><i>Example 2</i>. <strong> Let's say that Jane Lane repeats her interstellar trip with a group of friends. Suppose that Jane brought 8 packs of frozen food again, but the group goes through 4 packs every 2 weeks. </strong> </p>
+    <p> <strong>Define a linear equation to represent <span class='underlined'>the relation between the number of food packs left and the number of weeks on the trip</span>. In this case, what does the x-intercept represent? </strong> </p>
+
+    <p>To create a graph or an equation that represents the linear equation, we need to find the slope and the y-intercept.</p>
+
+    <p> <strong>Part 1: Set up.</strong></p>
+    <p> We can represent the relation between frozen food packs and weeks on the trip as a graph whose axes represent the number of food packs and the number of weeks spent on the trip.</p>
+    <div id='xIntEgSetUp' class='jxgbox square-graph' <%- graphOpts %> ></div>
+
+    <p><strong>Part 2: The y-intercept.</strong></p>
+    <p> We saw in the last exercise that the y-intercept is the number of food packs when the expedition has spent 0 weeks in space. In other words, the number of food packs that they started out with, which is 8.</p>
+    $$ y = 8 \text{ food packs} $$
+    <p>Therefore, the y-intercept is 8 and the line will cross the y-axis at 8. </p>
+    <div id='xIntEgYint' class='jxgbox square-graph' <%- graphOpts %> ></div>
+
+    <p><strong>Part 3: The slope.</strong></p>
+    <p>How does the amount on the y-axis (food packs) changes as the amount on the x-axis (weeks) changes? The slope tells us how quickly or slowly Jane and her friends use the frozen food packs. </p>
+    <p>In this case, we are told that every two weeks, Jane and her friends use 4 food packs. So if we move two units to the right, the line drops down by 4 units.</p>
+    <div id='xIntEgSlope' class='jxgbox square-graph' <%- graphOpts %> ></div>
+    <p>The slope is defined as how much we moved vertically over how much we moved horizontally.</p>
+    $$\text{slope} = \frac{\text{vertical travel}}{\text{horizontal travel}} = \frac{-4}{2} = -2 $$
+    <p>So the slope of the linear equation is -2. </p>
+
+    <p><strong>Part 4: Conclusion.</strong></p>
+    <p>The equation will look like this, where y represents the number of food packs left and the x represents the number of weeks on the galactic trip.</p>
+    $$ y = \textcolor{#DA8359}{\left[ \text{slope} \right]}x + \textcolor{#729170}{\left[ y\text{-intercept} \right]} $$
+    <p>Since the y-intercept is 8 and the slope is -2, the equation is:</p>
+    $$ y = -2x + 8 $$
+    <p>And it can be represented as the following graph:</p>
+    <div id='xIntEgComplete' class='jxgbox square-graph' <%- graphOpts %> ></div>
+
+    <p><strong>Part 5: Interpretation of the x-intercept.</strong></p>
+    The x-intercept is where the line and the x-axis meet; in other words, the value of x when
+    $$ y = 0 $$
+    In this case, y represents the number of food packs and x represents the number of weeks. So the x-intercept is the number of weeks when there are no food packs left.
+    <div id='xIntEg' class='jxgbox square-graph' <%- graphOpts %> ></div>
+
+    <p>Since the line crosses the x-axis at x = 4, that means that the after 4 weeks, Jane and her friends have used up all their frozen food packs. So the x-intercept in this case represents the number of weeks that the frozen food packs will last them.</p>
+</div>
+
+<!-- exercise to find and interpret x intercept given context -->
+<div class='ejercicio'><!-- id 1 -->
+    <h3>Exercise. </h3>
+    <p> Xander is fighting bosses on a desert, where they can't replenish their mana. They started out with 18 magic points, but each boss fight takes a toll on Xander. After each encounter, their mana decreases by 3 magic points. </p>
+    <p> Define a linear equation to represent <span class='underlined'>the relation between magic points and boss fights</span>. Find and interpret the <span class='underlined'>x-intercept</span>. </p>
+        <div class='full-of-answers hidden'>
+            <hr>
+             <p>To create a graph or an equation that represents the linear equation, we need to find the slope and the y-intercept.</p>
+
+            <p> <strong>Part 1: Set up.</strong></p>
+            <p> We can represent the relation between magic points and boss fights as a graph whose axes represent the number of magic points and the number of boss fights that Xander has fought.</p>
+            <div id='manaSetUp' class='jxgbox square-graph' <%- graphOpts %> ></div>
+
+            <p><strong>Part 2: The y-intercept.</strong></p>
+            <p> We need to find the value of y when x is 0. In this case, the y-intercept is the number of magic points that Xander has when they have fought
+            $$ x = 0 \text{ boss fights} $$
+            This means that the y-intercept is the number of magic points that they started out with; which is 18.</p>
+            $$ y = 18 \text{ magic points} $$
+            <p>Therefore, the intercept is 18 and the line will cross the y-axis at 18. </p>
+            <div id='manaYint' class='jxgbox square-graph' <%- graphOpts %> ></div>
+
+            <p><strong>Part 3: The slope.</strong></p>
+            <p>How does the amount on the y-axis (magic points) changes as the amount on the x-axis (boss fights) changes? The slope tells us how steep the line is; or how quickly or slowly Xander loses their magic points. </p>
+            <p>We are told that for every boss fight, Xander uses up 3 magic ponts. So if we move one unit to the right, the line drops down by 3 units.</p>
+            <div id='manaSlope' class='jxgbox square-graph' <%- graphOpts %> ></div>
+            <p>The slope is defined as how much we moved vertically over how much we moved horizontally.</p>
+            $$\text{slope} = \frac{\text{vertical travel}}{\text{horizontal travel}} = \frac{-3}{1} = -3 $$
+            <p>So the slope of the linear equation is -3. </p>
+
+            <p><strong>Part 4: Conclusion.</strong></p>
+            <p>The equation will look like this, where y represents the number of magic points left and the x represents the number of boss fights.</p>
+            $$ y = \textcolor{#DA8359}{\left[ \text{slope} \right]}x + \textcolor{#729170}{\left[ y\text{-intercept} \right]} $$
+            <p>Since the y-intercept is 18 and the slope is -3, the equation is:</p>
+            $$ y = -3x + 18 $$
+            <p>And it can be represented as the following graph:</p>
+            <div id='manaComplete' class='jxgbox square-graph' <%- graphOpts %> ></div>
+
+
+            <p><strong>Part 5: Interpretation of the x-intercept.</strong></p>
+            The x-intercept is where the line and the x-axis meet; in other words, the value of x when y = 0. In this case, the x-intercept is the number of boss fights when Xander has
+            $$ y = 0 \text{ magic points} $$
+            That means that the x-intercept is the number of bosses that Xander can fight with the mana he stocked up on, which is
+            $$ x = 6 \text{ boss fights} $$
+            <div id='manaXint' class='jxgbox square-graph' <%- graphOpts %> ></div>
+
+            <p>So the x-intercept in this case represents the number of bosses that Xander can fight before having to replenish his mana.</p>
+        </div>
+
+    <button class='see-answer-btn' onclick='showAnswers(1)'>See answer</button>
+</div>
 
 <script>
     const greenHex = '#729170';
     const orangeHex = '#DA8359';
+    const mkPoint = (boardName, coord, fillColor) => {
+        boardName.create('point', coord, {
+            fixed: true,
+            fillColor,
+            highlight: false,
+            strokeColor: 'black',
+            strokeWidth: 1.5,
+            withLabel: false
+        })
+    }
+    const mkLine = (boardName, p1, p2) => {
+        boardName.create('line', [p1, p2], {
+            fixed: true,
+            highlight: false,
+            strokeColor: greenHex,
+            strokeWidth: 1.5,
+            withLabel: false
+        })
+    }
 
-    //Definition of linear equation
-    const linearDefBoard = JXG.JSXGraph.initBoard( 'linearEqnDef', {
-        boundingbox: [-5, 5, 5, -5],
+    //--------Definition of linear equation //TODO make this interactive
+    let boundingbox = [-5, 5, 5, -5]
+    let boardOpts = () => ({
+        boundingbox,
         axis: true,
         showInfoBox: false,
         showNavigation: false,
-    });
+    })
+    const linearDefBoard = JXG.JSXGraph.initBoard( 'linearEqnDef', boardOpts());
     const xIntCoords = [0, 1];
     const dX = 3;
-    const dY = 2; //TODO make this interactive
+    const dY = 2;
     const pntCoord = [xIntCoords[0] + dX, xIntCoords[1] + dY];
     const lineGraph = linearDefBoard.create('line', [xIntCoords, pntCoord], {
         fixed: true,
@@ -87,7 +243,8 @@
         highlight: false,
         label: {color: greenHex, fontSize: 20, offset: [3, 75]},
         name: `${xIntCoords[1]}`,
-        strokeColor: greenHex
+        strokeColor: 'black',
+        strokeWidth: 1.5
     });
     const slopePntCoord = [xIntCoords[0] + dX, xIntCoords[1] + dY];
     const deltaX = linearDefBoard.create('segment', [xIntCoords, [slopePntCoord[0], xIntCoords[1]]], {
@@ -118,49 +275,34 @@
         withLabel: true
     });
 
-    //For example 1
-    const boundingbox = [-1.5, 8, 8, -1.5];
-    const makeLabels = boardName => {
-        const labelOpts = {fixed: true, fontSize: 14, highlight: false}
+    //---------For example 1
+    boundingbox = [-1.5, 8, 8, -1.5];
+    const labelOpts = {fixed: true, fontSize: 16, highlight: false}
+    const makeLabelsEg1 = boardName => {
         boardName.create('text', [2, 0.2, 'number of planks'], labelOpts)
         boardName.create('text', [-0.75, 3, 'number of nails'], {...labelOpts, rotate: 90})
     }
-    const makeYint = boardName => {
+    const makeYintEg1 = boardName => {
         boardName.create('point', [0, 0], {
             fillColor: greenHex,
             fixed: true,
             highlight: false,
-            strokeColor: greenHex,
+            strokeColor: 'black',
             strokeWidth: 1.5,
             withLabel: false
         })
     }
     //1.0 Axes' labels
-    const egLabelsBoard = JXG.JSXGraph.initBoard( 'egLabels', {
-        boundingbox,
-        axis: true,
-        showInfoBox: false,
-        showNavigation: false,
-    });
-    makeLabels(egLabelsBoard);
+    const egLabelsBoard = JXG.JSXGraph.initBoard( 'egLabels', boardOpts());
+    makeLabelsEg1(egLabelsBoard);
     //1.1 Y intercept
-    const egYintBoard = JXG.JSXGraph.initBoard( 'egYint', {
-        boundingbox,
-        axis: true,
-        showInfoBox: false,
-        showNavigation: false,
-    });
-    makeLabels(egYintBoard);
-    makeYint(egYintBoard);
+    const egYintBoard = JXG.JSXGraph.initBoard( 'egYint', boardOpts());
+    makeLabelsEg1(egYintBoard);
+    makeYintEg1(egYintBoard);
     //1.2 Slope
-    const egSlopeBoard = JXG.JSXGraph.initBoard( 'egSlope', {
-        boundingbox,
-        axis: true,
-        showInfoBox: false,
-        showNavigation: false,
-    });
-    makeLabels(egSlopeBoard);
-    makeYint(egSlopeBoard);
+    const egSlopeBoard = JXG.JSXGraph.initBoard( 'egSlope', boardOpts());
+    makeLabelsEg1(egSlopeBoard);
+    makeYintEg1(egSlopeBoard);
     egSlopeBoard.create('segment', [[0, 0], [1, 0]], {
         fixed: true,
         highlight: false,
@@ -179,14 +321,7 @@
         strokeColor: orangeHex,
         withLabel: true
     });
-    egSlopeBoard.create('point', [1, 4], {
-        fixed: true,
-        fillColor: orangeHex,
-        highlight: false,
-        strokeColor: orangeHex,
-        strokeWidth: 1,
-        withLabel: false
-    });
+    mkPoint(egSlopeBoard, [1, 4], orangeHex)
     egSlopeBoard.create('line', [[0, 0], [1, 4]], {
         dash: 2,
         fixed: true,
@@ -194,16 +329,135 @@
         strokeColor: 'black'
     });
     //1.3 Complete line
-    const egLineBoard = JXG.JSXGraph.initBoard( 'egLine', {
-        boundingbox,
-        axis: true,
-        showInfoBox: false,
-        showNavigation: false,
-    });
-    makeLabels(egLineBoard);
+    const egLineBoard = JXG.JSXGraph.initBoard( 'egLine', boardOpts());
+    makeLabelsEg1(egLineBoard);
     egLineBoard.create('line', [[0, 0], [1, 4]], {
         fixed: true,
         highlight: false,
         strokeColor: greenHex
     });
+
+    //For practice 1
+    boundingbox = [-1, 10, 10, -1]
+    const prac1yInt = [0, 8]
+    const makeLabelsPractice1 = boardName => {
+        boardName.create('text', [4, 0.5, 'number of weeks'], labelOpts)
+        boardName.create('text', [-0.65, 4, 'number of food packs'], {...labelOpts, rotate: 90})
+    }
+    const makeYintPractice1 = boardName => {
+        mkPoint(boardName, prac1yInt, greenHex)
+    }
+    const makeSlopeTriangle = (boardName, [x1, y1], h, hUnit, v, vUnit) => {
+        //Horizontal leg
+        const midP = [x1 + h, y1]
+        boardName.create('segment', [[x1, y1], midP], {
+            fixed: true,
+            highlight: false,
+            label: {fonstSize: 16, offset: [-25, 60]}, //TODO: define offset in terms of hUnit
+            lastArrow: {type: 4},
+            name: `<span class="orange-text">+ ${h} ${hUnit}</span>`,
+            strokeColor: orangeHex,
+            withLabel: true
+        })
+        //Vertical leg
+        const endP = [x1 + h, y1 + v]
+        boardName.create('segment', [midP, endP], {
+            fixed: true,
+            highlight: false,
+            label: {fonstSize:  16, offset: [5, 50]}, //TODO: define offset in terms of vUnit
+            lastArrow: {type: 4},
+            name: `<span class="orange-text">${v > 0 ? '+' : '-'} ${Math.abs(v)} ${vUnit}</span>`,
+            strokeColor: orangeHex,
+            withLabel: true
+        })
+        mkPoint(boardName, endP, greenHex)
+        //Line preview
+        boardName.create('line', [[x1, y1], endP], {
+            dash: 2,
+            fixed: true,
+            highlight: false,
+            strokeColor: greenHex,
+            strokeWidth: 1.5,
+            withLabel: false
+        })
+    }
+    //1.1 Set up
+    const practice1setUp = JXG.JSXGraph.initBoard('eqnPracticeSetUp', boardOpts())
+    makeLabelsPractice1(practice1setUp)
+    //1.2 y int
+    const practice1yInt = JXG.JSXGraph.initBoard('eqnPracticeYint', boardOpts())
+    makeLabelsPractice1(practice1yInt)
+    makeYintPractice1(practice1yInt)
+    //1.3 slope
+    const practice1slope = JXG.JSXGraph.initBoard('eqnPracticeSlope', boardOpts())
+    makeLabelsPractice1(practice1slope)
+    makeYintPractice1(practice1slope)
+    makeSlopeTriangle(practice1slope, prac1yInt, 2, 'weeks', -1, 'food pack')
+    //1.4 complete line
+    const practice1comp = JXG.JSXGraph.initBoard('eqnPracticeComplete', boardOpts())
+    makeLabelsPractice1(practice1comp)
+    mkLine(practice1comp, prac1yInt, [2, 7])
+
+
+    //Definition of x-intercept
+    boundingbox = [-5, 5, 5, -5]
+    const xIntBoard = JXG.JSXGraph.initBoard( 'xIntDef', boardOpts());
+    xIntBoard.create('line', [[-4, -2], [-1, 0]], {
+        fixed: true,
+        highlight: false,
+        strokeColor: 'black'
+    });
+    mkPoint(xIntBoard, [-1, 0], orangeHex)
+
+    //For example 2
+    boundingbox = [-1, 10, 10, -1]
+    //2.0 Set up
+    const egXint0 = JXG.JSXGraph.initBoard('xIntEgSetUp', boardOpts())
+    makeLabelsPractice1(egXint0)
+    //2.1 Y int
+    const egXint1 = JXG.JSXGraph.initBoard('xIntEgYint', boardOpts())
+    makeLabelsPractice1(egXint1)
+    makeYintPractice1(egXint1)
+    //2.3 Slope
+    const egXint2 = JXG.JSXGraph.initBoard('xIntEgSlope', boardOpts())
+    makeLabelsPractice1(egXint2)
+    makeYintPractice1(egXint2)
+    makeSlopeTriangle(egXint2, [0, 8], 2, 'weeks', -4, 'food packs')
+    //2.4 Complete line
+    const egXint3 = JXG.JSXGraph.initBoard('xIntEgComplete', boardOpts())
+    makeLabelsPractice1(egXint3)
+    mkLine(egXint3, prac1yInt, [2, 4])
+    //2.5 Y intercept
+    const egXint4 = JXG.JSXGraph.initBoard('xIntEg', boardOpts())
+    makeLabelsPractice1(egXint4)
+    mkLine(egXint4, prac1yInt, [2, 4])
+    mkPoint(egXint4, [4, 0], orangeHex)
+
+    //For Practice 3
+    boundingbox = [-3, 20, 20, -3]
+    const makeManaLabels = (boardName) => {
+        boardName.create('text', [5, 1, 'number of boss fights'], labelOpts)
+        boardName.create('text', [-2, 8, 'number of magic points'], {...labelOpts, rotate: 90})
+    }
+    //3.0 Set up
+    const manaBoard1 = JXG.JSXGraph.initBoard('manaSetUp', boardOpts())
+    makeManaLabels(manaBoard1)
+    //3.1 Y int
+    const manaBoard2 = JXG.JSXGraph.initBoard('manaYint', boardOpts())
+    makeManaLabels(manaBoard2)
+    mkPoint(manaBoard2, [0, 18], greenHex)
+    //3.2 Y int
+    const manaBoard3 = JXG.JSXGraph.initBoard('manaSlope', boardOpts())
+    makeManaLabels(manaBoard3)
+    mkPoint(manaBoard3, [0, 18], greenHex)
+    makeSlopeTriangle(manaBoard3, [0, 18], 1, 'boss fight', -3, 'mana points')
+    //3.3 Complete
+    const manaBoard4 = JXG.JSXGraph.initBoard('manaComplete', boardOpts())
+    makeManaLabels(manaBoard4)
+    mkLine(manaBoard4, [0, 18], [1, 15])
+    //3.4 X int
+    const manaBoard5 = JXG.JSXGraph.initBoard('manaXint', boardOpts())
+    makeManaLabels(manaBoard5)
+    mkLine(manaBoard5, [0, 18], [1, 15])
+    mkPoint(manaBoard5, [6, 0], orangeHex)
 </script>

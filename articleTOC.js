@@ -15,6 +15,16 @@ export const articleTOC = [
         lang: 'es'
     },
     {
+        title: 'Proporciones',
+        articleID: 'proporciones',
+        lang: 'es'
+    },
+    {
+        title: 'Razones',
+        articleID: 'razones',
+        lang: 'es'
+    },
+    {
         title: 'Slope triangles',
         articleID: 'slope_triangles',
         lang: 'en'
