@@ -1,19 +1,151 @@
-<h2> Razones </h2>
+<h2> ¿Qué son las razones? </h2>
 <hr class='topic-header'>
 
 <!-- def de razones -->
 <div class='def'>
     <p>Una <strong>razón</strong> es un número que compara dos cantidades usando la división.</p>
     <p>Por ejemplo, la razon de <span class='green-text'>flores</span> a <span class='orange-text'>copos de nieve</span> se forma contando el número de cada uno.</p>
-    <p class='big-text center-p'> <span class='green-text'>✿ ✿ ✿ ✿</span> <span class='orange-text'> ❄ ❄ ❄ </span> </p>
-    <p>Como hay 4 flores y 3 copos de nieve, la razon de flores a copos de nieve es:</p>
-    $$ \textcolor{<%- greenHex %>}{4} \text{ a } \textcolor{<%- orangeHex %>}{3} $$
+    <!-- <p class='big-text center-p'> <span class='green-text'>✿ ✿ ✿ ✿</span> <span class='orange-text'> ❄ ❄ ❄ </span> </p> -->
+    $$ \underbrace{\textcolor{<%- greenHex %>}{✿ \; ✿ \; ✿ \; ✿ \; ✿ \; ✿}}_{\textcolor{<%- greenHex %>}{6}} \underbrace{\textcolor{<%- orangeHex %>}{\; ❄ \; ❄ \; ❄}}_{\textcolor{<%- orangeHex %>}{3}} $$
+
+    <p>Como hay 6 flores y 3 copos de nieve, la razon de flores a copos de nieve es:</p>
+    $$ \textcolor{<%- greenHex %>}{6} \text{ a } \textcolor{<%- orangeHex %>}{3} $$
+
     <p>Esta misma razón se puede escribir como:</p>
-    $$ \textcolor{<%- greenHex %>}{4} : \textcolor{<%- orangeHex %>}{3} $$
-    <p>Y también se puede escribir como:</p>
-    $$ \frac{\textcolor{<%- greenHex %>}{4}}{\textcolor{<%- orangeHex %>}{3}} $$
+    $$ \textcolor{<%- greenHex %>}{6} : \textcolor{<%- orangeHex %>}{3} $$
+
+    <p>Otra forma de escribir la misma razón es como la fracción con estas dos cantidades como numerador y denominador:</p>
+    $$ \frac{\textcolor{<%- greenHex %>}{6}}{\textcolor{<%- orangeHex %>}{3}} $$
+    <p>Al igual que las fracciones comunes, las razones se pueden simplificar:</p>
+    $$ \frac{6}{3} = \frac{6 \div 3}{3 \div 3} = \frac{2}{1} $$
+    Por lo tanto, la razón tambien se puede expresar como:
+    $$ \textcolor{<%- greenHex %>}{2} : \textcolor{<%- orangeHex %>}{1} $$
 </div>
+<!--TODO? Explicar una segunda forma de simplificación usando la factorización prima-->
 
 <!-- eg de razones -->
-<!-- repaso de como simplificar -->
+<div class='eg'>
+    <p><i>Ejemplo 1</i>. Arturito está ayudando a su mamá en el patio. En la primavera, sembraron 7 plantas de algo. En el verano, solo 5 de ellas sobrevivieron. ¿Cuál es la <span class='underlined'>razón</span> de plantas de algo que sobrevivieron a las que no sobrevivieron?</p>
+
+    <p>La razón de plantas de algo que sobrevivieron a las que no sobrevivieron es:</p>
+    $$ \text{número de plantas vivas} : \text{número de plantas muertas} $$
+    <p>Ahora, sustituímos los números. El número de plantas de algo que sobrevivieron es 5 y el número de plantas que no sobrevivieron es la diferencia 7 - 5, o sea 2.</p>
+    $$ 5 : 2 $$
+    <p>Podemos expresar esta razón como:</p>
+    $$ \frac{5}{2} $$
+
+    <p><i>Ejemplo 2</i>. En la clase de matemáticas de Arturito hay 12 varones y 36 niñas. ¿Cuál es la <span class='underlined'>razón</span> de varones a niñas? </p>
+
+    <p>La razón de varones a niñas sería una expresión de la siguiente manera: </p>
+    $$ \text{número de varones} : \text{número de niñas} $$
+    <p>Ahora, sustituímos los números:</p>
+    $$ 12 : 36 $$
+    <p>La razón en forma de fracción es:</p>
+    $$ \frac{12}{36} $$
+    <p>Al igual que las fracciones comunes, podemos simplificar:</p>
+    $$ \frac{12}{36} = \frac{12 \div 12}{36 \div 12} = \frac{1}{3} $$
+    <p>Entonces, podemos decir que la razón de varones a niñas en la clase de Arturito es 1 a 3.</p>
+</div>
+
 <!-- ejercicio de razones -->
+ <div class='ejercicio'><!-- id 0 -->
+    <h3>Ejercicio. </h3>
+    <p>La repostería MagdaManía vende magdalenas de todos los sabores. (Y quiero decir TODOS los sabores.) Abajo hay una tabla con la cantidad de magdalenas disponibles de cada sabor.</p>
+    <table>
+        <tr><th>Sabor</th><th>Cantidad</th><th>Sabor</th><th>Cantidad</th></tr>
+        <tr><td>Vainilla</td><td>5</td><td>Grama</td><td>3</td></tr>
+        <tr><td>Chocolate</td><td>15</td><td>Lluvia</td><td>5</td></tr>
+        <tr><td>Fresa</td><td>2</td><td>Arena</td><td>6</td></tr>
+    </table>
+    <p>Usa esta tabla para encontrar las siguientes razones. Simplifica si es necesario.</p>
+    <ol>
+        <li><b>Magdalenas de chocolate a magdalenas de vainilla</b><br>
+        <span class='full-of-answers hidden'>Como MagdaManía tiene 15 magdalenas de chocolate y 5 magdalenas de vainilla la razón es: $$ 15:5 $$ Pero se puede simplificar: $$ \frac{15}{5} = \frac{15 \div 5}{5 \div 5} = \frac{3}{1} $$ Entonces la razón simplificada es 3 magdalenas de chocolate a 1 magdalena de vainilla. </span></li>
+        <li><b>Magdalenas de fresa a magdalenas de lluvia</b><br>
+        <span class='full-of-answers hidden'>En la tabla, vemos que hay 2 magdalenas de fresa y 5 de lluvia. Entonces, la razón es: $$ 2: 5$$ No se puede simplificar porque 2 y 5 son primos. Asi que la razon es 2 magdalenas de fresa a 5 de lluvia.</span></li>
+        <li><b>Magdalenas de grama a todoas las magdalenas</b><br>
+        <span class='full-of-answers hidden'>En la tabla, vemos que hay 3 magdalenas de grama. Para encontrar el número total de magdalenas, sumamos: $$ 5 + 15 + 2 + 3 + 5 + 6 = 36 $$ Entonces, la razón es: $$ 3 : 36 $$ Podemos simplificar: $$ \frac{3}{36} = \frac{3 \div 3}{36 \div 3} = \frac{1}{12} $$ Entonces, la razón es 1 magdalena de grama a 12 magdalenas de cualquier sabor.</span></li>
+    </ol>
+
+    <button class='see-answer-btn' onclick='showAnswers(0)'>Ver la respuesta</button>
+</div>
+
+<h2> ¿Qué son las razones equivalentes? </h2>
+<hr class='topic-header'>
+
+<!-- def de razones equivalentes -->
+<div class='def'>
+    <p>Dos razones son <strong> equivalentes </strong> si ambas razones simplifican a la misma fracción.</p>
+
+    <p>Por ejemplo, la escuela A tiene 200 estudiantes y 10 maestros. La escuela B tiene 160 estudiantes y 8 maestros. Vamos a verificar si las razones de estudiantes a maestros de cada escuela son equivalentes.</p>
+
+    <p>Escuela A:
+    $$ 200 \text{ estudiantes} : 10 \text{ maestros} $$
+    Simplificamos:
+    $$ \frac{200}{10} = \frac{200 \div 10}{10 \div 10} = \frac{20}{1} $$
+    Entonces, la escuela A tiene 20 estudiantes por maestro y la razón es 20:1.</p>
+
+    <p>Escuela B:
+    $$ 160 \text{ estudiantes} : 8 \text{ maestros} $$
+    Simplificamos:
+    $$ \frac{160}{8} = \frac{160 \div 8}{8 \div 8} = \frac{20}{1} $$
+    Entontes la escuela B también tiene 20 estudiantes por maestro y la razón es 20:1.</p>
+
+    <p>Como ambas razones se simplifican a 20:1, entonces las razones son equivalentes y podemos decir que: $$ \frac{200}{10} = \frac{160}{8} $$</p>
+
+</div>
+
+<!-- eg de razones equivalentes -->
+ <div class='eg'>
+    <p><i>Ejemplo 1</i>. Alguien fue a una fiesta de cumpleaños con 29 invitados. El cumpleañero ordenó 5 pizzas. Para el cumpleaño de Alguien, el invitó 17 y ordenó 3 pizzas. <span class='underlined'>Determina si la razón de pizzas a personas en ambas fiestas son equivalentes o nó</span>.</p>
+
+    <p>En la primera fiesta, hay 30 personas (29 invitados más el cumpleañero) y 5 pizzas. Entonces, la razón de pizza a personas es: $$ \frac{5}{30} = \frac{5 \div 5}{30 \div 5} = \frac{1}{6} $$ En la primera fiesta, hay 1 pizza para cada 6 personas. </p>
+
+    <p>En el cumpleaños de Alguien, hay 18 personas y 3 pizzas. Entonces, la razón de pizza a personas es: $$ \frac{3}{18} = \frac{3 \div 3}{18 \div 3} = \frac{1}{6} $$ En la fiesta de Alguien, también hay 1 pizza para cada 6 personas. </p>
+
+    <p>Como ambas razones se simplifican a 1:6, son razones equivalentes.</p>
+
+    <p><i>Ejemplo 2</i>. En una academia de baile, hay un equipo de jazz y un equipo de tap. El equipo de jazz tiene 15 niñas y 20 niños. El equipo de tap tiene 10 niñas y 12 niños. <span class='underlined'>Determina si la razón de niñas a niños en ambos equipos son equivalentes o nó</span>.</p>
+
+    <p>En el equipo de jazz tiene 15 niñas y 20 niños, asi que la razón de niñas a niños es: $$ \frac{15}{20} = \frac{15 \div 5}{20 \div 5} = \frac{3}{4} $$</p>
+
+    <p>En el equipo de tap tiene 10 niñas y 12 niños, asi que la razón de niñas a niños es: $$ \frac{10}{12} = \frac{10 \div 2}{12 \div 2} = \frac{5}{6} $$</p>
+
+     <p>Entonces la razón de niñas a niños en el equipo de jazz es 3:4 y en el equipo de tap es 5:6. Como las razones no se simplifican a lo mismo, las razones no son equivalentes.</p>
+
+</div>
+
+<!-- ejercicio de razones equivalentes -->
+ <div class='ejercicio'><!-- id 1 -->
+    <h3>Ejercicio. </h3>
+    <p>A Miranda le gusta coleccionar chicles. Cada vez que va de paseo en el parque, siempre encuentra por lo menos un chicle debajo de algún banco. Miranda contó su colección y grabó el número de chicles de cada color en la tabla que ves abajo. </p>
+    <table>
+        <tr><th>Color</th><th>Cantidad</th></tr>
+        <tr><td>Rosa</td><td>28</td></tr>
+        <tr><td>Amarillo</td><td>12</td></tr>
+        <tr><td>Azul</td><td>10</td></tr>
+        <tr><td>Rojo</td><td>7</td></tr>
+        <tr><td>Violeta</td><td>3</td></tr>
+    </table>
+    <p>Encuentra las siguientes razones y determina si son equivalentes.</p>
+    <ol>
+        <li><b>Chicles rosas a rojos</b><br>
+        <span class='full-of-answers hidden'>Miranda contó 28 chicles rosas y 7 rojos. Entonces, la razón de chicles rosas a rojos es 28:7. Pero esta razón se puede simplificar: $$ \frac{28}{7} = \frac{28 \div 7}{7 \div 7} = \frac{4}{1} $$ Asi que la razón 28:7 es equivalente a 4:1, y Miranda tiene 4 chicles rosas por cada chicle rojo.</span></li>
+        <li><b>Chicles rosas a azules</b><br>
+        <span class='full-of-answers hidden'>Mirana tiene 28 chicles rosas y 10 azules. Entonces la razón es 28:10. Pero podemos simplificar de nuevo: $$ \frac{28}{10} = \frac{28 \div 2}{10 \div 2} = \frac{14}{5} $$ Por lo tanto, la razón 28:10 es equivalente a 14:5. Y esto significa que Miranda tiene 14 chicles rosas por cada 5 chicles azules.</span></li>
+        <li><b>Chicles amarillos a violetas</b><br>
+        <span class='full-of-answers hidden'>Mirana tiene 12 chicles amarillos y 3 violetas. Entonces la razón es 12:3. Pero podemos simplificar esta razón: $$ \frac{12}{3} = \frac{12 \div 3}{3 \div 3} = \frac{4}{1} $$ Por lo tanto, la razón 12:3 es equivalente a 4:1. Esto significa que Miranda tiene 4 chicles amarillos por cada chicle violeta.</span></li>
+        <li><b>Chicles violetas al resto de la colección</b><br>
+        <span class='full-of-answers hidden'>Mirana tiene 3 chicles violetas. El resto de su colección se puede obtener sumando los siguientes números: $$ 28 + 12 + 7 + 10 = 57 $$ Entonces la razón es 3:57. Pero podemos simplificar esta razón: $$\frac{3}{57} = \frac{3 \div 3}{57 \div 3} = \frac{1}{19} $$ Por lo tanto, la razón es 1:19 y esto significa que Miranda tiene un chicle violeta por cada 19 chicles de cualquier otro color.</span></li>
+        <p class='full-of-answers hidden'>En resumen, las razones son:</p>
+        <table class='full-of-answers hidden'>
+            <tr><td>Chicles rosas a rojos</td><td>4:1</td></tr>
+            <tr><td>Chicles rosas a azules</td><td>14:5</td></tr>
+            <tr><td>Chicles amarillos a violetas</td><td>4:1</td></tr>
+            <tr><td>Chicles violetas al resto de la colección</td><td>1:19</td></tr>
+        </table>
+        <p class='full-of-answers hidden'>Entonces, las unicas razones que son equivalentes son la razón de chicles rosas a rojos y la razón de chicles amarillos a violetas.</p>
+    </ol>
+
+    <button class='see-answer-btn' onclick='showAnswers(1)'>Ver la respuesta</button>
+</div>

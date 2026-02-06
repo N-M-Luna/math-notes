@@ -20,6 +20,10 @@ To add new articles:
 -----------
 
 TODO:
+- Pick style and apply it consistently.
+- Finish ratio+porportions unit.
+- Add assessment view.
 - Add practice problems to each article.
 - Add English translations.
 - Add in-line LaTeX expressions.
+- Display correctly all LaTeX expressions that are too long.

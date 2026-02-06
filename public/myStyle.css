@@ -61,6 +61,10 @@ hr.topic-header {
     font-size: 20px;
     padding-left: 20px;
 }
+.test-link {
+    /* font-weight: 525; */
+    padding-bottom: 15px;
+}
 .math-content {
     font-size: 18px;
 }
@@ -95,6 +99,11 @@ hr.topic-header {
         width: 100%;
     }
 }
+table, th, td {
+  border: 1px solid black;
+  margin: 0px auto;
+  padding: 5px 10px;
+}
 .def {
     margin-top: 50px;
 }
@@ -116,6 +125,9 @@ hr.topic-header {
     border-radius: 10px;
     margin: 15px 0px;
     padding: 15px;
+}
+.ejercicio li {
+    margin-top: 10px;
 }
 .hidden {
     display: none;
@@ -139,7 +151,7 @@ hr.topic-header {
     text-decoration: underline;
 }
 .big-text {
-    font-size: 20;
+    font-size: 25px;
 }
 .center-p {
     text-align: center;
