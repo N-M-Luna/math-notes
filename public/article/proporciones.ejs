@@ -3,6 +3,117 @@
 <hr class='topic-header'>
 
 <!-- def de proporciones -->
+<div class='def'>
+    <p>Una <strong>proporción</strong> se puede representar como una ecuación y nos dice que dos razones son iguales.</p>
+
+    <p>Por ejemplo, la razón 5:10 es proporcional a 1:2. </p>
+    <div id='box' class='jxgbox short-graph' <%- graphOpts %> ></div>
+
+    <p>Por lo tanto, podemos escribir: $$ \frac{5}{10} = \frac{1}{2} $$</p>
+
+    <p>
+        Para verificar que estas dos razones sí forman una proporción, podemos multiplicar cruzado. Si llegamos a una ecuación que es cierta, entonces sí es proporción. Si llegamos a una ecuación falsa, entonces no es proporción.
+        $$ \frac{\textcolor{<%- greenHex %>}{5}}{\textcolor{<%- orangeHex %>}{10}} = \frac{\textcolor{<%- orangeHex %>}{1}}{\textcolor{<%- greenHex %>}{2}} $$
+        $$ \textcolor{<%- greenHex %>}{5 \cdot 2} = \textcolor{<%- orangeHex %>}{1 \cdot 10} $$
+        $$ \textcolor{<%- greenHex %>}{10} = \textcolor{<%- orangeHex %>}{10} $$
+        Como la multiplicación cruzada nos lleva a una ecuación cierta, la razón 5:10 sí es proporcional a 1:2.
+    </p>
+</div>
+
 <!-- eg de proporciones (determina si es o no proporcion) -->
-<!-- eg de proporciones () -->
-<!-- ejercicio de proporciones -->
+ <div class='eg'>
+     <p><i>Ejemplo 1</i>. <b> ¿La razón 3:4 es equivalente a la razón 12:16? </b> </p>
+     <p>Esta equivalencia se puede escribir como una ecuación: $$ \frac{3}{4} = \frac{12}{16} $$ </p>
+
+    <p>
+        Podemos verificar si esta proporción es cierta multiplicando cruzado:
+        $$ \frac{3}{4} \overset{?}{=} \frac{12}{16} $$
+        $$ 3 \cdot 16 \overset{?}{=} 4 \cdot 12 $$
+        $$ 48 = 48 $$
+    </p>
+
+    <p>Como llegamos a una ecuación verdadera, entonces las razones 3:4 y 12:16 son proporcionales.</p>
+
+    <p><i>Ejemplo 2</i>. <b> Juan Ramón corrió 3 millas en 35 minutos. El amigo de Juan Ramón corrió 2 millas en 20 minutos. Define la razón de millas a minutos para ambos. Juan Ramón y su amigo corrieron a las misma velocidad?</b> </p>
+
+    <p>Velocidad de Juan Ramón: $$ \frac{3 \text{ millas}}{35 \text{ minutos}} $$</p>
+    <p>Velocidad de su amigo: $$ \frac{2 \text{ millas}}{20 \text{ minutos}} $$</p>
+
+    <p>
+        Definimos una proporción con estas dos razones y multiplicamos cruzado:
+        $$ \frac{3}{35} \overset{?}{=} \frac{2}{20} $$
+        $$ 3 \cdot 20 \overset{?}{=} 2 \cdot 35 $$
+        $$ 60 \not = 70 $$
+    </p>
+
+    <p>Como llegamos a una ecuación falsa, entonces las velocidades de Juan Ramón y su amigo no son equivalentes.</p>
+ </div>
+
+ <p class='intro'>Usa la multiplicación cruzada para hacer el siguiente ejercicio.</p>
+
+<!-- ejercicio de proporciones (determina si es o no proporcion) -->
+<div class='ejercicio'><!-- id 0 -->
+    <h3>Ejercicio. </h3>
+    <p><b>Un grupo de amigos está jugando x juego. En la tabla de abajo, están anotadas las horas que cada uno jugó y la cantidad de puntos que cada uno anotó. Podemos definir la razón de puntos a horas para cada jugador. <span class='underlined'>Determina si la razón de puntos a horas de cada par es proporcional o nó.</span></b></p>
+
+    <table>
+        <tr><th>Jugador</th><th>Puntos</th><th>Horas</th></tr>
+        <tr><td>Lily</td><td>5</td><td>3</td></tr>
+        <tr><td>James</td><td>15</td><td>5</td></tr>
+        <tr><td>Sirius</td><td>2</td><td>6</td></tr>
+        <tr><td>Remus</td><td>2</td><td>6</td></tr>
+    </table>
+    <ol>
+        <li><b>Lily y James</b> <br>
+        <p class='full-of-answers hidden'> Definicion y multiplicacion</p></li>
+    </ol>
+
+    <button class='see-answer-btn' onclick='showAnswers(0)'>Ver la respuesta</button>
+</div>
+
+<h2> ¿Para qué sirven las proporciones? </h2> <!--¿Cómo se puede usar una proporción?-->
+<hr class='topic-header'>
+
+<p class='intro'>Podemos usar las proporciones para encontrar un desconocido.</p>
+
+<!-- eg de proporciones (busca el desconocido) -->
+
+<!-- ejercicio de proporciones (busca el desconocido) -->
+
+<script>
+    const greenHex = '#729170';
+
+    //Compare 1:2 and 5:10
+    const ex1board = JXG.JSXGraph.initBoard(
+        'box', {
+        boundingbox: [-20, 10, 20, -10],
+        showInfoBox: false,
+        showNavigation: false,
+    });
+    const mkCircleWithCenter = (boardName, cPnt, splits) => {
+        const radius = 8;
+        boardName.create('circle', [cPnt, radius], {
+            hightlight: false,
+            strokeColor: 'black'
+        });
+        const nSegments = splits/2;
+        for(let i = 0; i < nSegments; i++) {
+            const theta = i*(Math.PI / nSegments) + (Math.PI / 2);
+            const leftPnt = [radius * Math.cos(theta) + cPnt[0], radius * Math.sin(theta) + cPnt[1]];
+            const rightPnt = [-radius * Math.cos(theta) + cPnt[0], -radius * Math.sin(theta) + cPnt[1]];
+            boardName.create('segment', [leftPnt, rightPnt], {
+                hightlight: false,
+                strokeColor: 'black',
+            });
+        }
+        boardName.create('sector', [cPnt, [cPnt[0], cPnt[1] + radius], [cPnt[0], cPnt[1] - radius]], {
+            anglePoint: {visible: false},
+            center: {visible: false},
+            fillColor: greenHex,
+            radiusPoint: {visible: false}
+        });
+    };
+    mkCircleWithCenter(ex1board, [-10, 0], 10);
+    mkCircleWithCenter(ex1board, [10, 0], 2);
+
+</script>

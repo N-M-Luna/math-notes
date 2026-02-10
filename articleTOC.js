@@ -1,5 +1,10 @@
 export const articleTOC = [
     {
+        title: 'Boilerplate',
+        articleID: 'boilerplate',
+        lang: 'es'
+    },
+    {
         title: 'Conjuntos',
         articleID: 'conjuntos',
         lang: 'es'

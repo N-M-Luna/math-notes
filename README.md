@@ -21,6 +21,7 @@ To add new articles:
 
 TODO:
 - Finish ratio+porportions unit.
+- Edit sizing for mobile.
 - Add assessment view.
 - Add practice problems to each article.
 - Add English translations.
