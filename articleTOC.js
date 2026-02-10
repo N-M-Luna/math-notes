@@ -10,13 +10,18 @@ export const articleTOC = [
         lang: 'es'
     },
     {
-        title: 'Potencias y raíces cuadradas',
-        articleID: 'potencias_y_raices',
+        title: 'Potencias',
+        articleID: 'potencias',
         lang: 'es'
     },
     {
         title: 'Proporciones',
         articleID: 'proporciones',
+        lang: 'es'
+    },
+    {
+        title: 'Raíces cuadradas',
+        articleID: 'raices_cuadradas',
         lang: 'es'
     },
     {

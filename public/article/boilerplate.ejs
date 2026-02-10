@@ -1,4 +1,4 @@
-<h2> ¿Que es un número? </h2>
+<h2> ¿Qué es un número? </h2>
 <hr class='topic-header'>
 
 <p> Podemos usar LaTeX: </p>
@@ -6,9 +6,6 @@ $$ x^2 + y^2 = 1 $$
 
 <p>Y podemos usar jsx graph: </p>
 <div id="box" class="jxgbox square-graph" <%- graphOpts %> ></div> <!-- There is also short-graph, which has an AR of 2 -->
-
-<h2> Otro sub tema </h2>
-<hr class='topic-header'>
 
 <!-- def de elemento -->
 <div class='def'>
@@ -27,47 +24,18 @@ $$ 5 \notin Y $$
 <div class='ejercicio'><!-- id 0 -->
     <h3>Ejercicio. </h3>
     <!--Este es el primer ejercicio. Así que su indice es 0 y su botón 'see-answer-btn' va a llamar la function showAnswers(0)-->
-    <p>Instrucciones aqui.</p>
+    <p><b>Instrucciones aqui. Busca <span class='underlined'>esto y lo otro</span>.</b></p>
     <ol>
         <li class='open-for-answers'>$$ 2 \times 2 = \underline{\hspace{1cm}} $$</li>
-        <li class='full-of-answers hidden'>$$  2 \times 2 = 4 $$</li>
         <li class='open-for-answers'>$$ 2 + 2 = \underline{\hspace{1cm}} $$</li>
+    </ol>
+    <hr class='full-of-answers hidden'>
+    <ol>
+        <li class='full-of-answers hidden'>$$  2 \times 2 = 4 $$</li>
         <li class='full-of-answers hidden'>$$ 2 + 2 = 4 $$</li>
     </ol>
 
     <button class='see-answer-btn' onclick='showAnswers(0)'>Ver la respuesta</button>
-</div>
-
-<!-- ejercicio de operaciones -->
-<div class='ejercicio'><!-- id 1 -->
-    <h3>Ejercicio. </h3>
-    <p>Definimos los siguientes conjuntos:</p>
-    $$ \begin{align*}
-        F &= \{ 1, 2, 3, 4, 5 \} \\
-        G &= \{ 4, 5, 6, 7, 8, 9 \} \\
-    \end{align*} $$
-    <p>Determina qué elemento está en cada conjunto.</p>
-
-
-    <span class='open-for-answers'>
-        $$ \begin{align*}
-        F \cup G &= \underline{\hspace{3cm}} \\
-        F - G &= \underline{\hspace{3cm}} \\
-        G - F &= \underline{\hspace{3cm}} \\
-        F \cap G &= \underline{\hspace{3cm}} \\
-        \end{align*} $$
-    </span>
-
-    <span class='full-of-answers hidden'>
-        $$ \begin{align*}
-        F \cup G &= \{ 1, 2, 3, 4, 5, 6, 7, 8, 9 \} \\
-        F - G &=  \{ 1, 2, 3 \} \\
-        G - F &= \{ 6, 7, 8, 9 \} \\
-        F \cap G &= \{ 4, 5 \} \\
-        \end{align*} $$
-    </span>
-
-    <button class='see-answer-btn' onclick='showAnswers(1)'>Ver la respuesta</button>
 </div>
 
 <!-- información extra -->

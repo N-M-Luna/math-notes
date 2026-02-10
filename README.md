@@ -20,7 +20,6 @@ To add new articles:
 -----------
 
 TODO:
-- Pick style and apply it consistently.
 - Finish ratio+porportions unit.
 - Add assessment view.
 - Add practice problems to each article.
