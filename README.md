@@ -21,9 +21,12 @@ To add new articles:
 
 TODO:
 - Finish ratio+porportions unit.
+- Show my scratch paper in eg's and ejercicio's.
 - Edit sizing for mobile.
 - Add assessment view.
+- Add views for topicHeader, def, eg, ejercicio, and intro/outro.
 - Add practice problems to each article.
 - Add English translations.
-- Add in-line LaTeX expressions.
+- Understand macros in LaTeX.
+- Add in-line LaTeX expressions. ([docs on how to render](https://katex.org/docs/options))
 - Display correctly all LaTeX expressions that are too long.

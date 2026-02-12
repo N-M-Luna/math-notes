@@ -104,6 +104,10 @@ table, th, td {
   margin: 0px auto;
   padding: 5px 10px;
 }
+th {
+    background-color: #729170;
+    color: white;
+}
 .def {
     margin-top: 50px;
 }

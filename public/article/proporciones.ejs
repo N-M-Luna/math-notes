@@ -12,12 +12,15 @@
     <p>Por lo tanto, podemos escribir: $$ \frac{5}{10} = \frac{1}{2} $$</p>
 
     <p>
-        Para verificar que estas dos razones sí forman una proporción, podemos multiplicar cruzado. Si llegamos a una ecuación que es cierta, entonces sí es proporción. Si llegamos a una ecuación falsa, entonces no es proporción.
+        Para verificar que estas dos razones sí forman una proporción, podemos <span class='underlined'>multiplicar cruzado</span>. Si llegamos a una ecuación que es cierta, entonces sí es proporción. Si llegamos a una ecuación falsa, entonces no es proporción.
         $$ \frac{\textcolor{<%- greenHex %>}{5}}{\textcolor{<%- orangeHex %>}{10}} = \frac{\textcolor{<%- orangeHex %>}{1}}{\textcolor{<%- greenHex %>}{2}} $$
         $$ \textcolor{<%- greenHex %>}{5 \cdot 2} = \textcolor{<%- orangeHex %>}{1 \cdot 10} $$
         $$ \textcolor{<%- greenHex %>}{10} = \textcolor{<%- orangeHex %>}{10} $$
         Como la multiplicación cruzada nos lleva a una ecuación cierta, la razón 5:10 sí es proporcional a 1:2.
     </p>
+
+
+    <p>Otra forma de verificar que las razones son propocionales, es <span class='underlined'>simplificando</span> ambas. En este caso, la razón 1:2 ya está simplificada. La otra razón se simplifica dividiendo ambos números por 5: $$ \frac{5}{10} = \frac{5 \div 5}{10 \div 5} = \frac{1}{2} $$ Como ambas razones simplifican a 1:2, entonces son proprcionales.</p>
 </div>
 
 <!-- eg de proporciones (determina si es o no proporcion) -->
@@ -47,38 +50,119 @@
     </p>
 
     <p>Como llegamos a una ecuación falsa, entonces las velocidades de Juan Ramón y su amigo no son equivalentes.</p>
+
  </div>
 
- <p class='intro'>Usa la multiplicación cruzada para hacer el siguiente ejercicio.</p>
+ <p class='intro'>Usa la multiplicación cruzada o la simplificación para hacer el siguiente ejercicio.</p>
 
 <!-- ejercicio de proporciones (determina si es o no proporcion) -->
 <div class='ejercicio'><!-- id 0 -->
     <h3>Ejercicio. </h3>
-    <p><b>Un grupo de amigos está jugando x juego. En la tabla de abajo, están anotadas las horas que cada uno jugó y la cantidad de puntos que cada uno anotó. Podemos definir la razón de puntos a horas para cada jugador. <span class='underlined'>Determina si la razón de puntos a horas de cada par es proporcional o nó.</span></b></p>
+    <p>Determina si cada par de razones <span class='underlined'>forman una proporción</span>.</p>
 
-    <table>
-        <tr><th>Jugador</th><th>Puntos</th><th>Horas</th></tr>
-        <tr><td>Lily</td><td>5</td><td>3</td></tr>
-        <tr><td>James</td><td>15</td><td>5</td></tr>
-        <tr><td>Sirius</td><td>2</td><td>6</td></tr>
-        <tr><td>Remus</td><td>2</td><td>6</td></tr>
-    </table>
     <ol>
-        <li><b>Lily y James</b> <br>
-        <p class='full-of-answers hidden'> Definicion y multiplicacion</p></li>
+        <li> $$ \frac{2}{5} \text{ y }  \frac{4}{10} $$ <br>
+            <span class='full-of-answers hidden'> Si estas dos razones forman una proporción, entonces esta ecuación será cierta: $$\frac{2}{5} = \frac{4}{10}$$ Para verificar, tenemos que multiplicar cruzado. $$ 2 \cdot 10 = 4 \cdot 5 $$ Al simplificar, nos queda: $$ 20 = 20 $$ Como esto es una ecuación cierta, <b>sí es una proporción</b>. </span>
+        </li>
+        <li> $$ \frac{5}{7} \text{ y }  \frac{15}{21} $$ <br>
+            <span class='full-of-answers hidden'> Si estas dos razones forman una proporción, entonces esta ecuación será cierta: $$\frac{5}{7} = \frac{15}{21}$$ Para verificar, tenemos que multiplicar cruzado. $$ 5 \cdot 21 = 15 \cdot 7 $$ Al simplificar, nos queda: $$ 105 = 105 $$ Como esto es una ecuación cierta, <b>sí es una proporción</b>. </span>
+        </li>
+         <li> $$ \frac{6}{25} \text{ y }  \frac{10}{50} $$ <br>
+            <span class='full-of-answers hidden'> Vamos a verificar si esta pareja de razones forman una proporción simplificando cada una y comparando. La primera razón no se puede simplificar: $$ \frac{6}{25} = \frac{2 \cdot 3}{ 5 \cdot 5} $$  La segundo razón se puede simplificar dividiendo por 10: $$ \frac{10}{50} = \frac{10 \div 10}{50 \div 10} = \frac{1}{5} $$. Como las fracciones no simplifican a lo mismo, <b>no forman una proporción</b>. </span>
+        </li>
+        <li> $$ \frac{10}{12} \text{ y }  \frac{40}{48} $$ <br>
+            <span class='full-of-answers hidden'> Si estas dos razones forman una proporción, entonces esta ecuación será cierta: $$\frac{10}{12} = \frac{40}{48}$$ Para verificar, tenemos que multiplicar cruzado. $$ 10 \cdot 48 = 40 \cdot 12 $$ Al simplificar, nos queda: $$ 480 = 480 $$ Como esto es una ecuación cierta, <b>sí es una proporción</b>. </span>
+        </li>
     </ol>
 
     <button class='see-answer-btn' onclick='showAnswers(0)'>Ver la respuesta</button>
 </div>
 
-<h2> ¿Para qué sirven las proporciones? </h2> <!--¿Cómo se puede usar una proporción?-->
+<h2> ¿Para qué sirven las proporciones? </h2>
 <hr class='topic-header'>
 
 <p class='intro'>Podemos usar las proporciones para encontrar un desconocido.</p>
 
 <!-- eg de proporciones (busca el desconocido) -->
+ <div class='eg'>
+    <p><i>Ejemplo 1</i>. <b>Juan Bobo está siguiendo una receta para preparar una merienda. La receta pide los siguientes ingredientes: </b></p>
+    <table>
+        <tr><th>Ingrediente</th><th>Cantidad</th></tr>
+        <tr><td>nueces</td><td>4 tazas</td></tr>
+        <tr><td>maní</td><td>3 tazas</td></tr>
+        <tr><td>chocoloates</td><td>1 taza</td></tr>
+        <tr><td>pasas</td><td>2 tazas</td></tr>
+    </table>
+    <p><b>Si Juan Bobo tiene 6 tazas de maní, ¿cuántas tazas de pasa necesitará? </b></p>
+
+    <p>Para contestar esta pregunta, tenemos que (1<sup>ro</sup>) definir la razón de maní a pasas en la receta, y (2<sup>do</sup>) construir una segunda razón que sea proporcional a la razón de maní a pasas y que tenga 6 tazas de maní. </p>
+
+    <p><b>Paso 1</b>. Encontrar la razón de maní a pasas en la receta. </p>
+
+    <p>La receta pide 3 tazas de maní y 2 tazas de pasas. Entonces la razón de maní a pasas es $$ \frac{3 \text{ tazas de maní}}{2 \text{ tazas de pasas}} $$</p>
+
+    <p><b>Paso 2</b>. Construir una segunda razón que sea proporcional a la razón de maní a pasas y que tenga 6 tazas de maní. </p>
+
+    <p>En esta segunda razón, tenemos 6 tazas de de maní y un número desconocido de tazas de pasas, que podemos representar con la variable p. Entonces la razón será: $$ \frac{6 \text{ tazas de maní}}{p \text{ tazas de pasas}} $$</p>
+
+    <p>Para que las dos razones sean proporcionales, estas dos fracciones deben ser equivalentes. Por lo tanto, podemos definir la siguiente ecuación: $$ \frac{3}{2} = \frac{6}{p} $$</p>
+
+    <p>
+        Entonces, para encontrar la desconocida, podemos multiplicar cruzado y despejar por p.
+        $$ 3 p = 2 \cdot 6 $$
+        $$ 3 p = 12 $$
+        $$ \frac{3 p}{3} = \frac{12}{3} $$
+        $$ p = 4 $$
+    </p>
+
+    <p>Asi que Juan Bobo necesita 4 tazas de pasas.</p>
+
+    <p><i>Ejemplo 2</i>. <b> En el caso de que Juan Bobo tiene 3 tazas de nueces, ¿cuántas tazas de pasa necesitará? </b></p>
+
+    <p>Repetimos los mismos pasos usando la misma receta:</p>
+    <table>
+        <tr><th>Ingrediente</th><th>Cantidad</th></tr>
+        <tr><td>nueces</td><td>4 tazas</td></tr>
+        <tr><td>maní</td><td>3 tazas</td></tr>
+        <tr><td>chocoloates</td><td>1 taza</td></tr>
+        <tr><td>pasas</td><td>2 tazas</td></tr>
+    </table>
+
+    <p><b>Paso 1</b>. Encontrar la razón de nueces a pasa en la receta. </p>
+
+    <p>Como la receta pide 4 tazas de nueces y 2 tazas de pasas, la razón es 4:2 y se puede simplificar de la siguiente manera: $$ \frac{4}{2} = \frac{4 \div 2}{2 \div 2} = \frac{2}{1} $$</p>
+
+    <p><b>Paso 2</b>. Construir una segunda razón que sea proporcional a la razón de nueces a pasas y que tenga 3 tazas de nueces. </p>
+
+    <p>Para la otra razón, tenemos 3 tazas de nueces y un número desconocido de tazas de pasas (p). Entonces, la segunda razón es: $$ \frac{3}{p} $$ </p>
+
+    <p>Para que las razones sean equivalentes, definimos la siguiente ecuación: $$ \frac{2}{1} = \frac{3}{p} $$</p>
+
+    <p>
+        Entonces, para encontrar la desconocida, podemos multiplicar cruzado y despejar por p.
+        $$ 2 p = 1 \cdot 3 $$
+        $$ 2 p = 3 $$
+        $$ \frac{2 p}{2} = \frac{3}{2} $$
+        $$ p = 1.5 $$
+    </p>
+
+    <p>Por lo tanto, Juan Bobo necesitaría 1 taza y media de pasas.</p>
+
+ </div>
 
 <!-- ejercicio de proporciones (busca el desconocido) -->
+<div class='ejercicio'><!-- id 1 -->
+    <h3>Ejercicio. </h3>
+    <p>Usa las proporciones para resolver los siguientes ejecicios.</p>
+    <ol>
+        <li><b>Alguien esta corriendo bici. En 40 minutos, recorrió 6 millas. Si Alguien sigue corriendo a la misma velocidad, <span class='underlined'>¿cuánto habrá recorrido en una hora y media?</span></b></li>
+        <p class='full-of-answers hidden'>Para contestar la pregunta, vamos a usar una proporción. Por lo que necesitamos dos razones. En este caso, las razones serán el número de millas recorridas a el tiempo que se tardó. La primera razón será: $$ 6 \text{ millas} : 40 \text{ minutos} $$ Para la segunda razón, tenemos el tiempo (una hora y media, que es lo mismo que 90 minutos), pero no tenemos la distancia. Vamos a usar d para representar esta desconocida: $$ d \text{ millas} : 90 \text{ minutos} $$ Como estamos asumiendo que Alguien está corriendo bici a la misma velocidad, estas dos razones son proporcionales. Por lo tanto, podemos definir la siguiente ecuación: $$ \frac{6 \text{ millas}}{40 \text{ minutos}} = \frac{d \text{ millas}}{90 \text{ minutos}} $$ De aquí, podemos encontrar la desconocida si multiplicamos cruzado y despejamos por d: $$ \begin{align*} 6 \cdot 90 &= 40 \cdot d \\ 540 &= 40d \\ \frac{540}{40} &= \frac{40d}{40} \\ 13.5 &= d \end{align*} $$ Entonces, Alguien habrá recorrido 13.5 millas en una hora y media. </p>
+        <li><b>Rosa es una elfa que trabaja en el polo norte. Rosa envuelve regalos y usa 2 yardas de papel para cada 3 regalos. <span class='underlined'>¿Cuántos regalos podrá envolver con 18 yardas de papel?</span></b></li>
+        <p class='full-of-answers hidden'>Tenemos que definir una porporción. La primera razón es la cantidad de papel que Rosa usa a los regalos que envuelve: $$ 2 \text{ yardas de papel} : 3 \text{ regalos} $$ Para la segunda razón, tenemos la cantidad de papel (18 yardas), pero no tenemos la cantidad de regalos. Llamaremos r a esta desconocida. $$ 18 \text{ yardas de papel} : r \text{ regalos} $$ La proporción es: $$ \frac{2 \text{ yardas de papel}}{3 \text{ regalos}} = \frac{18 \text{ yardas de papel}}{r \text{ regalos}} $$ Ahora podemos encontrar la desconocida multiplicando cruzado y despejamos por r: $$ \begin{align*} 2 \cdot r &= 18 \cdot 3 \\ 2r &= 54 \\ \frac{2r}{2} &= \frac{54}{2} \\ r &= 27 \end{align*} $$ Entonces, Rosa puede envolver 27 regalos con 18 yardas de papel.</p>
+    </ol>
+
+    <button class='see-answer-btn' onclick='showAnswers(1)'>Ver la respuesta</button>
+</div>
 
 <script>
     const greenHex = '#729170';
@@ -115,5 +199,4 @@
     };
     mkCircleWithCenter(ex1board, [-10, 0], 10);
     mkCircleWithCenter(ex1board, [10, 0], 2);
-
 </script>
