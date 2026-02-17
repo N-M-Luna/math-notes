@@ -40,6 +40,16 @@ export const articleTOC = [
         lang: 'en'
     },
     {
+        title: 'Tasa unitaria',
+        articleID: 'tasa_unitaria',
+        lang: 'es'
+    },
+    {
+        title: 'Translations in the coordinate plane',
+        articleID: 'translations',
+        lang: 'en'
+    },
+    {
         title: 'The x-intercept of a linear equation',
         articleID: 'x_intercept',
         lang: 'en'
