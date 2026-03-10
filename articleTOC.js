@@ -10,6 +10,11 @@ export const articleTOC = [
         lang: 'es'
     },
     {
+        title: 'Figuras semejantes',
+        articleID: 'figuras_semejantes',
+        lang: 'es'
+    },
+    {
         title: 'Patrones',
         articleID: 'patrones',
         lang: 'es'

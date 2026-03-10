@@ -1,0 +1,117 @@
+<h2> ¿Qué son figuras semejantes? </h2>
+<hr class='topic-header'>
+
+<!-- def de elemento -->
+<div class='def'>
+    <p>Un par de figuras son <strong>semejantes</strong> si tienen la misma forma, pero no necesariamente el mismo tamaño.</p>
+
+    <div id='definicionBox' class='jxgbox short-graph' <%- graphOpts %> ></div>
+
+    <p>Por ejemplo, los rectángulos ABCD y EFGH son similares y se puede escribir: </p>
+    $$ \fbox{\phantom{---}} ABCD \sim  \fbox{\phantom{---}}EFGH $$
+</div>
+
+<!-- eg de figuras semejantes -->
+<div class='eg'>
+   <p><i>Ejemplo 1</i>. Las siguientes figuras son semejantes.</p>
+    <div id='star-box' class='jxgbox short-graph' <%- graphOpts %> ></div>
+    <p>Nota que cada lado tiene un lado correspondiente...</p>
+
+
+    <p><i>Ejemplo 2</i>. Las siguientes figuras no son semejantes.</p>
+    <div id='triangles-box' class='jxgbox short-graph' <%- graphOpts %> ></div>
+    <p>Nota que las figuras no tienen la misma forma.</p>
+</div>
+
+<h2>¿Cómo verificar que dos figuras son semejantes? </h2>
+<hr class='topic-header'>
+
+<div class='intro'>
+    <p>Si dos figuras son semejantes, cada lado de una figura tendrá un lado <strong>correspondiente</strong> en la otra figura. En este caso:</p>
+
+    <ul>
+        <li>El lado AB corresponde al lado EF </li>
+        <li>El lado BC corresponde al lado FG </li>
+        <li>El lado CD corresponde al lado GH </li>
+        <li>El lado AD corresponde al lado EH </li>
+    </ul>
+
+    <p>Para determinar si dos figuras son semejantes, tenemos que comparar las razones de cada par de lados correspondientes. En este caso, las figuras serán semejantes si la siguiente equivalencia es cierta.</p>
+
+    $$ \frac{AB}{EF} = \frac{BC}{FG} = \frac{CD}{GH} = \frac{AD}{EH} $$
+</div>
+
+<!-- eg de verificar figuras semejantes -->
+<div class='eg'>
+    ¿Las siguientes figuras son semejantes?
+    <div id='eg3box' class='jxgbox short-graph' <%- graphOpts %> ></div>
+
+    <p>Primero, tenemos que identificar los pares de lados correspondientes. He aquí una tabla.</p>
+
+    <p>Ahora, podemos definir las razones de cada par de lados correspondientes.</p>
+    $$\begin{align*}
+    \frac{AB}{GH} &= \frac{3}{5} \\
+    \frac{BC}{HI} &= \frac{6}{10} = \frac{3}{5}
+    \end{align*}$$
+
+    <p>Nota que todas las razones son equivalentes:</p>
+    $$ \frac{AB}{GH} = \frac{BC}{HI} = \dots = \frac{3}{5} $$
+
+    <p>Por lo tanto, las figuras son semejantes.</p>
+</div>
+
+<!-- ejercicio de verificar figuras semejantes-->
+<div class='ejercicio'><!-- id 0 -->
+    <h3>Ejercicio. </h3>
+    <p><b>Verifica que estos dos rectángulos son semejantes.</b></p>
+    <div id='ejercicioBox1' class='jxgbox short-graph' <%- graphOpts %> ></div>
+    <p class='full-of-answers hidden'> Para verificar... </p>
+
+    <button class='see-answer-btn' onclick='showAnswers(0)'>Ver la respuesta</button>
+</div>
+
+<div class='intro'>
+    <p>Si no sabemos cuales son los lados correspondientes, podemos ordenar los lados de más corto a más largo.</p>
+</div>
+
+<!-- ejercicio de verificar figuras semejantes-->
+<div class='ejercicio'><!-- id 1 -->
+    <h3>Ejercicio. </h3>
+    <p><b>Verifica que estos dos triángulos son semejantes.</b></p>
+    <div id='ejercicioBox2' class='jxgbox short-graph' <%- graphOpts %> ></div>
+    <p class='full-of-answers hidden'> Para verificar... </p>
+
+    <button class='see-answer-btn' onclick='showAnswers(1)'>Ver la respuesta</button>
+</div>
+
+
+<script>
+    const greenHex = '#729170';
+    const orangeHex = '#DA8359';
+    const pointName = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+
+    //Definicion
+    const defBoardOpts = {
+        boundingbox: [-20, 10, 20, -10],
+        showInfoBox: false,
+        showNavigation: false
+    };
+    const defBoard = JXG.JSXGraph.initBoard('definicionBox', defBoardOpts);
+    const polygonOpts = {borders: {highlight: false, strokeColor: 'black', strokeWidth: 2}, highlight: false, vertices: {fillOpacity: 0, highlight: false, strokeWidth: 0}};
+    const smallRectCoords = [[-15, 2], [-15, -2], [-7, -2], [-7, 2]];
+    const smallRect = defBoard.create('polygon', smallRectCoords, {...polygonOpts, fillColor: greenHex});
+    smallRectCoords.forEach((pnt, i) => {
+        defBoard.create('point', pnt, {fillOpacity: 0, highlight: false, label: {fontSize: 16, offset: [i < 2? -15 : 5, 50]}, name: pointName[i], strokeWidth: 0, withLabel: true})
+    });
+    const bigRectCoords = [[0, 4], [0, -4], [16, -4], [16, 4]];
+    const bigRect = defBoard.create('polygon', bigRectCoords, {...polygonOpts, fillColor: orangeHex});
+    bigRectCoords.forEach((pnt, i) => {
+        defBoard.create('point', pnt, {fillOpacity: 0, highlight: false, label: {fontSize: 16, offset: [i < 2? -15 : 5, 50]}, name: pointName[i+4], strokeWidth: 0, withLabel: true})
+    });
+
+    const eg1box1 = JXG.JSXGraph.initBoard('star-box', defBoardOpts);//TODO
+    const eg1box2 = JXG.JSXGraph.initBoard('triangles-box', defBoardOpts);
+
+    const ejercicio1box1 = JXG.JSXGraph.initBoard('ejercicioBox1', defBoardOpts);
+    const ejercicio1box2 = JXG.JSXGraph.initBoard('ejercicioBox2', defBoardOpts);
+</script>
