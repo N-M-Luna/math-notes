@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang='en'>
+
+  <head>
+    <meta charset='UTF-8'>
+    <title>Math Notes</title>
+    <link rel='stylesheet' href='myStyle.css'>
+  </head>
+
+  <body>
+  <h1 class='en-content'>Math Notes</h1>
+  <h1 class='es-content hidden'>Notas de Matemáticas</h1>
+  <hr class='page-header'>
+
+  <%- include(bttButtonPath) %>
+
+  <div class='language-controls'><i class="fa-solid fa-language"></i> <button id='en-btn' class='active' onclick='translatePage("en")'>English</button> | <button id='es-btn' onclick='translatePage("es")'>Español</button></div>
+
+  <p class='intro en-content'>Here are some of my writings on math.</p>
+  <p class='intro es-content hidden'>Aquí hay algunos de mis escritos de matemáticas.</p>
+
+  <h2>High School Algebra</h2>
+  <div class='math-list'>
+    <p><a href='/article/slope_triangles'>Slope triangles</a></p>
+    <p><a href='/article/x_intercept'>The x-intercept of a linear function</a></p>
+  </div>
+
+  <h2>Matemáticas de Séptimo Grado</h2>
+  <div class='math-list'>
+    <h3>Unidad: Expresiones numéricas y algebraicas</h3>
+    <p><a href='/article/conjuntos'>Conjuntos</a></p>
+    <p><a href='/article/patrones'>Patrones</a></p>
+    <p><a href='/article/potencias'>Potencias</a></p>
+    <p><a href='/article/raices_cuadradas'>Raíces cuadradas</a> (WIP)</p>
+    <p><a href='#'>Orden de operaciones</a> (TODO)</p>
+    <p><a href='#'>Evaluaciones de expresiones</a> (TODO)</p>
+    <p><a href='#'>Propiedad de los números reales</a> (TODO)</p>
+
+
+    <h3>Unidad: Enteros</h3>
+    (TODO)
+
+    <h3>Unidad: Números racionales</h3>
+    (TODO)
+
+    <h3>Unidad: Ecuaciones e inecuaciones</h3>
+    (TODO)
+
+    <h3>Unidad: Razones y Proporciones</h3>
+    <p><a href='/article/razones'>Razones</a></p>
+    <p><a href='/article/proporciones'>Proporciones</a></p>
+    <p><a href='/article/tasa_unitaria'>Tasa unitaria</a></p>
+    <p><a href='/article/figuras_semejantes'>Figuras semejantes</a> (WIP)</p>
+    <p><a href='/article/escalas'>Escalas</a> (WIP)</p>
+  </div>
+
+  <div class='en-content'>
+    <%- include(footerPath) %>
+  </div>
+  <div class='es-content hidden'>
+    <%- include(pieDePaginaPath) %>
+  </div>
+  </body>
+
+  <script src='index.js'></script>
+  <script src='https://kit.fontawesome.com/5721503876.js' crossorigin='anonymous'></script>
+  <script>
+    function translatePage(langToSet) {
+      //Find and hide all .en-content and .es-content
+      const englishContent = document.getElementsByClassName('en-content');
+      for(let i = 0; i < englishContent.length; i++) {
+        englishContent[i].classList.add('hidden')
+      }
+      const contenidoEspanol = document.getElementsByClassName('es-content');
+      for(let i = 0; i < contenidoEspanol.length; i++) {
+        contenidoEspanol[i].classList.add('hidden')
+      }
+
+      //Find all elements with class `${langToSet}-content` and remove the hidden class
+      const targetContent = document.getElementsByClassName(langToSet + '-content');
+      for(let i = 0; i < targetContent.length; i++) {
+        targetContent[i].classList.remove('hidden')
+      }
+
+      //Change html lang attribute.
+      const htmlElem = document.getElementsByTagName('html')
+      // htmlElem.setAttribute('lang', langToSet)
+
+      //Change active btns
+      const langBtns = document.querySelectorAll('.language-controls button')
+      langBtns[0].classList.remove('active')
+      langBtns[1].classList.remove('active')
+      document.getElementById(langToSet + '-btn').classList.add('active')
+    }
+  </script>
+
+</html>

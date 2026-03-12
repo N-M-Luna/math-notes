@@ -20,14 +20,16 @@
 
     <p><i>Ejemplo 2</i>. Las siguientes figuras no son semejantes.</p>
     <div id='triangles-box' class='jxgbox short-graph' <%- graphOpts %> ></div>
-    <p>Nota que las figuras no tienen la misma forma.</p>
+    <p>Nota que las figuras no tienen la misma forma...</p>
 </div>
 
 <h2>¿Cómo verificar que dos figuras son semejantes? </h2>
 <hr class='topic-header'>
 
 <div class='intro'>
-    <p>Si dos figuras son semejantes, cada lado de una figura tendrá un lado <strong>correspondiente</strong> en la otra figura. En este caso:</p>
+    <p>Si dos figuras son semejantes, cada lado de una figura tendrá un lado <strong>correspondiente</strong> en la otra figura. </p>
+
+    <p> Si tenemos estas dos figuras... En este caso:</p>
 
     <ul>
         <li>El lado AB corresponde al lado EF </li>
@@ -36,7 +38,7 @@
         <li>El lado AD corresponde al lado EH </li>
     </ul>
 
-    <p>Para determinar si dos figuras son semejantes, tenemos que comparar las razones de cada par de lados correspondientes. En este caso, las figuras serán semejantes si la siguiente equivalencia es cierta.</p>
+    <p>Para determinar si dos figuras son semejantes, tenemos que comparar las razones de cada par de lados correspondientes. En este caso, las figuras serán semejantes si la sig1iente equivalencia es cierta.</p>
 
     $$ \frac{AB}{EF} = \frac{BC}{FG} = \frac{CD}{GH} = \frac{AD}{EH} $$
 </div>
@@ -109,8 +111,40 @@
         defBoard.create('point', pnt, {fillOpacity: 0, highlight: false, label: {fontSize: 16, offset: [i < 2? -15 : 5, 50]}, name: pointName[i+4], strokeWidth: 0, withLabel: true})
     });
 
-    const eg1box1 = JXG.JSXGraph.initBoard('star-box', defBoardOpts);//TODO
+    const eg1box1 = JXG.JSXGraph.initBoard('star-box', defBoardOpts);
+    const mkStarPolygon = (boardName, centerCoord, l) => {
+        const s = l/2;
+        const theta_l = 2 * Math.PI / 5;
+        const vertices = [];
+        const getCoords = (theta, r) => [centerCoord[0] + r * Math.cos(theta), centerCoord[1] + r * Math.sin(theta)];
+        for(let i = 0; i < 2 * Math.PI; i += theta_l) {
+            vertices.push(getCoords(i, l)); //Convex v-point
+            vertices.push(getCoords(i + (theta_l / 2), s)); //Concave v-point
+        }
+        boardName.create('polygon', vertices, {
+            borders: {strokeColor: centerCoord[0] < 0 ? greenHex : orangeHex, strokeWidth: 2},
+            fillColor: centerCoord[0] < 0 ? greenHex : orangeHex,
+            fillOpacity: 0.25,
+            vertices: {visible: false}
+        });
+    };
+    mkStarPolygon(eg1box1, [-10, 0], 8);
+    mkStarPolygon(eg1box1, [10, 0], 5);
+
+
     const eg1box2 = JXG.JSXGraph.initBoard('triangles-box', defBoardOpts);
+    eg1box2.create('polygon', [[-15, 6], [-15, -5], [-5, -5]], {
+        borders: {strokeColor: greenHex, strokeWidth: 2},
+        fillColor: greenHex,
+        fillOpacity: 0.25,
+        vertices: {visible: false}
+    });
+    eg1box2.create('polygon', [[13, -5], [7, 6], [1, -5]], {
+        borders: {strokeColor: orangeHex, strokeWidth: 2},
+        fillColor: orangeHex,
+        fillOpacity: 0.25,
+        vertices: {visible: false}
+    });
 
     const ejercicio1box1 = JXG.JSXGraph.initBoard('ejercicioBox1', defBoardOpts);
     const ejercicio1box2 = JXG.JSXGraph.initBoard('ejercicioBox2', defBoardOpts);

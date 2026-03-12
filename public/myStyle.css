@@ -43,6 +43,16 @@ a:hover {
 h1 {
     margin-top: 50px;
 }
+.language-controls {
+    float: right;
+}
+.language-controls button {
+    background-color: transparent;
+    border: dashed 1px #729170;
+}
+.language-controls button.active {
+    border: solid 1px #729170;
+}
 .intro {
     margin: 50px 0px;
 }
@@ -176,4 +186,12 @@ footer {
 }
 footer a {
     color: white;
+}
+footer .fa-solid, .fa-brands {
+    font-size: x-large;
+    margin: 10px;
+}
+.signature {
+    font-family: cursive;
+    font-size: large;
 }

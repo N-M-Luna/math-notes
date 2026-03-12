@@ -1,3 +1,16 @@
+export const subjectList = [
+    'High School Algebra',
+    'Matemáticas de Séptimo Grado'
+]
+export const unitsPerSubject = {
+    'High School Algebra': [
+        'Sample'
+    ],
+    'Matemáticas de Séptimo Grado': [
+        'Expresiones numéricas y algebraicas',
+        'Razones y Proporciones'
+    ]
+}
 export const articleTOC = [
     {
         title: 'Boilerplate',
