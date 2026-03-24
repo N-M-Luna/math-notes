@@ -5,10 +5,70 @@
 <!-- def de raíz cuadrada -->
 <div class='def'>
     <p>Obtener la <strong>raíz cuadrada</strong> de un número es la operación opuesta a elevar al cuadrado.</p>
-    <p>Por ejemplo, sacar la raíz cuadrada de 16 es encontrar qué número tengo que elevar al cuadrado para que me dé 16.</p>
-    $$ \sqrt{16} = \boxed{?} \quad \text{ es equivalente a } \quad \boxed{?}^2 = 16 $$
+    <p>Por ejemplo, sacar la raíz cuadrada de 4 es encontrar qué número tengo que elevar al cuadrado para que me dé 4.</p>
+    $$ \sqrt{4} = \boxed{?} \quad \text{ es equivalente a } \quad \boxed{?}^2 = 4 $$
 
-    Visto de otra manera, las raíces cuadradas nos dan la misma información que las expresiones exponenciales.
+    <p>Visto de otra manera, las raíces cuadradas nos dan la misma información que las expresiones exponenciales.</p>
     $$ \sqrt[2]{a} = b \quad \text{ es equivalente a } \quad b^2 = a $$
+</div>
 
+
+<!-- eg de raiz cuadrada -->
+<div class='eg'>
+    <p><i>Ejemplo 1</i>. Encuentra la raíz cuadrada de 16.</p>
+    <p>Usando los símbolos para raíz cuadrada, queremos encontrar:</p>
+    $$ \sqrt{16} = \boxed{?} $$
+    <p>O sea, que queremos encontrar el número que va en la cajita abajo:</p>
+    $$ \boxed{?}^2 = 16 $$
+    <p>Vamos a probar números. A ver si la respuesta es 1:</p>
+    $$ 1^2 = 1 \cdot 1 = 1 \neq 16 $$
+    <p>La respuesta no es 1. Seguimos con el próximo numero:</p>
+    $$ 2^2 = 2 \cdot 2 = 4 \neq 16 $$
+    <p>Asi que la respuesta tampoco es 2. Seguimos: </p>
+    $$ 3^2 = 3 \cdot 3 = 9 \neq 16 $$
+    <p>Entonces la respuesta tampoco es 3. Continuemos: </p>
+    $$ 4^2 = 4 \cdot 4 = 16 $$
+    <p>Bien, encontramos (por fin) el número que al elevar al cuadrado nos dá 16. Por lo tanto,</p>
+    $$ \sqrt{16} = 4 $$
+
+    <p><i>Ejemplo 2</i>. Encuentra la raíz cuadrada de 4.</p>
+    <p>Usando los símbolos para raíz cuadrada, queremos encontrar:</p>
+    $$ \sqrt{4} = \boxed{?} $$
+    <p>Como nosotros sabemos que:</p>
+    $$ 2^2 = 2 \cdot 2 = 4 $$
+    <p>Entonces:</p>
+    $$ \sqrt{4} = 2 $$
+</div>
+
+<p class='outro'>No tenemos que memorizarnos los cuadrados de todos los números, pero nos conviene familiarizarnos con ellos. Aqui los cuadrados de los números enteros desde el 1 hasta el 12.</p>
+
+<table class='wide-table'>
+    <tr><th>x</th><th>x<sup>2</sup></th></tr>
+    <% for (let i = 1; i < 13; i++) { %>
+        <tr><td><%= i %></td><td ><%= i*i %></td></tr>
+    <% } %>
+</table>
+
+
+<!-- ejercicio de raices cuadradas -->
+<div class='ejercicio'><!-- id 0 -->
+    <h3>Ejercicio. </h3>
+    <p><b>Encuentra las siguientes raices cuadradas.</b></p>
+    <ol>
+        <li class='open-for-answers'>$$ \sqrt{9} = \underline{\hspace{1cm}} $$</li>
+        <li class='full-of-answers hidden'>$$ \sqrt{9} = 3 $$</li>
+        <p class='full-of-answers hidden'>Para encontrar la raíz cuadrada de 9, chequiamos la tabla de arriba. Como $$ 3^2 = 9 $$ Entonces, la raíz cuadrada de 9 es 3. O sea, $$ \sqrt{9} = 3 $$ </p>
+        <hr class='prob-separator full-of-answers hidden'>
+
+        <li class='open-for-answers'>$$ \sqrt{1} = \underline{\hspace{1cm}} $$</li>
+        <li class='full-of-answers hidden'>$$ \sqrt{1} = 1 $$</li>
+        <p class='full-of-answers hidden'>Para encontrar la raíz cuadrada de 1, chequiamos la tabla de arriba. Como $$ 1^2 = 1 $$ Entonces, la raíz cuadrada de 1 es 1. O sea, $$ \sqrt{1} = 1 $$ </p>
+        <hr class='prob-separator full-of-answers hidden'>
+
+        <li class='open-for-answers'>$$ \sqrt{49} = \underline{\hspace{1cm}} $$</li>
+        <li class='full-of-answers hidden'>$$ \sqrt{49} = 7 $$</li>
+        <p class='full-of-answers hidden'>Para encontrar la raíz cuadrada de 49, chequiamos la tabla de arriba. Como $$ 7^2 = 49 $$ Entonces, la raíz cuadrada de 49 es 7. O sea, $$ \sqrt{49} = 7 $$ </p>
+    </ol>
+
+    <button class='see-answer-btn' onclick='showAnswers(0)'>Ver la respuesta</button>
 </div>

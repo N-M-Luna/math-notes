@@ -87,7 +87,7 @@ h2 {
     margin-bottom: 0px;
     margin-top: 80px;
 }
-hr.topic-header {
+hr.topic-header, hr.prob-separator {
     border: 1px solid #729170;
 }
 .grade-list {
@@ -139,6 +139,10 @@ table, th, td {
 th {
     background-color: #729170;
     color: white;
+}
+table.wide-table td {
+    text-align: center;
+    width: 30%;
 }
 .def {
     margin-top: 50px;

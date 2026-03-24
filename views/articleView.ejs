@@ -33,9 +33,9 @@
 
   <body>
 
+  <p><a href='/'><%- lang === 'es' ? 'Regresar al índice' : 'Go back to home' %></a></p>
   <h1> <%= title %> </h1>
   <hr class='page-header'>
-  <p><a href='/'><%- lang === 'es' ? 'Regresar al índice' : 'Go back to home' %></a></p>
 
   <div class='math-content'>
     <%- include(contentPath, {

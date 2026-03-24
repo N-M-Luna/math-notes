@@ -1,16 +1,3 @@
-export const subjectList = [
-    'High School Algebra',
-    'Matemáticas de Séptimo Grado'
-]
-export const unitsPerSubject = {
-    'High School Algebra': [
-        'Sample'
-    ],
-    'Matemáticas de Séptimo Grado': [
-        'Expresiones numéricas y algebraicas',
-        'Razones y Proporciones'
-    ]
-}
 export const articleTOC = [
     {
         title: 'Boilerplate',
@@ -78,3 +65,45 @@ export const articleTOC = [
         lang: 'en'
     }
 ]
+export const mate7units = {
+    'Expresiones numéricas y algebraicas': [
+        'conjuntos',
+        'patrones',
+        'potencias',
+        'raices_cuadradas', //WIP
+        // 'expresiones_numericas', //Expresiones numéricas y orden de operaciones
+        // 'expresiones_algebraicas', //Expresiones algebraicas y evaluación
+        // 'numeros_reales', //Propiedades de los números reales
+    ],
+    'Enteros': [
+        // 'valor_absoluto', //Valor absoluto
+        // 'suma_resta_enteros', //'Suma y resta de número enteros
+        // 'multiplicacion_division_enteros', //'Multiplicación y división de número enteros
+        // 'plano_cartesiano', //'El plano cartesiano
+    ],
+    'Números racionales': [
+        // 'numeros_racionales', //'Números racionales
+        // 'decimales_exactos_periodicos', //'Decimales exactos y perdiódicos
+        // 'comparar_decimales', //'Comparar y ordenar decimales'
+        // 'fracciones_homogeneas', //Fracciones homogéneas
+        // 'fracciones_heterogeneas', //Fracciones heterogéneas
+        // 'notacion_cientifica', //Exponentes negativos y notación científica
+    ],
+    'Ecuaciones e inecuaciones': [
+        // 'expresiones_y_ecuaciones', //Expresiones y ecuaciones
+        // 'ecuaciones_suma_resta', //Ecuaciones con suma y resta
+        // 'ecuaciones_multiplicacion_division', //Ecuaciones con multiplicación y división
+        // 'ecuaciones_combinacion_operaciones', //Ecuaciones con operaciones combinadas
+        // 'inecuaciones_y_graficas', //Inecuaciones y gráficas
+        // 'inecuaciones_suma_resta', //Inecuaciones con suma y resta
+        // 'inecuaciones_multiplicacion_division', //Inecuaciones con multiplicación y división
+        // 'inecuaciones_combinacion_operaciones', //Inecuaciones con operaciones combinadas
+    ],
+    'Razones y Proporciones': [
+        'razones',
+        'proporciones',
+        'tasa_unitaria',
+        'figuras_semejantes', //WIP
+        'escalas' //TODO
+    ]
+}

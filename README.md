@@ -13,18 +13,19 @@ The site can also be viewed at https://math-notes-xi.vercel.app.
 
 To add new articles:
 - Each new article needs a unique ID, which we will call here articleID.
-- First, add `<p><a href='/article/articleID'> My article title </a></p>` under the appropriate `h2` in public/index.html.
-- Then, add a new object to articleTOC.js with fields 'title', 'articleID', and 'lang'.
+- First, add a new object to articleTOC.js with fields 'title', 'articleID', and 'lang'.
+- Then, add the articleID to the approriate unit in mate7units in articleTOC.js.
 - Finally, add the content to a new file called public/article/articleID.ejs. In this file, any latex should be inbetween `$$...$$` and any jsx graphs should be in `<div class='jxgbox'></div>`. Other styling is in the file 'public/mate7/boilerplate.ejs'
 
 -----------
 
 TODO:
-- Finish ratio+porportions unit.
+- Add vocab view (by unit? by subject?) and add link to {.def strong} vocab words.
 - Show my scratch paper in eg's and ejercicio's.
 - Edit sizing for mobile.
 - Add assessment view.
 - Add views for topicHeader, def, eg, ejercicio, and intro/outro.
+- Add previous / next lesson to article view.
 - Add practice problems to each article.
 - Add English translations.
 - Understand macros in LaTeX.

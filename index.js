@@ -23,8 +23,21 @@ const bttButtonPath = __dirname + '/views/backToTopBtn.ejs'
 const langCntrlPath = __dirname + '/views/langControlBtn.ejs'
 
 //Home route
+import {mate7units, articleTOC} from './articleTOC.js'
+let mate7menu = ``
+for (const myUnit in mate7units) {
+    mate7menu += `<h3>Unidad: ${myUnit}</h3>
+    `
+    const unitList = mate7units[myUnit]
+    for(let i = 0; i < unitList.length; i++) {
+        const articleObj = articleTOC.find(art => art.articleID === unitList[i])
+        mate7menu += `<p><a href='/article/${unitList[i]}'> ${articleObj.title}</a></p>
+        `
+    }
+}
 app.get('/', (req, res) => {
     res.render(__dirname + '/public/index.ejs', {
+        mate7menu, //html for math-list of mate 7
         bttButtonPath, //path to view of back-to-top button
         footerPath, //path to view of footer
         pieDePaginaPath, //path to view of footer in Spanish
@@ -33,7 +46,6 @@ app.get('/', (req, res) => {
 });
 
 //Article route
-import {articleTOC} from './articleTOC.js'
 app.get('/article/:articleID', (req, res) => {
     const articleID = req.params.articleID
     const contentPath = __dirname + `/public/article/${articleID}.ejs`
