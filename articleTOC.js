@@ -15,8 +15,18 @@ export const articleTOC = [
         lang: 'es'
     },
     {
+        title: 'Expresiones y ecuaciones',
+        articleID: 'expresiones_y_ecuaciones',
+        lang: 'es'
+    },
+    {
         title: 'Figuras semejantes',
         articleID: 'figuras_semejantes',
+        lang: 'es'
+    },
+    {
+        title: 'Números racionales',
+        articleID: 'numeros_racionales',
         lang: 'es'
     },
     {
@@ -63,6 +73,11 @@ export const articleTOC = [
         title: 'The x-intercept of a linear equation',
         articleID: 'x_intercept',
         lang: 'en'
+    },
+    {
+        title: 'Valor absoluto',
+        articleID: 'valor_absoluto',
+        lang: 'es'
     }
 ]
 export const mate7units = {
@@ -70,19 +85,19 @@ export const mate7units = {
         'conjuntos',
         'patrones',
         'potencias',
-        'raices_cuadradas', //WIP
+        'raices_cuadradas',
         // 'expresiones_numericas', //Expresiones numéricas y orden de operaciones
         // 'expresiones_algebraicas', //Expresiones algebraicas y evaluación
         // 'numeros_reales', //Propiedades de los números reales
     ],
     'Enteros': [
-        // 'valor_absoluto', //Valor absoluto
+        'valor_absoluto', //WIP
         // 'suma_resta_enteros', //'Suma y resta de número enteros
         // 'multiplicacion_division_enteros', //'Multiplicación y división de número enteros
         // 'plano_cartesiano', //'El plano cartesiano
     ],
     'Números racionales': [
-        // 'numeros_racionales', //'Números racionales
+        'numeros_racionales', //WIP
         // 'decimales_exactos_periodicos', //'Decimales exactos y perdiódicos
         // 'comparar_decimales', //'Comparar y ordenar decimales'
         // 'fracciones_homogeneas', //Fracciones homogéneas
@@ -90,7 +105,7 @@ export const mate7units = {
         // 'notacion_cientifica', //Exponentes negativos y notación científica
     ],
     'Ecuaciones e inecuaciones': [
-        // 'expresiones_y_ecuaciones', //Expresiones y ecuaciones
+        'expresiones_y_ecuaciones', //Expresiones y ecuaciones
         // 'ecuaciones_suma_resta', //Ecuaciones con suma y resta
         // 'ecuaciones_multiplicacion_division', //Ecuaciones con multiplicación y división
         // 'ecuaciones_combinacion_operaciones', //Ecuaciones con operaciones combinadas
@@ -104,6 +119,6 @@ export const mate7units = {
         'proporciones',
         'tasa_unitaria',
         'figuras_semejantes', //WIP
-        'escalas' //TODO
+        'escalas' //WIP
     ]
 }
