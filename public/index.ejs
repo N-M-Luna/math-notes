@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang='en'>
+<html>
 
   <head>
     <meta charset='UTF-8'>
@@ -14,44 +14,66 @@
 
   <%- include(bttButtonPath) %>
 
-  <div class='language-controls'><i class="fa-solid fa-language"></i> <button id='en-btn' class='active' onclick='translatePage("en")'>English</button> | <button id='es-btn' onclick='translatePage("es")'>Español</button></div>
+  <%- include(langCntrlPath) %>
 
   <p class='intro en-content'>Here are some of my writings on math.</p>
   <p class='intro es-content hidden'>Aquí hay algunos de mis escritos de matemáticas.</p>
 
-  <h2>High School Algebra</h2>
-  <div class='math-list'>
-    <p><a href='/article/slope_triangles'>Slope triangles</a></p>
-    <p><a href='/article/x_intercept'>The x-intercept of a linear function</a></p>
+  <div class='en-content'>
+    <div> <!--Section index 0-->
+      <h2 class='section-header'>High School Algebra</h2>
+      <p class='section-controls'>
+        <button onclick='expandMathList(0)' class='section-cntrl-btn'><i class="fa-solid fa-plus"></i></button>
+        <button onclick='collapseMathList(0)' class='section-cntrl-btn hidden'><i class="fa-solid fa-minus"></i></button>
+      </p>
+    </div>
+
+    <p class='section-intro'>Sample writings</p>
+
+    <div class='math-list hidden'>
+      <p><a href='/article/slope_triangles'>Slope triangles</a></p>
+      <p><a href='/article/x_intercept'>The x-intercept of a linear function</a></p>
+    </div>
   </div>
 
-  <h2>Matemáticas de Séptimo Grado</h2>
-  <div class='math-list'>
-    <h3>Unidad: Expresiones numéricas y algebraicas</h3>
-    <p><a href='/article/conjuntos'>Conjuntos</a></p>
-    <p><a href='/article/patrones'>Patrones</a></p>
-    <p><a href='/article/potencias'>Potencias</a></p>
-    <p><a href='/article/raices_cuadradas'>Raíces cuadradas</a> (WIP)</p>
-    <p><a href='#'>Orden de operaciones</a> (TODO)</p>
-    <p><a href='#'>Evaluaciones de expresiones</a> (TODO)</p>
-    <p><a href='#'>Propiedad de los números reales</a> (TODO)</p>
+  <div class='es-content'>
+    <div> <!--Section index 1-->
+      <h2 class='section-header'>Matemáticas de Séptimo Grado</h2>
+      <p class='section-controls'>
+        <button onclick='expandMathList(1)' class='section-cntrl-btn'><i class="fa-solid fa-plus"></i></button>
+        <button onclick='collapseMathList(1)' class='section-cntrl-btn hidden'><i class="fa-solid fa-minus"></i></button>
+      </p>
+    </div>
+
+    <p class='section-intro'>Notas de un curso de mate de séptimo grado</p>
+
+    <div class='math-list hidden'>
+      <h3>Unidad: Expresiones numéricas y algebraicas</h3>
+      <p><a href='/article/conjuntos'>Conjuntos</a></p>
+      <p><a href='/article/patrones'>Patrones</a></p>
+      <p><a href='/article/potencias'>Potencias</a></p>
+      <p><a href='/article/raices_cuadradas'>Raíces cuadradas</a> (WIP)</p>
+      <p><a href='#'>Orden de operaciones</a> (TODO)</p>
+      <p><a href='#'>Evaluaciones de expresiones</a> (TODO)</p>
+      <p><a href='#'>Propiedad de los números reales</a> (TODO)</p>
 
 
-    <h3>Unidad: Enteros</h3>
-    (TODO)
+      <h3>Unidad: Enteros</h3>
+      (TODO)
 
-    <h3>Unidad: Números racionales</h3>
-    (TODO)
+      <h3>Unidad: Números racionales</h3>
+      (TODO)
 
-    <h3>Unidad: Ecuaciones e inecuaciones</h3>
-    (TODO)
+      <h3>Unidad: Ecuaciones e inecuaciones</h3>
+      (TODO)
 
-    <h3>Unidad: Razones y Proporciones</h3>
-    <p><a href='/article/razones'>Razones</a></p>
-    <p><a href='/article/proporciones'>Proporciones</a></p>
-    <p><a href='/article/tasa_unitaria'>Tasa unitaria</a></p>
-    <p><a href='/article/figuras_semejantes'>Figuras semejantes</a> (WIP)</p>
-    <p><a href='/article/escalas'>Escalas</a> (WIP)</p>
+      <h3>Unidad: Razones y Proporciones</h3>
+      <p><a href='/article/razones'>Razones</a></p>
+      <p><a href='/article/proporciones'>Proporciones</a></p>
+      <p><a href='/article/tasa_unitaria'>Tasa unitaria</a></p>
+      <p><a href='/article/figuras_semejantes'>Figuras semejantes</a> (WIP)</p>
+      <p><a href='/article/escalas'>Escalas</a> (WIP)</p>
+    </div>
   </div>
 
   <div class='en-content'>
@@ -65,6 +87,11 @@
   <script src='index.js'></script>
   <script src='https://kit.fontawesome.com/5721503876.js' crossorigin='anonymous'></script>
   <script>
+    function showLanguageBtns() {
+      const langBtns = document.getElementById('language-btns');
+      langBtns.classList.toggle('hidden');
+    }
+
     function translatePage(langToSet) {
       //Find and hide all .en-content and .es-content
       const englishContent = document.getElementsByClassName('en-content');
@@ -82,15 +109,39 @@
         targetContent[i].classList.remove('hidden')
       }
 
-      //Change html lang attribute.
-      const htmlElem = document.getElementsByTagName('html')
-      // htmlElem.setAttribute('lang', langToSet)
-
       //Change active btns
       const langBtns = document.querySelectorAll('.language-controls button')
       langBtns[0].classList.remove('active')
       langBtns[1].classList.remove('active')
       document.getElementById(langToSet + '-btn').classList.add('active')
+
+      //Close language controls
+      const langCntrl = document.getElementById('language-btns');
+      langCntrl.classList.add('hidden');
+    }
+
+    function expandMathList(indx) {
+      //Expand math list with index indx
+      const mathLists = document.getElementsByClassName('math-list')
+      mathLists[indx].classList.remove('hidden');
+      //Switch the '+' button with the '-' button
+      const sectionCntrls = document.getElementsByClassName('section-controls')
+      const plusBtn = sectionCntrls[indx].firstElementChild
+      plusBtn.classList.add('hidden')
+      const minusBtn = plusBtn.nextElementSibling
+      minusBtn.classList.remove('hidden')
+    }
+
+    function collapseMathList(indx) {
+      //Expand or collapse math list with index indx
+      const mathLists = document.getElementsByClassName('math-list')
+      mathLists[indx].classList.add('hidden')
+      //Switch the '-' button with the '+' button
+      const sectionCntrls = document.getElementsByClassName('section-controls')
+      const plusBtn = sectionCntrls[indx].firstElementChild
+      plusBtn.classList.remove('hidden')
+      const minusBtn = plusBtn.nextElementSibling
+      minusBtn.classList.add('hidden')
     }
   </script>
 

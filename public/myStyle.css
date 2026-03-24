@@ -43,15 +43,41 @@ a:hover {
 h1 {
     margin-top: 50px;
 }
-.language-controls {
-    float: right;
-}
-.language-controls button {
+#language-btns button {
     background-color: transparent;
     border: dashed 1px #729170;
+    font-size: 16px;
 }
-.language-controls button.active {
+#language-btns button.active {
     border: solid 1px #729170;
+}
+.section-header {
+    float: left;
+    margin: 0;
+}
+.section-controls, .language-controls {
+    float: right;
+}
+.section-controls button, #langCntrlBtn {
+    background-color: transparent;
+    border: 1px #729170 solid;
+    border-radius: 12px;
+    color: #729170;
+    padding: 5px 10px;
+}
+.section-controls button {
+    font-size: 20px;
+}
+#langCntrlBtn {
+    font-size: 16px;
+}
+.section-controls button:hover, #langCntrlBtn:hover {
+    background-color: #729170;
+    color: white;
+}
+.section-intro {
+    clear: left;
+    color: #729170;
 }
 .intro {
     margin: 50px 0px;
