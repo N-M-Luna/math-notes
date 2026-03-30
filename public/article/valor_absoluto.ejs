@@ -1,1 +1,171 @@
-WIP
+<h2> ¿Cómo se comparan dos números? </h2>
+<hr class='topic-header'>
+
+<!-- def de la regla de la comparación -->
+<div class='def'>
+    <p>Para comparar dos numeros, tenemos que aprender acerca de la recta numérica. La <strong>recta numérica</strong> es una forma de organizar y representar los números. </p>
+    <div id='recta-num' class='jxgbox short-graph' <%- graphOpts %> ></div>
+    <p> Consta de una línea con marcas, cada una de las cuales representa un número. El cero está en el medio. A la izquierda del cero, se ponen todo los números negativos y a la derecha todos los positivos. La recta se puede extender infinitamente hacia la derecha y la izquierda. </p>
+
+    <p>Para comparar dos números, tenemos que encontrarlos en la recta numérica. El número que esté más a la izquierda sera menor que el que esté a la derecha.</p>
+
+    <p>La <strong>regla de la comparación</strong> dice que si un número <i>a</i> está a la derecha de otro número <i>b</i> en la recta numérica, entonces <i>a</i> es mayor que <i>b</i> y se escribe: $$ a > b $$</p>
+</div>
+
+<!-- eg de como usar la regla de la comparación -->
+<div class='eg'>
+    <p><i>Ejemplo 1</i>. Podemos comparar el 1 y el 3. Primero, encontramos los números en la recta.</p>
+    <div id='recta-eg1' class='jxgbox short-graph' <%- graphOpts %> ></div>
+    <p>Como el 1 está a la izquierda del 3, 1 es menor que 3. Podemos escribir esto de la siguiente manera: $$ \textcolor{<%= orangeHex %>}{1} < \textcolor{<%= greenHex %>}{3} $$ Podemos decir lo mismo de otra manera. Podemos decir que 3 es mayor que 1: $$ \textcolor{<%= greenHex %>}{3} > \textcolor{<%= orangeHex %>}{1} $$</3></p>
+
+    <p><i>Ejemplo 2</i>. Podemos comparar el 1 y el -3. Primero, encontramos los números en la recta.</p>
+    <div id='recta-eg2' class='jxgbox short-graph' <%- graphOpts %> ></div>
+    <p>Como el -3 está a la izquierda del 1, -3 es menor que 1. Podemos escribir esto de la siguiente manera: $$ \textcolor{<%= orangeHex %>}{-3} < \textcolor{<%= greenHex %>}{1} $$ También podemos decir que 1 es mayor que -3: $$ \textcolor{<%= greenHex %>}{1} > \textcolor{<%= orangeHex %>}{-3} $$</3></p>
+</div>
+
+<!-- def de numeros positivos/negativos -->
+<div class='def'>
+    <p>Recordando que todos los números positivos están a la derecha del cero,</p>
+    <div id='recta-num-pos' class='jxgbox short-graph' <%- graphOpts %> ></div>
+    <p>podemos decir que si <i>a</i> es un <strong>número racional positivo</strong>, entonces $$ a > 0 $$</p>
+
+    <p>De manera similar, todos los números negativos están a la izquierda del cero,</p>
+    <div id='recta-num-neg' class='jxgbox short-graph' <%- graphOpts %> ></div>
+    <p>podemos decir que si <i>a</i> es un <strong>número racional negativo</strong>, entonces $$ a < 0 $$</p>
+</div>
+
+<!-- practica de como ordenar una lista de números -->
+<!-- TODO -->
+
+<h2> ¿Qué es el valor absoluto de un número? </h2>
+<hr class='topic-header'>
+
+<!-- def de valor absoluto -->
+<div class='def'>
+    <p>El <strong>valor absoluto</strong>  de un número <i>n</i> es la distancia en la recta numérica entre <i>n</i> y 0. Se denota: $$ \left| n \right| $$</p>
+
+    <div id='valor-abs-recta' class='jxgbox short-graph' <%- graphOpts %> ></div>
+</div>
+
+<!-- eg de valor absoluto-->
+<!-- TODO -->
+
+<!-- practica de valor absoluto -->
+<!-- TODO -->
+
+<!-- def del opuesto de un numero -->
+<!-- TODO -->
+
+<!-- eg del opuesto de un numero -->
+<!-- TODO -->
+
+<!-- practica del opuesto de un numero -->
+<!-- TODO -->
+
+<script>
+    //Constants and helpers
+    const greenHex = '#729170';
+    const orangeHex = '#DA8359';
+    const shortOpts = {
+        boundingbox: [-20, 10, 20, -10],
+        showInfoBox: false,
+        showNavigation: false,
+    };
+    const createNumLine = (boardName, orangeDots = [], greenDots = []) => {
+        //Create line with arrows
+        boardName.create('segment', [[-19, 0], [19, 0]], {
+            firstArrow: true,
+            lastArrow: true,
+            strokeColor: 'black',
+        });
+
+        //Populate number line
+        let numName = -3;
+        for(let i = -15; i < 20; i+=5) {
+            let numColor = 'black';
+            //Check if number needs to be written in a highlight color
+            if (orangeDots.includes(numName) || greenDots.includes(numName)) {
+                numColor = orangeDots.includes(numName) ? orangeHex : greenHex;
+                boardName.create('point', [i, 0], {
+                    fillColor: numColor,
+                    strokeColor: 'black',
+                    strokeWidth: 1.5,
+                    withLabel: false
+                });
+            }
+            //Create number tick in number line
+            boardName.create('segment', [[i, 0.5], [i, -0.5]], {
+                label: {offset: [numName < 0 ? -6 : -4, 30], color: numColor},
+                name: numName.toString(),
+                strokeColor: 'black',
+                strokeWidth: 1,
+                withLabel: true
+            });
+            numName++;
+        }
+    };
+    const createAbsValLine = (boardName, n, nLabel) => {
+        //Dibujar la recta desde (-19, 0) hasta (19, 0)
+        //Dibujar las marcas
+            //Numeros van desde -(n+1) hasta n+1
+            //Coordenadas desde (-19, 0) hasta (19, 0)
+        //Dibujar un punto en el 0
+        //Dibujar un punto en n
+        //Dibujar segmento de |n| desde (0, 2) hasta (n, 2)
+    };
+
+    //Def de la regla de comparacion
+    const rectaNumBoard = JXG.JSXGraph.initBoard('recta-num', shortOpts);
+    createNumLine(rectaNumBoard);
+
+    //Ejemplo de como usar la regla de la comparacion
+    const boardEG1 = JXG.JSXGraph.initBoard('recta-eg1', shortOpts);
+    createNumLine(boardEG1, [1], [3]);
+    const boardEG2 = JXG.JSXGraph.initBoard('recta-eg2', shortOpts);
+    createNumLine(boardEG2, [-3], [1]);
+
+    //Def de numeros positivos/negativos
+    const positiveBoard = JXG.JSXGraph.initBoard('recta-num-pos', shortOpts);
+    createNumLine(positiveBoard, [1, 2, 3], [0]);
+    const negativeBoard = JXG.JSXGraph.initBoard('recta-num-neg', shortOpts);
+    createNumLine(negativeBoard, [-1, -2, -3], [0]);
+
+    //Def de valor absoluto
+    const valorAbsBoard = JXG.JSXGraph.initBoard('valor-abs-recta', shortOpts);
+    valorAbsBoard.create('segment', [[-19, 0], [19, 0]], {
+        firstArrow: true,
+        lastArrow: true,
+        strokeColor: 'black',
+    });
+    for (let i = -15; i < 20; i += 5) {
+        if (i === 0 || i === 15) {
+            valorAbsBoard.create('point', [i, 0], {
+                fillColor: greenHex,
+                strokeColor: greenHex,
+                withLabel: false
+            })
+            valorAbsBoard.create('segment', [[i, 0.5], [i, -0.5]], {
+                label: {offset: [-4, 30]},
+                name: i === 0 ? '0' : 'n',
+                strokeColor: 'black',
+                strokeWidth: 1,
+                withLabel: true
+            });
+        } else {
+            valorAbsBoard.create('segment', [[i, 0.5], [i, -0.5]], {
+                strokeColor: 'black',
+                strokeWidth: 1,
+                withLabel: false
+            });
+        }
+    }
+    valorAbsBoard.create('segment', [[0, 2], [15, 2]], {
+        firstArrow: {type: 2, size: 5},
+        label: {offset: [0, 60]},
+        lastArrow: {type: 2, size: 5},
+        name: '|n|',
+        strokeColor: 'black',
+        withLabel: true,
+    });
+
+</script>
