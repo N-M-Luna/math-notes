@@ -84,6 +84,7 @@ h1 {
 }
 h2 {
     color: #729170;
+    font-size: 26px;
     margin-bottom: 0px;
     margin-top: 80px;
 }
@@ -103,6 +104,10 @@ hr.topic-header, hr.prob-separator {
 .math-content div {
     margin-bottom: 50px;
     margin-top: 50px;
+}
+#lesson-nav {
+    margin-bottom: 150px;
+    width: 100%;
 }
 .link-to-adjacent-topic {
     background-color: white;
@@ -127,8 +132,15 @@ hr.topic-header, hr.prob-separator {
 }
 @media screen and (max-width: 600px) {
     .link-to-adjacent-topic {
-        margin-top: 15px;
-        width: 100%;
+        display: block;
+        margin: 15px auto 0px;
+        width: 80%;
+    }
+    .right, .left {
+        float: none;
+    }
+    #lesson-nav {
+        margin-bottom: 0px;
     }
 }
 table, th, td {

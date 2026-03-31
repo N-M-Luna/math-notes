@@ -24,11 +24,13 @@ const langCntrlPath = __dirname + '/views/langControlBtn.ejs'
 
 //Home route
 import {mate7units, articleTOC} from './articleTOC.js'
+const mate7articles = [] //List of mate 7 articles' ID
 let mate7menu = ``
 for (const myUnit in mate7units) {
     mate7menu += `<h3>Unidad: ${myUnit}</h3>
     `
     const unitList = mate7units[myUnit]
+    mate7articles.push(...unitList)
     for(let i = 0; i < unitList.length; i++) {
         const articleObj = articleTOC.find(art => art.articleID === unitList[i])
         mate7menu += `<p><a href='/article/${unitList[i]}'> ${articleObj.title}</a></p>
@@ -47,16 +49,30 @@ app.get('/', (req, res) => {
 
 //Article route
 app.get('/article/:articleID', (req, res) => {
+    //Get article ID and find the title and language in the article TOC
     const articleID = req.params.articleID
     const contentPath = __dirname + `/public/article/${articleID}.ejs`
     const {title, lang} = articleTOC.find(art => art.articleID === articleID)
+
+    const articleIndx = mate7articles.indexOf(articleID)
+    const prevArticleID = articleIndx === 0 ? '' : mate7articles[articleIndx - 1]
+    const prevArticleObj = articleTOC.find(art => art.articleID === prevArticleID)
+    const prevArticleTitle = prevArticleObj?.title
+
+    const nextArticleID = articleIndx === mate7articles.length - 1 ? '' : mate7articles[articleIndx + 1]
+    const nextArticleObj = articleTOC.find(art => art.articleID === nextArticleID)
+    const nextArticleTitle = nextArticleObj?.title
     res.render('articleView', {
-        title, //Title of article
+        title, //string of title of article
         lang, //'es' or 'en'
-        contentPath, //path to view of content
-        bttButtonPath, //path to view of back-to-top button
-        footerPath, //path to view of footer
-        pieDePaginaPath //path to view of footer in Spanish
+        contentPath, //string of path to view of content
+        bttButtonPath, //string of path to view of back-to-top button
+        footerPath, //string of path to view of footer
+        pieDePaginaPath, //string of path to view of footer in Spanish
+        prevArticleID,
+        prevArticleTitle,
+        nextArticleID,
+        nextArticleTitle
     })
 })
 
