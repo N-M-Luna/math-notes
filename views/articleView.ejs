@@ -48,24 +48,17 @@
   </div>
 
   <div id='lesson-nav'>
-  <% if (lang === 'en') { %>
-    <% if (prevArticleID.length > 0 ) { %>
-      <a class='link-to-adjacent-topic left' href='/article/<%= prevArticleID %>'> Go to previous lesson: <strong><%= prevArticleTitle %></strong> </a>
-    <% } %>
-    <% if (nextArticleID.length > 0) { %>
-      <a class='link-to-adjacent-topic right' href='/article/<%= nextArticleID %>'> Go to next lesson: <strong><%= nextArticleTitle %></strong> </a>
-    <% } %>
-    </div>
-    <%- include(footerPath) %>
+  <% if (prevArticleID.length > 0 ) { %>
+    <a class='link-to-adjacent-topic left' href='/article/<%= prevArticleID %>'> <i class="fa-solid fa-left-long"></i> <strong><%= prevArticleTitle %></strong> </a>
+  <% } %>
+  <% if (nextArticleID.length > 0) { %>
+    <a class='link-to-adjacent-topic right' href='/article/<%= nextArticleID %>'> <i class="fa-solid fa-right-long"></i> <strong><%= nextArticleTitle %></strong> </a>
+  <% } %>
+  </div>
 
+  <% if (lang === 'en') { %>
+    <%- include(footerPath) %>
   <% } else { %>
-    <% if (prevArticleID.length > 0 ) { %>
-      <a class='link-to-adjacent-topic left' href='/article/<%= prevArticleID %>'> Ir a la previa lección: <strong><%= prevArticleTitle %></strong> </a>
-    <% } %>
-    <% if (nextArticleID.length > 0) { %>
-      <a class='link-to-adjacent-topic right' href='/article/<%= nextArticleID %>'> Ir a la próxima lección: <strong><%= nextArticleTitle %></strong> </a>
-    <% } %>
-    </div>
     <%- include(pieDePaginaPath) %>
   <% } %>
 
