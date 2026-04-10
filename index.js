@@ -54,14 +54,17 @@ app.get('/article/:articleID', (req, res) => {
     const contentPath = __dirname + `/public/article/${articleID}.ejs`
     const {title, lang} = articleTOC.find(art => art.articleID === articleID)
 
+    //Get article ID and title of previous lesson
     const articleIndx = mate7articles.indexOf(articleID)
     const prevArticleID = articleIndx === 0 ? '' : mate7articles[articleIndx - 1]
     const prevArticleObj = articleTOC.find(art => art.articleID === prevArticleID)
     const prevArticleTitle = prevArticleObj?.title
 
+    //Get article ID and title of next lesson
     const nextArticleID = articleIndx === mate7articles.length - 1 ? '' : mate7articles[articleIndx + 1]
     const nextArticleObj = articleTOC.find(art => art.articleID === nextArticleID)
     const nextArticleTitle = nextArticleObj?.title
+
     res.render('articleView', {
         title, //string of title of article
         lang, //'es' or 'en'

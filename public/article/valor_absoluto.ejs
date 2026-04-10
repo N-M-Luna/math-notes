@@ -7,7 +7,7 @@
     <div id='recta-num' class='jxgbox short-graph' <%- graphOpts %> ></div>
     <p> Consta de una línea con marcas, cada una de las cuales representa un número. El cero está en el medio. A la izquierda del cero, se ponen todo los números negativos y a la derecha todos los positivos. La recta se puede extender infinitamente hacia la derecha y la izquierda. </p>
 
-    <p>Para comparar dos números, tenemos que encontrarlos en la recta numérica. El número que esté más a la izquierda sera menor que el que esté a la derecha.</p>
+    <p>Para comparar dos números, tenemos que encontrarlos en la recta numérica. El número que esté más a la izquierda será menor que el que esté a la derecha.</p>
 
     <p>La <strong>regla de la comparación</strong> dice que si un número <i>a</i> está a la derecha de otro número <i>b</i> en la recta numérica, entonces <i>a</i> es mayor que <i>b</i> y se escribe: $$ a > b $$</p>
 </div>
@@ -48,22 +48,80 @@
 </div>
 
 <!-- eg de valor absoluto-->
-<!-- TODO -->
+<div class='eg'>
+    <p><i>Ejemplo 1</i>. Encontremos el valor absoluto de 4, que se denota: $$ |4| $$ </p>
+    <p>Para encontrar el valor absoluto de 4, primero tenemos que localizar el número 4 en la recta numérica.</p>
+    <div id='valor-abs-recta-eg1' class='jxgbox short-graph' <%- graphOpts %> ></div>
+    <p>El largo del segmento que cubre la recta desde el 0 hasta el 4 es de 4 unidades. Por lo tanto, $$ |4| = 4 $$</p>
+
+    <p><i>Ejemplo 2</i>. Encontremos el valor absoluto de -2, que se denota: $$ |-2| $$ </p>
+    <p>Para encontrar el valor absoluto de -2, primero tenemos que localizar el número -2 en la recta numérica.</p>
+    <div id='valor-abs-recta-eg2' class='jxgbox short-graph' <%- graphOpts %> ></div>
+    <p>El largo del segmento que cubre la recta desde el 0 hasta el -2 es de 2 unidades. Por lo tanto, $$ |-2| = 2 $$</p>
+
+    <p><i>Ejemplo 3</i>. Encontremos el valor absoluto de 0, que se denota: $$ |0| $$ </p>
+    <p>Para encontrar el valor absoluto de 0, primero tenemos que localizar el número 0 en la recta numérica.</p>
+    <div id='valor-abs-recta-eg3' class='jxgbox short-graph' <%- graphOpts %> ></div>
+    <p>El segmento que cubre la recta desde el 0 hasta el 0 no es màs que un punto. Por lo tanto, el largo del segmento es 0. Entonces, $$ |0| = 0 $$</p>
+</div>
 
 <!-- practica de valor absoluto -->
 <!-- TODO -->
 
 <!-- def del opuesto de un numero -->
-<!-- TODO -->
+<div class='def'>
+    <p>El <strong>opuesto de un número <i>n</i></strong> es el número que está a la misma distancia del cero que <i>n</i>, pero en la dirección opuesta.</p>
+    <div id='opuesto-n' class='jxgbox short-graph' <%- graphOpts %> ></div>
+    <p> Al opuesto de <i>n</i> también se le puede llamar 'negativo <i>n</i>' o el 'negativo de <i>n</i>' y se denota $$-n$$</p>
+</div>
 
 <!-- eg del opuesto de un numero -->
-<!-- TODO -->
+<div class='eg'>
+    <p><i>Ejemplo 1</i>. Vamos a encontrar el opuesto de 6. </p>
+    <p>Primero, vamos a encontrar el número 6 en la recta numérica.</p>
+    <div id='opuesto-eg1a' class='jxgbox short-graph' <%- graphOpts %> ></div>
+    <p>El número 6 está a 6 unidades a la derecha del 0. Por lo tanto, su valor absoluto es: $$ |6| = 6 $$</p>
+    <p>Entonces, el opuesto de 6 estará a 6 unidades a la <b>izquierda</b> del 0.</p>
+    <div id='opuesto-eg1b' class='jxgbox short-graph' <%- graphOpts %> ></div>
+
+    <p><i>Ejemplo 2</i>. Vamos a encontrar el opuesto de -8. </p>
+    <p>Primero, encontramos el número -8 en la recta. Como es un número negativo, está a la izquierda del 0.</p>
+    <div id='opuesto-eg2a' class='jxgbox short-graph' <%- graphOpts %> ></div>
+    <p>El número -8 está a 8 unidades a la izquierda del 0. Por lo tanto, su valor absoluto es: $$ |-8| = 8 $$</p>
+    <p>Entonces, el opuesto de -8 estará a 8 unidades a la <b>derecha</b> del 0.</p>
+    <div id='opuesto-eg2b' class='jxgbox short-graph' <%- graphOpts %> ></div>
+</div>
+
+ <div class='outro'>
+    <p>El opuesto de un número es el inverso aditivo.</p>
+    <p>La suma de dos opuestos es 0.</p>
+</div>
+
+<!-- eg de suma de opuestos -->
+<div class='eg'>
+    <p><i>Ejemplo 1</i>. Vamos a encontrar la suma de dos opuestos. Por ejemplo, de -5 y 5. $$ -5 + 5 $$</p>
+    <p>Para sumar, vamos a usar el recta numérica. Primero, encontramos el -5, que está 5 unidades a la izquierda del 0.</p>
+    <div id='suma-opuestos-eg1a' class='jxgbox short-graph' <%- graphOpts %> ></div>
+    <p>Para sumarle 5, nos movemos 5 unidades a la derecha.</p>
+    <div id='suma-opuestos-eg1b' class='jxgbox short-graph' <%- graphOpts %> ></div>
+    <p>Como llegamos al 0, esta será la respuesta de la operación. $$ -5 + 5 = 0 $$</p>
+
+    <p><i>Ejemplo 2</i>. Vamos a encontrar la suma de 7 y -7. $$ 7 + (-7) $$</p>
+    <p>Esto es equivalente a la resta: $$ 7 - 7 $$</p>
+    <p>Primero, encontramos el 7, que está 7 unidades a la derecha del 0.</p>
+    <div id='suma-opuestos-eg2a' class='jxgbox short-graph' <%- graphOpts %> ></div>
+    <p>Para restarle 7, nos movemos 7 unidades a la izquierda.</p>
+    <div id='suma-opuestos-eg2b' class='jxgbox short-graph' <%- graphOpts %> ></div>
+    <p>Como llegamos al 0, esta será la respuesta de la operación. $$ 7 + (-7) = 0 $$</p>
+</div>
 
 <!-- practica del opuesto de un numero -->
 <!-- TODO -->
 
+<!--TODO abs val of decimals and fractions-->
+
 <script>
-    //Constants and helpers
+    //Constants
     const greenHex = '#729170';
     const orangeHex = '#DA8359';
     const shortOpts = {
@@ -71,7 +129,9 @@
         showInfoBox: false,
         showNavigation: false,
     };
-    const createNumLine = (boardName, orangeDots = [], greenDots = []) => {
+    //Helpers
+    //TODO Refactor as: createNumLine(), addDots([greenDots], [orangeDots]), addAbsVal([nums]), addOperationArrow(a, b) which draws an arrow from a to a+b
+    const createNumLine = (boardName, orangeDots = [], greenDots = [], includeAbsVal = false, includeOpArrow = 0) => {
         //Create line with arrows
         boardName.create('segment', [[-19, 0], [19, 0]], {
             firstArrow: true,
@@ -79,9 +139,23 @@
             strokeColor: 'black',
         });
 
+        //Chop up the number line
+        let maxNum;
+        if (orangeDots.length > 0 || greenDots.length > 0) {
+            maxNum = Math.max(
+                ...orangeDots.map(x => Math.abs(x)),
+                ...greenDots.map(x => Math.abs(x)),
+                3
+            );
+        } else {
+            maxNum = 5;
+        }
+        const pieceLength = 20/(maxNum + 1);
+        const maxCoord = -20 + pieceLength;
+
         //Populate number line
-        let numName = -3;
-        for(let i = -15; i < 20; i+=5) {
+        let numName = -maxNum;
+        for(let i = maxCoord; i < 20; i+= pieceLength) {
             let numColor = 'black';
             //Check if number needs to be written in a highlight color
             if (orangeDots.includes(numName) || greenDots.includes(numName)) {
@@ -95,7 +169,7 @@
             }
             //Create number tick in number line
             boardName.create('segment', [[i, 0.5], [i, -0.5]], {
-                label: {offset: [numName < 0 ? -6 : -4, 30], color: numColor},
+                label: {offset: [numName < 0 ? -6 : -4, 30], color: numColor, fontSize: 16},
                 name: numName.toString(),
                 strokeColor: 'black',
                 strokeWidth: 1,
@@ -103,16 +177,71 @@
             });
             numName++;
         }
+
+        if (includeAbsVal) {
+            boardName.create('segment', [[0, 2], [orangeDots[1]*pieceLength, 2]], {
+                firstArrow: {size: 8, type: 2},
+                label: {color: orangeHex, fontSize: 16, offset: [0, 70]},
+                lastArrow:  {size: 8, type: 2},
+                name: `|${orangeDots[1]}|`,
+                strokeColor: orangeHex,
+                withLabel: true,
+            })
+        }
+        if (includeOpArrow != 0) {
+            const name = includeOpArrow > 0 ? `+${includeOpArrow}` : includeOpArrow.toString()
+            boardName.create('segment', [[orangeDots[0]*pieceLength, 2], [greenDots[0]*pieceLength, 2]], {
+                label: {color: greenHex, fontSize: 16, offset: [0, 70]},
+                lastArrow: {size: 8, type: 2},
+                name,
+                strokeColor: greenHex,
+                withLabel: true,
+            })
+        }
     };
-    const createAbsValLine = (boardName, n, nLabel) => {
-        //Dibujar la recta desde (-19, 0) hasta (19, 0)
-        //Dibujar las marcas
-            //Numeros van desde -(n+1) hasta n+1
-            //Coordenadas desde (-19, 0) hasta (19, 0)
-        //Dibujar un punto en el 0
-        //Dibujar un punto en n
-        //Dibujar segmento de |n| desde (0, 2) hasta (n, 2)
-    };
+    const createNumlessLine = (boardName, nums = [], includeAbsVal = true) => {
+        //Create line with arrows
+        boardName.create('segment', [[-19, 0], [19, 0]], {
+            firstArrow: true,
+            lastArrow: true,
+            strokeColor: 'black',
+        });
+        //Populate number line with ticks (and label 0 and n's in [nums])
+        let numName = -3;
+        for (let i = -15; i < 20; i += 5) {
+            boardName.create('segment', [[i, 0.5], [i, -0.5]], {
+                label: { offset: [-4, 30], color: orangeHex, fontSize: 16 },
+                name: numName === 0 ? '0'
+                : nums.includes(numName) && numName > 0 ? 'n'
+                : nums.includes(numName) && numName < 0 ? '-n'
+                : '',
+                strokeColor: 'black',
+                strokeWidth: 1,
+                withLabel: numName === 0 || nums.includes(numName)
+            });
+            numName++;
+        }
+        //Draw the abs val segment for each n in [nums]
+        nums.forEach(n => {
+            boardName.create('segment', [[0, 2], [n * 5, 2]], {
+            firstArrow: { size: 8, type: 2 },
+            label: { color: orangeHex, fontSize: 16, offset: [0, 70] },
+            lastArrow: { size: 8, type: 2 },
+            name: `|n|`,
+            strokeColor: orangeHex,
+            withLabel: true,
+        })
+        })
+    }
+    const createAbsValueLine = (boardName, n) => {
+        createNumLine(boardName, [0, n], [], true);
+    }
+    const createOperationLine = (boardName, a, b) => {
+        const nums = [a, a+b];
+        const min = Math.min(...nums);
+        const max = Math.max(...nums);
+        createNumLine(boardName, [a], [a+b], false, b);
+    }
 
     //Def de la regla de comparacion
     const rectaNumBoard = JXG.JSXGraph.initBoard('recta-num', shortOpts);
@@ -132,40 +261,45 @@
 
     //Def de valor absoluto
     const valorAbsBoard = JXG.JSXGraph.initBoard('valor-abs-recta', shortOpts);
-    valorAbsBoard.create('segment', [[-19, 0], [19, 0]], {
-        firstArrow: true,
-        lastArrow: true,
-        strokeColor: 'black',
-    });
-    for (let i = -15; i < 20; i += 5) {
-        if (i === 0 || i === 15) {
-            valorAbsBoard.create('point', [i, 0], {
-                fillColor: greenHex,
-                strokeColor: greenHex,
-                withLabel: false
-            })
-            valorAbsBoard.create('segment', [[i, 0.5], [i, -0.5]], {
-                label: {offset: [-4, 30]},
-                name: i === 0 ? '0' : 'n',
-                strokeColor: 'black',
-                strokeWidth: 1,
-                withLabel: true
-            });
-        } else {
-            valorAbsBoard.create('segment', [[i, 0.5], [i, -0.5]], {
-                strokeColor: 'black',
-                strokeWidth: 1,
-                withLabel: false
-            });
-        }
-    }
-    valorAbsBoard.create('segment', [[0, 2], [15, 2]], {
-        firstArrow: {type: 2, size: 5},
-        label: {offset: [0, 60]},
-        lastArrow: {type: 2, size: 5},
-        name: '|n|',
-        strokeColor: 'black',
-        withLabel: true,
-    });
+    createNumlessLine(valorAbsBoard, [3]);
 
+    //Ejemplo 1 de como encontrar el valor absoluto
+    const valorAbsEG1 = JXG.JSXGraph.initBoard('valor-abs-recta-eg1', shortOpts);
+    createAbsValueLine(valorAbsEG1, 4);
+
+    //Ejemplo 2 de como encontrar el valor absoluto
+    const valorAbsEG2 = JXG.JSXGraph.initBoard('valor-abs-recta-eg2', shortOpts);
+    createAbsValueLine(valorAbsEG2, -2);
+
+    //Ejemplo 3 de como encontrar el valor absoluto
+    const valorAbsEG3 = JXG.JSXGraph.initBoard('valor-abs-recta-eg3', shortOpts);
+    createNumLine(valorAbsEG3, [0]);
+
+    //Def de nums opuestos
+    const opuestoDefBoard = JXG.JSXGraph.initBoard('opuesto-n', shortOpts);
+    createNumlessLine(opuestoDefBoard, [3, -3]);
+
+    //Ejemplo 1 de nums opuestos
+    const opuestoEG1a = JXG.JSXGraph.initBoard('opuesto-eg1a', shortOpts);
+    createAbsValueLine(opuestoEG1a, 6);
+    const opuestoEG1b = JXG.JSXGraph.initBoard('opuesto-eg1b', shortOpts);
+    createAbsValueLine(opuestoEG1b, -6);
+
+    //Ejemplo 2 de nums opuestos
+    const opuestoEG2a = JXG.JSXGraph.initBoard('opuesto-eg2a', shortOpts);
+    createAbsValueLine(opuestoEG2a, -8);
+    const opuestoEG2b = JXG.JSXGraph.initBoard('opuesto-eg2b', shortOpts);
+    createAbsValueLine(opuestoEG2b, 8);
+
+    //Ejemplo 1 de suma de opuestos
+    const sumaEG1a = JXG.JSXGraph.initBoard('suma-opuestos-eg1a', shortOpts);
+    createNumLine(sumaEG1a, [-5]);
+    const sumaEG1b = JXG.JSXGraph.initBoard('suma-opuestos-eg1b', shortOpts);
+    createOperationLine(sumaEG1b , -5, 5);
+
+    //Ejemplo 2 de suma de opuestos
+    const sumaEG2a = JXG.JSXGraph.initBoard('suma-opuestos-eg2a', shortOpts);
+    createNumLine(sumaEG2a, [7]);
+    const sumaEG2b = JXG.JSXGraph.initBoard('suma-opuestos-eg2b', shortOpts);
+    createOperationLine(sumaEG2b , 7, -7);
 </script>

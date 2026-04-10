@@ -48,10 +48,10 @@
   </div>
 
   <div id='lesson-nav'>
-  <% if (prevArticleID.length > 0 ) { %>
+  <% if (prevArticleID?.length > 0 ) { %>
     <a class='link-to-adjacent-topic left' href='/article/<%= prevArticleID %>'> <i class="fa-solid fa-left-long"></i> <strong><%= prevArticleTitle %></strong> </a>
   <% } %>
-  <% if (nextArticleID.length > 0) { %>
+  <% if (nextArticleID?.length > 0) { %>
     <a class='link-to-adjacent-topic right' href='/article/<%= nextArticleID %>'> <i class="fa-solid fa-right-long"></i> <strong><%= nextArticleTitle %></strong> </a>
   <% } %>
   </div>
@@ -64,6 +64,6 @@
 
   <%- include(bttButtonPath) %>
 
-  <script src='../index.js'></script>
+  <script src='../commonArticle.js'></script>
   </body>
 </html>

@@ -105,7 +105,7 @@ export const mate7units = {
         // 'notacion_cientifica', //Exponentes negativos y notación científica
     ],
     'Ecuaciones e inecuaciones': [
-        'expresiones_y_ecuaciones', //Expresiones y ecuaciones
+        'expresiones_y_ecuaciones', //WIP
         // 'ecuaciones_suma_resta', //Ecuaciones con suma y resta
         // 'ecuaciones_multiplicacion_division', //Ecuaciones con multiplicación y división
         // 'ecuaciones_combinacion_operaciones', //Ecuaciones con operaciones combinadas
