@@ -88,6 +88,12 @@ h2 {
     margin-bottom: 0px;
     margin-top: 80px;
 }
+h3 {
+    color: #729170;
+    font-size: 20px;
+    margin-bottom: 0px;
+    margin-top: 40px;
+}
 hr.topic-header, hr.prob-separator {
     border: 1px solid #729170;
 }
@@ -157,7 +163,9 @@ table.wide-table td {
     width: 30%;
 }
 .def {
+    background-color: #72917025;
     margin-top: 50px;
+    padding: 5px 10px;
 }
 .def strong:hover {
     color: #DA8359;

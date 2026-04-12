@@ -91,13 +91,13 @@ export const mate7units = {
         // 'numeros_reales', //Propiedades de los números reales
     ],
     'Enteros': [
-        'valor_absoluto', //WIP
+        'valor_absoluto',
         // 'suma_resta_enteros', //'Suma y resta de número enteros
         // 'multiplicacion_division_enteros', //'Multiplicación y división de número enteros
         // 'plano_cartesiano', //'El plano cartesiano
     ],
     'Números racionales': [
-        'numeros_racionales', //WIP
+        'numeros_racionales',
         // 'decimales_exactos_periodicos', //'Decimales exactos y perdiódicos
         // 'comparar_decimales', //'Comparar y ordenar decimales'
         // 'fracciones_homogeneas', //Fracciones homogéneas
