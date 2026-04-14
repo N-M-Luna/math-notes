@@ -162,10 +162,13 @@ table.wide-table td {
     text-align: center;
     width: 30%;
 }
+dt {
+    font-weight: bold;
+}
 .def {
     background-color: #72917025;
     margin-top: 50px;
-    padding: 5px 10px;
+    padding: 5px 20px;
 }
 .def strong:hover {
     color: #DA8359;

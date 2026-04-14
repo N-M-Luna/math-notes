@@ -1,9 +1,175 @@
-Def de expresión algebraica (frase matemática)
-Partes de una expresión
+<h2> ¿Qué es una expresión algebraica? </h2>
+<hr class='topic-header'>
 
-Def de evaluar una expresión
+<!-- Def de expresión algebraica (frase matemática) -->
+<div class='def'>
+    <p>Una <strong>expresión algebraica</strong> es una frase matemática.</p>
+    <p>Una expresión algebraica puede tener:</p>
+    <dl>
+        <dt>Variable</dt>
+        <dd>Letra que representan un número desconocido.</dd>
+        <dt>Coeficiente</dt>
+        <dd>Constante que es multiplicada por una variable.</dd>
+        <dt>Operadores</dt>
+        <dd>Suma, resta, multiplicación, y división.</dd>
+        <dt>Exponente</dt>
+        <dd>Número que indica cuantas veces se multiplica otro número por si mismo.</dd>
+        <dt>Paréntesis</dt>
+        <dd>Se usan en dos ocasiones: para indicar que una operación se debe hacer antes que las demas, y para indicar que lo que tienen adentro es un todo.</dd>
+    </dl>
+</div>
 
-Def de ecuación algebraica (oración matemática)
-Eg de traducir de palabras a mate.
+<!--Eg de una expresión algebraica (y sus partes)-->
+<div class='eg'> <!-- TODO Color code the diff parts-->
+    <p><i>Por ejemplo</i>, en la expresión de abajo... </p>
+    $$ (3x + 5)^2 - 4 $$
+    <p>La x es una variable. Como tiene un 3 multiplicado por x, entonces el 3 es el coeficiente de x.</p>
+    <p>Los operadores en la expresión es la suma y la resta.</p>
+    <p>Tenemos un exponente, que es el 2.</p>
+    <p>Y tenemos un par de paréntesis, que indican que la base del exponente es 3x+5 completo, no solamente el 5.</p>
+</div>
 
-Def de ecuación abierta/cerrada
+<!-- Def de expresión/ecuación abierta/cerrada -->
+ <div class='def'>
+    Podemos describir una expresión algebraica como una expresión abierta. <p>Una <strong>expresión abierta</strong> es...</p>
+    <p>De manera similar, una <strong>expresión cerrada</strong> es...</p>
+ </div>
+
+<!--Eg de una expresión algebraica -->
+<div class='eg'>
+    <p><i>Ejemplo</i>. Las siguientes son expresiones algebraicas. No todas tienen todas las partes que se mencionan arriba, pero no importa. </p>
+    $$ \frac{3+y}{2} + 6^x $$
+    <p><i>Ejemplo</i>. Las siguientes no son expresiones algebraicas porque le falta una variable. Por lo tanto, son una expresión cerrada.</p>
+    $$ \frac{3}{4 \times 5} - (30 \div 5) $$
+</div>
+
+<h2> ¿Cómo se evalúa una expresión algebraica? </h2>
+<hr class='topic-header'>
+
+<!-- Intro (que significa evaluar una expresión) -->
+<div class='intro'>
+    <p>Por definición, una expresión algebraica tiene al menos una variable, que representa un valor desconocido. Si nos dan el valor de la variable, podemos evaluar la expresión.</p>
+</div>
+
+<!-- Def de evaluar una expresión -->
+<div class='def'>
+    <p>Para evaluar una expresión, primero tenemos que sustituir las variables de la expresión por el valor de cada una. Luego simplificamos la expresión haciendo las operaciones; o sea sumando, restando, multiplicando, y dividiendo hasta llegar a un solo número.</p>
+</div>
+<!-- TODO review PEMDAS -->
+
+<!-- Eg de evaluar una expresión -->
+ <div class='eg'>
+    <p><i>Por ejemplo</i>, podemos evaluar la siguiente expresión </p>
+    $$ 3z + (8 - x)^2 $$
+    <p>cuando</p>
+    $$ x=4 \quad y \quad z = 10$$
+
+    <p>Primero, sustituimos la variable x por 4 y la variable z por 10.</p>
+    $$ 3z + (8 - x)^2 $$
+    $$ 3(10) + (8 - 4)^2 $$
+
+    <p>Ahora, simplificamos. (Recuerda seguir el orden de operaciones.) Podemos empezar por los paréntesis. Asi que restamos primero. </p>
+    $$ 3(10) + (4)^2 $$
+
+    <p>Seguimos con los exponentes. En este caso, solo hay uno. </p>
+    $$ 3(10) + (4)^2 $$
+    $$ 3(10) + 16 $$
+
+    <p>Luego, va la multiplicación y la división. En este caso, solo hay una multiplicación.</p>
+    $$ 3(10) + 16 $$
+    $$ 30 + 16 $$
+
+    <p>Por último, sumamos y restamos. En este caso, solo hay una suma.</p>
+    $$ 30 + 16 $$
+    $$ 46 $$
+
+    <p>En conclusión, la expresión $$ 3z + (8 - x)^2 $$ es equivalente a 46 cuando $$ x=4 \quad y \quad z = 10$$  </p>
+ </div>
+
+ <!-- TODO ejercicio (evaluar expresiones)-->
+
+<h2> ¿Qué es una ecuación algebraica? </h2>
+<hr class='topic-header'>
+
+<div class='intro'>
+     <p>Si una expresión algebraica es una frase matemática, una ecuación es una oración completa.</p>
+</div>
+
+<!-- Def de ecuación algebraica (oración matemática)-->
+<div class='def'>
+    <p>Una <strong>ecuación algebraica</strong> es una oración que está compuesta por dos expresiones matematicas y el signo de igualdad. Una ecuación nos dice que lo que está a la derecha del signo de igualdad es equivalente a la expresión de la izquierda.</p>
+</div>
+
+<!--Eg de ecuación-->
+<div class='eg'>
+    <p><i>Por ejemplo</i>, las siguientes son ecuaciones algebraicas:</p>
+    $$ x + 2 = 45 $$
+    <p>Una ecuación algebraica solo nececita una xpresión algebraica. En este ejemplo, la expresión de la izquierda es una expresión algebraica y la de la derecha es una expresión cerrada.</p>
+</div>
+
+<!-- Eg de traducir de palabras a mate. -->
+Expresiones verbales para variables.
+el nombre de la variable
+"un número"
+"un número desconocido"
+"una desconocida"
+
+Expresiones verbales para la suma.
+"a x se le añade 2"
+"6 más que y"
+"3 mas 9"
+"la suma de 2 y 3"
+
+Expresiones verbales para la resta.
+"4 es disminuido por un número"
+"3 menos 8"
+"4 menos que 10"
+"la resta de 4 y 10"
+
+Expresiones verbales para la multiplicación.
+"4 veces un desconocido"
+"el doble de un número"
+"el triple de un número"
+"el producto de 7 y un número"
+
+Expresiones verbales para la división.
+"un número entre 4"
+"3 dividido por 9"
+"la mitad de un número"
+"un tercio de un número"
+"la división de 5 por 15"
+
+Expresiones verbales para el signo de igualdad.
+"a es la suma de 3 y 4"
+"y es igual a z"
+
+<div class='outro'>
+    <p>Otra forma de describir una ecuación algebraica es como una ecuación abierta.</p>
+</div>
+
+<!-- Def de expresión/ecuación abierta/cerrada -->
+<div class='def'>
+    <p>Una <strong>ecuación abierta</strong> es...</p>
+    <p>De manera similar, una <strong>ecuación cerrada</strong> es...</p>
+</div>
+
+ <script>
+    const greenHex = '#729170';
+    const orangeHex = '#DA8359';
+    // const expDefBoard = JXG.JSXGraph.initBoard(
+    //     'exp-def-box', {
+    //     boundingbox: [-20, 20, 20, 0],
+    //     showInfoBox: false,
+    //     showNavigation: false,
+    //     //useKatex: true
+    // });
+    // expDefBoard.create('point', [-9, 9], {
+    //     fillOpacity: 0,
+    //     label: {fontSize: 50, offset: [0, 60]}, //, useKatex: true
+    //     name: '(x + 5)^2 - 4', // '<i>(x + 2)^2 - 4</i>', //
+    //     strokeWidth: 0,
+    //     //useKatex: true,
+    //     withLabel: true,
+    // });
+
+</script>
