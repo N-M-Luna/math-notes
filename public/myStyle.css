@@ -195,6 +195,9 @@ dt {
 .hidden {
     display: none;
 }
+.centered {
+    text-align: center;
+}
 .see-answer-btn {
   background-color: white;
   border: 1px #DA8359 solid;

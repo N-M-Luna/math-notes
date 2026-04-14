@@ -23,7 +23,6 @@ TODO:
 - Fix previous / next lesson to article view. (outside mate7)
 - Addendum to 'Slope triangles' (dado un punto y una pendiente, pon un 2do punto. y que pasa si la pendiente es negativa.)
 - Add vocab view (by unit? by subject?) and add link to {.def strong} vocab words.
-- Show my scratch paper in eg's and ejercicio's.
 - Edit sizing for mobile.
 - Add assessment view.
 - Add views for topicHeader, def, eg, ejercicio, and intro/outro.

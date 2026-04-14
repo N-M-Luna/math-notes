@@ -15,6 +15,11 @@ export const articleTOC = [
         lang: 'es'
     },
     {
+        title: 'Expresiones numéricas',
+        articleID: 'expresiones_numericas',
+        lang: 'es'
+    },
+    {
         title: 'Expresiones y ecuaciones',
         articleID: 'expresiones_y_ecuaciones',
         lang: 'es'
@@ -81,22 +86,22 @@ export const articleTOC = [
     }
 ]
 export const mate7units = {
-    'Expresiones numéricas y algebraicas': [
+    'Expresiones numéricas y algebraicas': [//Unidad 1
         'conjuntos',
         'patrones',
         'potencias',
         'raices_cuadradas',
-        // 'expresiones_numericas', //Expresiones numéricas y orden de operaciones
+        'expresiones_numericas', //Expresiones numéricas y orden de operaciones
         // 'expresiones_algebraicas', //Expresiones algebraicas y evaluación
         // 'numeros_reales', //Propiedades de los números reales
     ],
-    'Enteros': [
+    'Enteros': [//Unidad 2
         'valor_absoluto',
         // 'suma_resta_enteros', //'Suma y resta de número enteros
         // 'multiplicacion_division_enteros', //'Multiplicación y división de número enteros
         // 'plano_cartesiano', //'El plano cartesiano
     ],
-    'Números racionales': [
+    'Números racionales': [//Unidad 3
         'numeros_racionales',
         // 'decimales_exactos_periodicos', //'Decimales exactos y perdiódicos
         // 'comparar_decimales', //'Comparar y ordenar decimales'
@@ -104,8 +109,8 @@ export const mate7units = {
         // 'fracciones_heterogeneas', //Fracciones heterogéneas
         // 'notacion_cientifica', //Exponentes negativos y notación científica
     ],
-    'Ecuaciones e inecuaciones': [
-        'expresiones_y_ecuaciones', //WIP
+    'Ecuaciones e inecuaciones': [//Unidad 4
+        'expresiones_y_ecuaciones',
         // 'ecuaciones_suma_resta', //Ecuaciones con suma y resta
         // 'ecuaciones_multiplicacion_division', //Ecuaciones con multiplicación y división
         // 'ecuaciones_combinacion_operaciones', //Ecuaciones con operaciones combinadas
@@ -114,7 +119,7 @@ export const mate7units = {
         // 'inecuaciones_multiplicacion_division', //Inecuaciones con multiplicación y división
         // 'inecuaciones_combinacion_operaciones', //Inecuaciones con operaciones combinadas
     ],
-    'Razones y Proporciones': [
+    'Razones y Proporciones': [//Unidad 5
         'razones',
         'proporciones',
         'tasa_unitaria',
