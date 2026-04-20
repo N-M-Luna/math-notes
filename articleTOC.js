@@ -15,7 +15,12 @@ export const articleTOC = [
         lang: 'es'
     },
     {
-        title: 'Expresiones numéricas',
+        title: 'Expresiones algebraicas y evaluación',
+        articleID: 'expresiones_algebraicas',
+        lang: 'es'
+    },
+    {
+        title: 'Expresiones numéricas y orden de operaciones',
         articleID: 'expresiones_numericas',
         lang: 'es'
     },
@@ -42,6 +47,11 @@ export const articleTOC = [
     {
         title: 'Potencias',
         articleID: 'potencias',
+        lang: 'es'
+    },
+    {
+        title: 'Propiedades de los números reales',
+        articleID: 'numeros_reales',
         lang: 'es'
     },
     {
@@ -91,9 +101,9 @@ export const mate7units = {
         'patrones',
         'potencias',
         'raices_cuadradas',
-        'expresiones_numericas', //Expresiones numéricas y orden de operaciones
-        // 'expresiones_algebraicas', //Expresiones algebraicas y evaluación
-        // 'numeros_reales', //Propiedades de los números reales
+        'expresiones_numericas',
+        'expresiones_algebraicas', //WIP
+        'numeros_reales', //WIP
     ],
     'Enteros': [//Unidad 2
         'valor_absoluto',
