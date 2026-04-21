@@ -75,6 +75,11 @@ export const articleTOC = [
         lang: 'en'
     },
     {
+        title: 'Suma y resta de número enteros',
+        articleID: 'suma_resta_enteros',
+        lang: 'es'
+    },
+    {
         title: 'Tasa unitaria',
         articleID: 'tasa_unitaria',
         lang: 'es'
@@ -97,17 +102,17 @@ export const articleTOC = [
 ]
 export const mate7units = {
     'Expresiones numéricas y algebraicas': [//Unidad 1
-        'conjuntos',
         'patrones',
+        'conjuntos',
         'potencias',
         'raices_cuadradas',
+        'numeros_reales', //outlined
         'expresiones_numericas',
-        'expresiones_algebraicas', //WIP
-        'numeros_reales', //WIP
+        'expresiones_algebraicas',
     ],
     'Enteros': [//Unidad 2
         'valor_absoluto',
-        // 'suma_resta_enteros', //'Suma y resta de número enteros
+        'suma_resta_enteros', //outlined
         // 'multiplicacion_division_enteros', //'Multiplicación y división de número enteros
         // 'plano_cartesiano', //'El plano cartesiano
     ],
