@@ -35,6 +35,11 @@ export const articleTOC = [
         lang: 'es'
     },
     {
+        title: 'Multiplicación y división de número enteros',
+        articleID: 'multiplicacion_division_enteros',
+        lang: 'es'
+    },
+    {
         title: 'Números racionales',
         articleID: 'numeros_racionales',
         lang: 'es'
@@ -42,6 +47,11 @@ export const articleTOC = [
     {
         title: 'Patrones',
         articleID: 'patrones',
+        lang: 'es'
+    },
+    {
+        title: 'El plano cartesiano',
+        articleID: 'plano_cartesiano',
         lang: 'es'
     },
     {
@@ -113,8 +123,8 @@ export const mate7units = {
     'Enteros': [//Unidad 2
         'valor_absoluto',
         'suma_resta_enteros', //outlined
-        // 'multiplicacion_division_enteros', //'Multiplicación y división de número enteros
-        // 'plano_cartesiano', //'El plano cartesiano
+        'multiplicacion_division_enteros', //outlined
+        'plano_cartesiano', //outlined
     ],
     'Números racionales': [//Unidad 3
         'numeros_racionales',

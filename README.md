@@ -25,7 +25,7 @@ TODO:
 - Edit sizing for mobile.
 - Add assessment view.
 - Add views for topicHeader, def, eg, ejercicio, and intro/outro.
-- Add practice problems to each article.
+- Add practice problems to each article. (Create a question bank. Create practice view, where it shuffles through the bank and serve 10-15 probs.)
 - Add English translations.
 - Understand macros in LaTeX.
 - Add in-line LaTeX expressions. ([docs on how to render](https://katex.org/docs/options))
