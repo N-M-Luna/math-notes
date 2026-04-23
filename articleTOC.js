@@ -5,14 +5,31 @@ export const articleTOC = [
         lang: 'es'
     },
     {
+        title: 'Comparar y ordenar decimales',
+        articleID: 'comparar_decimales',
+        lang: 'es'
+
+    },
+    {
         title: 'Conjuntos',
         articleID: 'conjuntos',
+        lang: 'es'
+    },
+    {
+        title: 'Decimales exactos y perdiódicos',
+        articleID: 'decimales_exactos_periodicos',
         lang: 'es'
     },
     {
         title: 'Escalas',
         articleID: 'escalas',
         lang: 'es'
+    },
+    {
+        title: 'Exponentes negativos y notación científica',
+        articleID: 'notacion_cientifica',
+        lang: 'es'
+
     },
     {
         title: 'Expresiones algebraicas y evaluación',
@@ -33,6 +50,18 @@ export const articleTOC = [
         title: 'Figuras semejantes',
         articleID: 'figuras_semejantes',
         lang: 'es'
+    },
+    {
+        title: 'Fracciones heterogéneas',
+        articleID: 'fracciones_heterogeneas',
+        lang: 'es'
+
+    },
+    {
+        title: 'Fracciones homogéneas',
+        articleID: 'fracciones_homogeneas',
+        lang: 'es'
+
     },
     {
         title: 'Multiplicación y división de número enteros',
@@ -128,11 +157,11 @@ export const mate7units = {
     ],
     'Números racionales': [//Unidad 3
         'numeros_racionales',
-        // 'decimales_exactos_periodicos', //'Decimales exactos y perdiódicos
-        // 'comparar_decimales', //'Comparar y ordenar decimales'
-        // 'fracciones_homogeneas', //Fracciones homogéneas
-        // 'fracciones_heterogeneas', //Fracciones heterogéneas
-        // 'notacion_cientifica', //Exponentes negativos y notación científica
+        'decimales_exactos_periodicos', //outlined
+        'comparar_decimales', //outlined
+        'fracciones_homogeneas', //outlined
+        'fracciones_heterogeneas', //outlined
+        'notacion_cientifica', //outlined
     ],
     'Ecuaciones e inecuaciones': [//Unidad 4
         'expresiones_y_ecuaciones',
