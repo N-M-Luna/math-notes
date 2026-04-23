@@ -12,7 +12,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 import favicon from 'serve-favicon';
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 
-
 //Routes
 import ejs from 'ejs'
 app.set('view engine', 'ejs');
@@ -24,10 +23,12 @@ const langCntrlPath = __dirname + '/views/langControlBtn.ejs'
 
 //Home route
 import {mate7units, articleTOC} from './articleTOC.js'
+import {writeInRoman} from './public/helper_mod.js'
 const mate7articles = [] //List of mate 7 articles' ID
 let mate7menu = ``
+let unitNum = 1
 for (const myUnit in mate7units) {
-    mate7menu += `<h3>Unidad: ${myUnit}</h3>
+    mate7menu += `<h3>Unidad ${writeInRoman(unitNum)}: ${myUnit}</h3>
     `
     const unitList = mate7units[myUnit]
     mate7articles.push(...unitList)
@@ -36,6 +37,7 @@ for (const myUnit in mate7units) {
         mate7menu += `<p><a href='/article/${unitList[i]}'> ${articleObj.title}</a></p>
         `
     }
+    unitNum++
 }
 app.get('/', (req, res) => {
     res.render(__dirname + '/public/index.ejs', {

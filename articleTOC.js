@@ -26,6 +26,22 @@ export const articleTOC = [
         lang: 'es'
     },
     {
+        title: 'Ecuaciones con multiplicación y división',
+        articleID: 'ecuaciones_multiplicacion_division',
+        lang: 'es'
+    },
+    {
+        title: 'Ecuaciones con operaciones combinadas',
+        articleID: 'ecuaciones_combinacion_operaciones',
+        lang: 'es'
+
+    },
+    {
+        title: 'Ecuaciones con suma y resta',
+        articleID: 'ecuaciones_suma_resta',
+        lang: 'es'
+    },
+    {
         title: 'Exponentes negativos y notación científica',
         articleID: 'notacion_cientifica',
         lang: 'es'
@@ -163,21 +179,44 @@ export const mate7units = {
         'fracciones_heterogeneas', //outlined
         'notacion_cientifica', //outlined
     ],
-    'Ecuaciones e inecuaciones': [//Unidad 4
+    'Ecuaciones': [//Unidad 4
         'expresiones_y_ecuaciones',
-        // 'ecuaciones_suma_resta', //Ecuaciones con suma y resta
-        // 'ecuaciones_multiplicacion_division', //Ecuaciones con multiplicación y división
-        // 'ecuaciones_combinacion_operaciones', //Ecuaciones con operaciones combinadas
+        'ecuaciones_suma_resta', //outlined
+        'ecuaciones_multiplicacion_division', //outlined
+        'ecuaciones_combinacion_operaciones', //outlined
+    ],
+    'Inecuaciones': [//Unidad 5
         // 'inecuaciones_y_graficas', //Inecuaciones y gráficas
         // 'inecuaciones_suma_resta', //Inecuaciones con suma y resta
         // 'inecuaciones_multiplicacion_division', //Inecuaciones con multiplicación y división
         // 'inecuaciones_combinacion_operaciones', //Inecuaciones con operaciones combinadas
     ],
-    'Razones y Proporciones': [//Unidad 5
+    'Razones y proporciones': [//Unidad 6
         'razones',
         'proporciones',
         'tasa_unitaria',
         'figuras_semejantes', //WIP
         'escalas' //WIP
-    ]
+    ],
 }
+
+// 'Porcentaje': [//Unidad 7
+// ],
+
+// 'Funciones': [//Unidad 8
+// ],
+
+//'Geometría plana': [//Unidad 9
+//],
+
+//'Geometría espacial': [//Unidad 10
+//],
+
+//'Sistema de medidas': [//Unidad 11
+//],
+
+//'Análisis de datos': [//Unidad 12
+//],
+
+//'Probabilidad': [//Unidad 13
+//],
