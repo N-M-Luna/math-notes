@@ -3,6 +3,10 @@ export const articleTOC = [
         articleID: 'boilerplate',
         lang: 'es'
     },
+    {title: 'Cambio Porcentual',
+        articleID: 'cambio_porcentual',
+        lang: 'es'
+    },
     {title: 'Comparar y ordenar decimales',
         articleID: 'comparar_decimales',
         lang: 'es'
@@ -21,6 +25,10 @@ export const articleTOC = [
     },
     {title: 'Escalas',
         articleID: 'escalas',
+        lang: 'es'
+    },
+    {title: 'Ecuación porcentual',
+        articleID: 'ecuacion_porcentual',
         lang: 'es'
     },
     {title: 'Ecuaciones con multiplicación y división',
@@ -53,6 +61,10 @@ export const articleTOC = [
     },
     {title: 'Figuras semejantes',
         articleID: 'figuras_semejantes',
+        lang: 'es'
+    },
+    {title: 'Fracciones, decimales, y porcientos',
+        articleID: 'fracciones_decimales_porcientos',
         lang: 'es'
     },
     {title: 'Fracciones heterogéneas',
@@ -91,6 +103,14 @@ export const articleTOC = [
         articleID: 'plano_cartesiano',
         lang: 'es'
     },
+    {title: 'Porciento',
+        articleID: 'porciento',
+        lang: 'es'
+    },
+    {title: 'Porcientos en las finanzas',
+        articleID: 'porciento_finanzas',
+        lang: 'es'
+    },
     {title: 'Potencias',
         articleID: 'potencias',
         lang: 'es'
@@ -101,6 +121,10 @@ export const articleTOC = [
     },
     {title: 'Proporciones',
         articleID: 'proporciones',
+        lang: 'es'
+    },
+    {title: 'Proporciones porcentuales',
+        articleID: 'proporciones_porcentuales',
         lang: 'es'
     },
     {title: 'Raíces cuadradas',
@@ -176,13 +200,18 @@ export const mate7units = {
         'razones',
         'proporciones',
         'tasa_unitaria',
-        'figuras_semejantes', //WIP
-        'escalas' //WIP
+        'figuras_semejantes', //outlined
+        'escalas' //outlined
+    ],
+    'Porcentaje': [//Unidad 7
+        'porciento', //outlined
+        'fracciones_decimales_porcientos', //outlined
+        'proporciones_porcentuales', //outlined
+        'ecuacion_porcentual', //outlined
+        'cambio_porcentual', //outlined
+        'porciento_finanzas' //outlined
     ],
 }
-
-// 'Porcentaje': [//Unidad 7
-// ],
 
 // 'Funciones': [//Unidad 8
 // ],
