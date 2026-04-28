@@ -1,156 +1,137 @@
 export const articleTOC = [
-    {
-        title: 'Boilerplate',
+    {title: 'Boilerplate',
         articleID: 'boilerplate',
         lang: 'es'
     },
-    {
-        title: 'Comparar y ordenar decimales',
+    {title: 'Comparar y ordenar decimales',
         articleID: 'comparar_decimales',
         lang: 'es'
-
     },
-    {
-        title: 'Conjuntos',
+    {title: 'Conjuntos',
         articleID: 'conjuntos',
         lang: 'es'
     },
-    {
-        title: 'Decimales exactos y perdiódicos',
+    {title: 'Decimales exactos y perdiódicos',
         articleID: 'decimales_exactos_periodicos',
         lang: 'es'
     },
-    {
-        title: 'Escalas',
+    {title: 'Desigualdades y gráficas',
+        articleID: 'desigualdades_y_graficas',
+        lang: 'es'
+    },
+    {title: 'Escalas',
         articleID: 'escalas',
         lang: 'es'
     },
-    {
-        title: 'Ecuaciones con multiplicación y división',
+    {title: 'Ecuaciones con multiplicación y división',
         articleID: 'ecuaciones_multiplicacion_division',
         lang: 'es'
     },
-    {
-        title: 'Ecuaciones con operaciones combinadas',
+    {title: 'Ecuaciones con operaciones combinadas',
         articleID: 'ecuaciones_combinacion_operaciones',
         lang: 'es'
-
     },
-    {
-        title: 'Ecuaciones con suma y resta',
+    {title: 'Ecuaciones con suma y resta',
         articleID: 'ecuaciones_suma_resta',
         lang: 'es'
     },
-    {
-        title: 'Exponentes negativos y notación científica',
+    {title: 'Exponentes negativos y notación científica',
         articleID: 'notacion_cientifica',
         lang: 'es'
-
     },
-    {
-        title: 'Expresiones algebraicas y evaluación',
+    {title: 'Expresiones algebraicas y evaluación',
         articleID: 'expresiones_algebraicas',
         lang: 'es'
     },
-    {
-        title: 'Expresiones numéricas y orden de operaciones',
+    {title: 'Expresiones numéricas y orden de operaciones',
         articleID: 'expresiones_numericas',
         lang: 'es'
     },
-    {
-        title: 'Expresiones y ecuaciones',
+    {title: 'Expresiones y ecuaciones',
         articleID: 'expresiones_y_ecuaciones',
         lang: 'es'
     },
-    {
-        title: 'Figuras semejantes',
+    {title: 'Figuras semejantes',
         articleID: 'figuras_semejantes',
         lang: 'es'
     },
-    {
-        title: 'Fracciones heterogéneas',
+    {title: 'Fracciones heterogéneas',
         articleID: 'fracciones_heterogeneas',
         lang: 'es'
-
     },
-    {
-        title: 'Fracciones homogéneas',
+    {title: 'Fracciones homogéneas',
         articleID: 'fracciones_homogeneas',
         lang: 'es'
-
     },
-    {
-        title: 'Multiplicación y división de número enteros',
+    {title: 'Inecuaciones con multiplicación y división',
+        articleID: 'inecuaciones_multiplicacion_division',
+        lang: 'es'
+    },
+    {title: 'Inecuaciones con operaciones combinadas',
+        articleID: 'inecuaciones_combinacion_operaciones',
+        lang: 'es'
+    },
+    {title: 'Inecuaciones con suma y resta',
+        articleID: 'inecuaciones_suma_resta',
+        lang: 'es'
+    },
+    {title: 'Multiplicación y división de número enteros',
         articleID: 'multiplicacion_division_enteros',
         lang: 'es'
     },
-    {
-        title: 'Números racionales',
+    {title: 'Números racionales',
         articleID: 'numeros_racionales',
         lang: 'es'
     },
-    {
-        title: 'Patrones',
+    {title: 'Patrones',
         articleID: 'patrones',
         lang: 'es'
     },
-    {
-        title: 'El plano cartesiano',
+    {title: 'El plano cartesiano',
         articleID: 'plano_cartesiano',
         lang: 'es'
     },
-    {
-        title: 'Potencias',
+    {title: 'Potencias',
         articleID: 'potencias',
         lang: 'es'
     },
-    {
-        title: 'Propiedades de los números reales',
+    {title: 'Propiedades de los números reales',
         articleID: 'numeros_reales',
         lang: 'es'
     },
-    {
-        title: 'Proporciones',
+    {title: 'Proporciones',
         articleID: 'proporciones',
         lang: 'es'
     },
-    {
-        title: 'Raíces cuadradas',
+    {title: 'Raíces cuadradas',
         articleID: 'raices_cuadradas',
         lang: 'es'
     },
-    {
-        title: 'Razones',
+    {title: 'Razones',
         articleID: 'razones',
         lang: 'es'
     },
-    {
-        title: 'Slope triangles',
+    {title: 'Slope triangles',
         articleID: 'slope_triangles',
         lang: 'en'
     },
-    {
-        title: 'Suma y resta de número enteros',
+    {title: 'Suma y resta de número enteros',
         articleID: 'suma_resta_enteros',
         lang: 'es'
     },
-    {
-        title: 'Tasa unitaria',
+    {title: 'Tasa unitaria',
         articleID: 'tasa_unitaria',
         lang: 'es'
     },
-    {
-        title: 'Translations in the coordinate plane',
+    {title: 'Translations in the coordinate plane',
         articleID: 'translations',
         lang: 'en'
     },
-    {
-        title: 'The x-intercept of a linear equation',
+    {title: 'The x-intercept of a linear equation',
         articleID: 'x_intercept',
         lang: 'en'
     },
-    {
-        title: 'Valor absoluto',
+    {title: 'Valor absoluto',
         articleID: 'valor_absoluto',
         lang: 'es'
     }
@@ -186,10 +167,10 @@ export const mate7units = {
         'ecuaciones_combinacion_operaciones', //outlined
     ],
     'Inecuaciones': [//Unidad 5
-        // 'inecuaciones_y_graficas', //Inecuaciones y gráficas
-        // 'inecuaciones_suma_resta', //Inecuaciones con suma y resta
-        // 'inecuaciones_multiplicacion_division', //Inecuaciones con multiplicación y división
-        // 'inecuaciones_combinacion_operaciones', //Inecuaciones con operaciones combinadas
+        'desigualdades_y_graficas', //outlined
+        'inecuaciones_suma_resta', //outlined
+        'inecuaciones_multiplicacion_division', //outlined
+        'inecuaciones_combinacion_operaciones', //outlined
     ],
     'Razones y proporciones': [//Unidad 6
         'razones',
