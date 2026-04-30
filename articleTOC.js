@@ -31,6 +31,14 @@ export const articleTOC = [
         articleID: 'ecuacion_porcentual',
         lang: 'es'
     },
+    {title: 'Ecuación de la recta',
+        articleID: 'ecuacion_de_la_recta',
+        lang: 'es'
+    },
+    {title: 'Ecuaciones de dos variables',
+        articleID: 'ecuaciones_dos_variables',
+        lang: 'es'
+    },
     {title: 'Ecuaciones con multiplicación y división',
         articleID: 'ecuaciones_multiplicacion_division',
         lang: 'es'
@@ -41,6 +49,10 @@ export const articleTOC = [
     },
     {title: 'Ecuaciones con suma y resta',
         articleID: 'ecuaciones_suma_resta',
+        lang: 'es'
+    },
+    {title: 'Ecuaciones, tablas, y gráficas',
+        articleID: 'ecuaciones_tablas_graficas',
         lang: 'es'
     },
     {title: 'Exponentes negativos y notación científica',
@@ -87,6 +99,10 @@ export const articleTOC = [
         articleID: 'inecuaciones_suma_resta',
         lang: 'es'
     },
+    {title: 'Interpretación de las gráficas lineales',
+        articleID: 'interpretacion_grafica_lineal',
+        lang: 'es'
+    },
     {title: 'Multiplicación y división de número enteros',
         articleID: 'multiplicacion_division_enteros',
         lang: 'es'
@@ -131,8 +147,16 @@ export const articleTOC = [
         articleID: 'raices_cuadradas',
         lang: 'es'
     },
+    {title: 'Razón de cambio constante',
+        articleID: 'razon_cambio_constante',
+        lang: 'es'
+    },
     {title: 'Razones',
         articleID: 'razones',
+        lang: 'es'
+    },
+    {title: 'Relaciones y funciones',
+        articleID: 'relaciones_y_funciones',
         lang: 'es'
     },
     {title: 'Slope triangles',
@@ -158,7 +182,11 @@ export const articleTOC = [
     {title: 'Valor absoluto',
         articleID: 'valor_absoluto',
         lang: 'es'
-    }
+    },
+    {title: 'Variación directe e indirecta',
+        articleID: 'variacion_directa_indirecta',
+        lang: 'es'
+    },
 ]
 export const mate7units = {
     'Expresiones numéricas y algebraicas': [//Unidad 1
@@ -211,10 +239,16 @@ export const mate7units = {
         'cambio_porcentual', //outlined
         'porciento_finanzas' //outlined
     ],
+    'Funciones': [//Unidad 8
+        'relaciones_y_funciones', //outlined
+        'ecuaciones_tablas_graficas', //outlined
+        'ecuaciones_dos_variables', //outlined
+        'razon_cambio_constante', //outlined
+        'ecuacion_de_la_recta', //outlined
+        'variacion_directa_indirecta', //outlined
+        'interpretacion_grafica_lineal' //outlined
+    ],
 }
-
-// 'Funciones': [//Unidad 8
-// ],
 
 //'Geometría plana': [//Unidad 9
 //],
