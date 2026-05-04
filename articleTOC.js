@@ -194,7 +194,7 @@ export const mate7units = {
         'conjuntos',
         'potencias',
         'raices_cuadradas',
-        'numeros_reales', //outlined
+        'numeros_reales',
         'expresiones_numericas',
         'expresiones_algebraicas',
     ],

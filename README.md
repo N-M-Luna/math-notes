@@ -15,7 +15,7 @@ To add new articles:
 - Each new article needs a unique ID, which we will call here articleID.
 - First, add a new object to articleTOC.js with fields 'title', 'articleID', and 'lang'.
 - Then, add the articleID to the approriate unit in mate7units in articleTOC.js.
-- Finally, add the content to a new file called public/article/articleID.ejs. In this file, any latex should be inbetween `$$...$$` and any jsx graphs should be in `<div class='jxgbox'></div>`. Other styling is in the file 'public/mate7/boilerplate.ejs'
+- Finally, add the content to a new file called public/article/articleID.ejs. In this file, display latex should be inbetween `$$ ... $$`, inline latex should be inbetween ` \( ... \)`, and any jsx graphs should be in `<div class='jxgbox'></div>`. Other styling is in the file 'public/mate7/boilerplate.ejs'
 
 -----------
 
@@ -27,6 +27,4 @@ TODO:
 - Add views for topicHeader, def, eg, ejercicio, and intro/outro.
 - Add practice problems to each article. (Create a question bank. Create practice view, where it shuffles through the bank and serve 10-15 probs.)
 - Add English translations.
-- Understand macros in LaTeX.
-- Add in-line LaTeX expressions. ([docs on how to render](https://katex.org/docs/options))
 - Display correctly all LaTeX expressions that are too long.

@@ -1,97 +1,423 @@
-<h2> ¿Qué conjuntos hay en el conjunto de números reales? </h2>
-<h2> ¿Qué conjuntos de números reales hay? </h2>
-<h2> ¿Qué conjuntos de números reales existen? </h2>
+<h2> ¿Cuáles son los conjuntos de los números reales? </h2>
 <hr class='topic-header'>
 
 <!-- Repaso de conjuntos -->
- <!-- Def de conjunto (diferentes representaciones) -->
+<div class='def'>
+    <p>Recordamos que un <strong>conjunto</strong> es una colección de elementos. </p>
+    <p>Es costumbre nombrar conjuntos con una letra mayúscula y se pueden representar como una lista de sus elementos entre corchetes.</p>
+    $$ X = \{ 2, 4, 6, 8, 10, 12, ... \} $$
+    <p>Otra forma de representar un conjunto es: </p>
+    $$ X = \{ x \quad | \quad  x \text{ es par } \} $$
+
+    <p>Cuando un número es parte de un conjunto decimos que <strong>pertenece</strong> al conjunto y se escribe: </p>
+    $$ 24 \in X $$
+    <p>Cuando un número no es parte del conjunto, entonces no pertence y se escribe: </p>
+    $$ 1 \notin X $$
+
+    <p>Recordamos también lo que es un subconjunto. Si todos los elementos de un conjunto  \( A \) también están en un conjunto \( B \), entonces decimos que \( A \) es un <strong>subconjunto</strong> de \( B \). $$ A \subset B $$ </p>
+</div>
 
 <!-- Def de conjunto de números naturales -->
-<!-- Eg de quien está o nó está en el conjunto -->
+ <div class='intro'>
+    <p>Podemos definir varios conjuntos de números reales. </p>
+</div>
+<div class='def'>
+    <p>Los <strong>números naturales</strong> son los número que usamos para contar. Se representan con la letra \( \mathbb{N} \).</p>
+    $$ \mathbb{N} = \{ 1, 2, 3, 4, 5, ... \} $$
+</div>
+
+<!-- Eg de quien está o nó está en el conjunto de números naturales -->
+<div class='eg'>
+    <p><i>Ejemplo</i>. Determina si los siguientes números pertenecen a los números naturales.</p>
+    $$ 3,\, \frac{1}{2},\, 55.5,\, 100000 $$
+    <p>El número 3 se puede usar para contar, asi que pertenece a \( \mathbb{N} \).</p>
+    $$ 3 \in \mathbb{N} $$
+    <p>La fracción \( \frac{1}{2} \) no se puede usar para contar, asi que no pertenece a \( \mathbb{N} \).</p>
+    <!-- Nat Note: Antes de descubrir cómo se usa in-line latex, esta fue mi solución para escribir una fracción dentro del párrafo: <sup>1</sup>&frasl;<sub>2</sub> -->
+    $$ \frac{1}{2} \notin \mathbb{N} $$
+    <p>El número 55.5 no se puede usar para contar, asi que no pertenece a \( \mathbb{N} \).</p>
+    $$ 55.5 \notin \mathbb{N} $$
+    <p>El número 100000 se puede usar para contar, asi que pertenece a \( \mathbb{N} \).</p>
+    $$ 100000 \in \mathbb{N} $$
+</div>
 
 <!-- Def de conjunto de números cardinales -->
-<!-- Eg de quien está o nó está en el conjunto -->
- <!-- N \subset N_0 (ejemplos y diagrama con N y N_0) -->
+<div class='def'>
+    <p>Los <strong>números cardinales</strong> son todos los número naturales más el número 0. Se representan con la letra \( \mathbb{N} \) con 0 como un subscrito.</p>
+    $$ \mathbb{N}_0 = \{ 0, 1, 2, 3, 4, 5, ... \} $$
+</div>
+
+<!-- Eg de quien está o nó está en el conjunto de números cardinales  -->
+<div class='eg'>
+    <p><i>Ejemplo</i>. Determina si los siguientes números estan en  \( \mathbb{N}_0 \) o nó.</p>
+    <!--TODO-->
+</div>
+
+<!-- N \subset N_0 (ejemplos y diagrama con N y N_0) -->
+<div class='outro'>
+    <p>Como \( \mathbb{N}_0 \) incluye todos los números naturales, entonces \( \mathbb{N} \) es subconjunto de \( \mathbb{N}_0 \).</p>
+    $$ \mathbb{N} \subset \mathbb{N}_0 $$
+</div>
 
 <!-- Def de conjunto de números enteros -->
-<!-- Eg de quien está o nó está en el conjunto -->
+<div class='def'>
+    <p>Los números enteros consisten en el 0, todos los numeros naturales, y sus opuestos. Se representan con la letra \( \mathbb{Z} \).</p>
+    $$ \mathbb{Z} = \{ ..., -3, -2, -1, 0, 1, 2, 3, ... \} $$
+</div>
+
+<!-- Eg de quien está o nó está en el conjunto de números enteros -->
+ <div class='eg'>
+    <p><i>Ejemplo</i>. Determina si los siguientes números estan en \( \mathbb{Z} \) o nó.</p>
+    <!--TODO-->
+</div>
+
  <!-- N_0 \subset Z (ejemplos y diagramas con N, ..., Z)-->
+<div class='outro'>
+    <p>Como \( \mathbb{Z} \) incluye todos los números cardinales, entonces \( \mathbb{N}_0 \) es subconjunto de \( \mathbb{Z} \).</p>
+    $$ \mathbb{N} \subset \mathbb{N}_0 \subset \mathbb{Z} $$
+</div>
 
 <!-- Def de conjunto de números racionales -->
-<!-- Eg de quien está o nó está en el conjunto -->
+<div class='def'>
+    <p>El conjunto de números racionales contiene todos los números que se pueden expresar como una razón de dos enteros (o sea, como una fracción). Se representan con una \( \mathbb{Q} \). </p>
+    $$ \mathbb{Q} = \left\{ q \quad | \quad q = \frac{a}{b} \right\} $$
+</div>
+
+<!-- Eg de quien está o nó está en el conjunto de números racionales -->
+<div class='eg'>
+    <p><i>Ejemplo</i>. Determina si los siguientes números estan en \( \mathbb{Q} \) o nó.</p>
+    <!--TODO fracciones, enteros, decimales finitos, infinitos que se repiten, e infinitos que no se repiten -->
+</div>
+
  <!-- Z \subset Q (ejemplos y diagramas con N, ..., Q)-->
+<div class='outro'>
+    <p>Nota que cualquier numero entero se puede expresar como una fracción con denominador 1. Por ejemplo, el número entero 15 se puede escribir como \(\frac{15}{1} \). O el número entero -4; que se puede expresar como \( -\frac{4}{1} \).</p>
+    <p>Como cualquier elemento de \( \mathbb{Z} \) también está en \( \mathbb{Q} \), entonces los enteros es un subconjunto de los racionales.</p>
+    $$ \mathbb{N} \subset \mathbb{N}_0 \subset \mathbb{Z} \subset \mathbb{Q} $$
+</div>
 
 <!-- Def de conjunto de números irracionales -->
-<!-- Eg de quien está o nó está en el conjunto -->
- <!-- I \notsubset todos otros (ejemplos y diagramas con N, ..., Z, I, y un universo) -->
+<div class='def'>
+    <p>Los número irracionales, al contrario de los racionales, son los números que no se pueden expresar como una razón de dos enteros. Y se representan con una \( \mathbb{I} \).</p>
+    $$ \mathbb{I} = \left\{ x \quad | \quad x \neq \frac{a}{b} \right\} $$
+</div>
 
- <!-- Def de conjunto de números reales -->
-<!-- Eg de quien está o nó está en el conjunto -->
-<!-- todos \subset R (ejemplos y diagramas con R y todos sus subconjuntos)-->
+<!-- Eg de quien está o nó está en el conjunto de números irracionales -->
+<div class='eg'>
+    <p><i>Ejemplo</i>. Determina si los siguientes números estan en \( \mathbb{I} \) o nó.</p>
+    <!--TODO -->
+</div>
 
-<!-- Practica de ubicar numeros en el conjunto adecuado (en el diagrama de arriba) -->
+<!-- I \notsubset todos otros (ejemplos y diagramas con N, ..., Z, I, y un universo) -->
+<div class='outro'>
+    <p>Nota que los conjuntos \( \mathbb{I} \) y \( \mathbb{Q} \) no pueden compartir ningún elemento. O sea, que  </p>
+    <!--TODO-->
+</div>
 
-<h2> ¿Cómo es la suma en R? </h2>
-<h2> ¿Cómo podemos describir la suma en R? </h2>
-<h2> ¿Cómo se puede describir la suma en R? </h2>
+<!-- Def de conjunto de números reales -->
+ <div class='def'>
+    <p>Los número reales consisten en todos los números racionales y los irracionales. Y se representan con una \( \mathbb{R} \).</p>
+    $$ \mathbb{R} = \mathbb{Q} \cup\mathbb{I} $$
+    <p>Una forma común de representar el conjunto \( \mathbb{R} \) es la recta numérica.</p>
+    <div id='recta-numerica' class='jxgbox short-graph' <%- graphOpts %> ></div>
+</div>
+
+<!-- Diagrama con R y todos sus subconjuntos -->
+<div class='outro'>
+    <p>Podemos representar a \( \mathbb{R} \) y sus subconjuntos de la siguiente manera:</p>
+</div>
+<div id='diagrama-de-r' class='jxgbox short-graph' <%- graphOpts %> ></div>
+
+<!-- Práctica de ubicar numeros en el conjunto adecuado (en el diagrama de arriba) -->
+<!--TODO-->
+
+<h2> ¿Cuáles son las propiedades de la suma en \( \mathbb{R} \)? </h2>
 <hr class='topic-header'>
 
 <!-- Def de propiedad de la clausura -->
+ <div class='def'>
+    <p>La <strong>Propiedad de la Clausura</strong> dice que la suma de cualquiera dos números reales también será un número real. </p>
+    <p>O sea, si escogemos dos números reales al azar y los sumamos, esta suma también será un número real.</p>
+    $$ a,b \in \mathbb{R} \qquad \Rightarrow \qquad a+b \in \mathbb{R} $$
+ </div>
 <!-- Eg de esta propiedad-->
-<!-- Eg de como esta propiedad falla en otro conjunto-->
-
-<!-- Def de propiedad asociativa -->
-<!-- Eg de esta propiedad-->
-<!-- Eg de como esta propiedad falla en otro conjunto-->
+<div class='eg'>
+    <p><i>Ejemplo</i>. Vamos a estudiar la siguiente suma: \( -\frac{4}{5} + \frac{15}{5} \). </p>
+    <p>Los números 4 y 18 son reales. $$ -\frac{4}{5}, \; \frac{15}{5} \in \mathbb{R} $$ Su suma, \( -\frac{4}{5} + \frac{15}{5} = \frac{-4 + 15}{5} = \frac{11}{5} \), también es un número real.  $$ -\frac{4}{5} + \frac{15}{5} \in \mathbb{R} $$ </p>
+</div>
 
 <!-- Def de propiedad conmutativa -->
+<div class='def'>
+    <p>La <strong>Propiedad Conmutativa</strong> nos dice que no importa el orden en que sumamos dos números reales.</p>
+    $$ a,b \in \mathbb{R} \qquad \Rightarrow \qquad a+b = b+a $$
+</div>
 <!-- Eg de esta propiedad-->
-<!-- Eg de como esta propiedad falla en otro conjunto-->
+<div class='eg'>
+    <p><i>Ejemplo</i>. Vamos a estudiar la suma: \( 5.55 + 3.8 \). </p>
+    <p>Los dos números que estamos sumando son números reales. $$ 5.55, \; 3.8 \in \mathbb{R} $$ </p>
+    <p>Podemos encontrar su suma:  \( 5.55 + 3.8 = 9.35 \). Ahora encontramos la suma \( 3.8 + 5.55 = 9.35 \). Entonces $$ 5.55 + 3.8 = 3.8 + 5.55 = 9.35 $$</p>
+</div>
+
+<!-- Def de propiedad asociativa -->
+<div class='def'>
+    <p>La <strong>Propiedad Asociativa</strong> dice que si estamos sumando más de dos números reales, no importa el orden en que sumamos.</p>
+    $$ a,b,c \in \mathbb{R} \qquad \Rightarrow \qquad (a+b)+c = a+(b+c) $$
+</div>
+<!-- Eg de esta propiedad-->
+<div class='eg'>
+    <p><i>Ejemplo</i>. Supón que queremos sumar \( 3 + 4.5 + 13.5 \).</p>
+    <p>Segun la propiedad asociativa, podemos sumar \( (3 + 4.5) + 13.5 \) o podemos sumar \( 3 + (4.5 + 13.5) \). Para comprobarlo, vamos a calcular ambas expresiones. Por un lado, tenemos: </p>
+    $$ (3 + 4.5) + 13.5 = 7.5 + 13.5 = 21 $$
+    <p>Por otro lado, tenemos: </p>
+    $$ 3 + (4.5 + 13.5) = 3 + 18 = 21 $$
+    Entonces, $$ (3 + 4.5) + 13.5 = 3 + (4.5 + 13.5) = 21 $$
+</div>
 
 <!-- Def de la identidad aditiva -->
+<div class='def'>
+    <p>La <strong>Identidad Aditiva</strong> es el 0 porque si sumamos cualquier número real y 0, la suma será el otro número. </p>
+    $$ a \in \mathbb{R} \qquad \Rightarrow \qquad a + 0 = 0 + a = a $$
+</div>
 <!-- Eg de esta propiedad-->
+<div class='eg'>
+    <p><i>Ejemplo</i>. Tenemos los siguientes números reales: $$ 3, \frac{6}{13}, -9.99 $$</p>
+    <ol>
+        <li>\( 3 + 0 = 3 \)</li>
+        <li>\( 0 + \frac{6}{13} = \frac{6}{13} \)</li>
+        <li>\( -9.99 + 0 = -9.99 \)</li>
+    </ol>
+</div>
 
 <!-- Def de numero opuesto -->
+<div class='def'>
+    <p>Dos números reales son <strong>opuestos</strong> si están a la misma distancia del 0 en la recta numérica. El opuesto de un número real \(a\) es \(-a\). </p>
+    <p>Visto de otra manera, podemos decir que dos números reales son opuestos si su suma es la identidad. </p>
+    $$ a \in \mathbb{R} \qquad \Rightarrow \qquad a + (-a) = (-a) + a = 0 $$
+</div>
 <!-- Eg de esta propiedad-->
+ <div class='eg'>
+    <p><i>Ejemplo</i>. Tenemos los siguientes números reales: $$ -4, \; \frac{3}{17}, \; 3.14 \in \mathbb{R} $$</p>
+    <p>Vamos a encontrar sus opuestos.</p>
+    <p>Como \( -4 + 4 = 0 \), entonces 4 es el opuesto de -4.</p>
+    <p>Como \( \frac{3}{17} + \left(-\frac{3}{17}\right) = 0 \), entonces \(-\frac{3}{17}\) es el opuesto de \(\frac{3}{17}\).</p>
+    <p>Como \( 3.14 + (-3.14) = 0 \), entonces -3.14 es el opuesto de 3.14.</p>
+</div>
 
 <!-- Práctica de identificar qué propiedad se usó -->
+ <!--TODO-->
 
 <!-- Práctica de cómo usar las propiedades al simplificar expresiones algebraicas con coeficientes enteros, fraccionales, y decimales -->
+ <!--TODO-->
 
-<h2> ¿Cómo es la multiplicación en R? </h2>
+<h2> ¿Cuáles son las propiedades de la multiplicación en \( \mathbb{R} \)? </h2>
 <hr class='topic-header'>
 
 <!-- Def de propiedad de la clausura -->
+ <div class='def'>
+    <p>La <strong>Propiedad de la Clausura</strong> nos dice que el producto de dos números reales es también un número real.</p>
+    <p>Dicho de otra manera, la Propiedad de la Clausura nos dice que si multiplicamos dos números reales, el resultado también será un número real.</p>
+    $$ a, b \in \mathbb{R} \qquad \Rightarrow \qquad a\cdot b \in \mathbb{R} $$
+ </div>
 <!-- Eg de esta propiedad-->
-<!-- Eg de como esta propiedad falla en otro conjunto-->
-
-<!-- Def de propiedad asociativa -->
-<!-- Eg de esta propiedad-->
+ <div class='eg'>
+    <p><i>Ejemplo</i>. Podemos escoger los siguientes dos números reales: $$ -28, \; \frac{2}{7} \in \mathbb{R} $$</p>
+    <p>Su producto es $$ -28 \cdot \frac{2}{7} = \frac{-28}{1} \cdot \frac{2}{7} = \frac{-28 \cdot 2}{1 \cdot 7} = \frac{-4 \cdot \cancel{7} \cdot 2}{1 \cdot \cancel{7}} = \frac{-4 \cdot 2}{1} = -8, $$ que también es un número real. Entonces, el producto de los números originales está en \( \mathbb{R} \)</p>
+    $$ -28 \cdot \frac{2}{7} \in \mathbb{R} $$
+ </div>
 <!-- Eg de como esta propiedad falla en otro conjunto-->
 
 <!-- Def de propiedad conmutativa -->
+<div class='def'>
+    <p>La <strong>Propiedad Conmutativa</strong> nos dice que no importa el orden en que multiplicamos dos números reales.</p>
+    $$ a,b \in \mathbb{R} \qquad \Rightarrow \qquad a \cdot b = b \cdot a $$
+</div>
 <!-- Eg de esta propiedad-->
+<div class='eg'>
+    <p><i>Ejemplo</i>. Si queremos multiplicar \( \frac{2}{3} \) y \( \frac{5}{4} \), la propiedad comnumtativa nos dice que no importa el orden de los factores. O sea, que $$ \frac{2}{3} \cdot \frac{5}{4} = \frac{5}{4} \cdot \frac{2}{3} $$</p>
+    <p>Vamos a simplificar cada lado a ver si nos da lo mismo. Empezando por el lado izquierdo, tenemos: </p>
+    $$ \frac{2}{3} \cdot \frac{5}{4} = \frac{2 \cdot 5}{3 \cdot 4} = \frac{10}{12} = \frac{10 \div 2}{12 \div 2} = \frac{5}{6}  $$
+    <p>Por el otro lado, tenemos:</p>
+    $$ \frac{5}{4} \cdot \frac{2}{3} = \frac{5 \cdot 2}{4 \cdot 3} = \frac{10}{12} = \frac{10 \div 2}{12 \div 2} = \frac{5}{6}  $$
+    <p>Entonces, confirmamos que: </p>
+    $$ \frac{2}{3} \cdot \frac{5}{4} = \frac{5}{6} = \frac{5}{4} \cdot \frac{2}{3} $$
+</div>
+
+<!-- Def de propiedad asociativa -->
+ <div class='def'>
+    <p>La <strong>Propiedad Asociativa</strong> dice que si estamos multiplicando más de dos números reales, no importa el orden en que multiplicamos.</p>
+    $$ a,b,c \in \mathbb{R} \qquad \Rightarrow \qquad (a\cdot b)\cdot c = a\cdot (b\cdot c) $$
+</div>
+<!-- Eg de esta propiedad-->
+<div class='eg'>
+    <p><i>Ejemplo</i>. Vamos a multiplicar estos tres números reales: $$ 4, \; 2.5, \; 2.75 \in \mathbb{R} $$</p>
+    <p>La propiedad asociativa, nos dice que no importa el orden en que los multipliquemos. O sea, que: $$ 4 \cdot (2.5 \cdot 2.75) = (4 \cdot 2.5) \cdot 2.75 $$</p>
+    <p>Para verificarlo, vamos a hacer los cálculos de la izquierda y la derecha por separados. Empezamos por la izquierda: $$ 4 \cdot (2.5 \cdot 2.75) = 4 \cdot 6.875 = 27.5 $$</p>
+    <p>Ahora la derecha: $$ (4 \cdot 2.5) \cdot 2.75 = 10 \cdot 2.75 = 27.5 $$</p>
+    <p>Entonces, verificamos que ambos lados sí son iguales: $$ 4 \cdot (2.5 \cdot 2.75) = 27.5 = (4 \cdot 2.5) \cdot 2.75 $$ </p>
+</div>
 <!-- Eg de como esta propiedad falla en otro conjunto-->
 
 <!-- Def de la identidad mutliplicativa -->
+ <div class='def'>
+    <p>La <strong>Identidad Mutliplicativa</strong> es el 1 porque si multiplicamos cualquier número real y 1, el resultado será el otro número. </p>
+    $$ a \in \mathbb{R} \qquad \Rightarrow \qquad a \cdot 1 = 1 \cdot a = a $$
+</div>
 <!-- Eg de esta propiedad-->
+ <div class='eg'>
+    <p><i>Ejemplo</i>. No importa qué número se multiplica por \(1\), el producto siempre es el otro número.</p>
+    <ol>
+        <li>\( 1 \cdot 3 = 3 \)</li>
+        <li>\( \frac{7}{13} \cdot 1 = \frac{7}{13} \)</li>
+        <li>\( 0.45 \cdot 1 = 0.45 \)</li>
+        <li>\( 4,450 \cdot 1 = 4,450 \)</li>
+        <li>\( 1 \cdot 1 = 1 \)</li>
+        <li>\( 1 \cdot 0 = 0 \)</li>
+    </ol>
+ </div>
 
 <!-- Def de recíproco -->
+ <div class='def'>
+    <p>El <strong>recíproco</strong> de un número \( n \) es el número que se tiene que multiplicar por \( n \) para que nos de 1.</p>
+    <p>Un número es <strong>recíproco</strong> de otro si al multiplicarlos nos da 1. </p>
+    <p> El recíproco de \( n \) es \( \frac{1}{n} \).</p>
+    $$ n \cdot \frac{1}{n} = 1 $$
+ </div>
 <!-- Eg de esta propiedad-->
+ <div class='eg'>
+    <p><i>Ejemplo</i>. Para encontrar el recíproco de un número, tenemos que cambiar el numerador por el denominador. Si queremos encontrar el recíproco de 4, podemos expresar 4 como una fraccion:  \( \frac{4}{1} \). Enconces, su recíproco es \( \frac{1}{4} \). Podemos verificar que son recíprocos multiplicándolos. </p>
+    $$ \begin{align*} 4 \cdot \frac{1}{4} &= \frac{4}{1} \cdot \frac{1}{4} &\\ \\ &= \frac{4 \cdot 1}{1 \cdot 4} \\ &\\ &= \frac{4}{4} \\ & \\  &= 1 \end{align*} $$
+    Como \( 4 \cdot \frac{1}{4} = 1 \), podemos decir que \( 4 \) y \( \frac{1}{4} \) son recíprocos.
+ </div>
 
 <!-- Práctica de identificar qué propiedad se usó -->
+ <!--TODO-->
 
 <!-- Práctica de cómo usar las propiedades al simplificar expresiones algebraicas con coeficientes enteros, fraccionales, y decimales -->
+ <!--TODO-->
 
 <h2> ¿Qué es el axioma distributivo? </h2>
 <hr class='topic-header'>
 
 <!-- Def del axioma distributivo -->
+ <div class='def'>
+    <p>El <strong>axioma distributivo</strong> nos dice que el producto de un número y una suma se puede escribir como la suma de productos.</p>
+    $$a,b,c \in \mathbb{R} \Rightarrow a \cdot (b + c) = a \cdot b + a \cdot c $$
+ </div>
 
 <!-- Eg de cómo usar el axioma distributivo en una dirección (si tenemos la multiplicación de una suma por una variable o constante) -->
+<div class='intro'>
+    <p>Hay dos formas de usar esta axioma. Veamos la primera.</p>
+</div>
+<div class='eg'>
+    <p><i>Ejemplo</i>. Supón que tenemos el producto de un número y una suma con dos términos.</p>
+    $$ 3(x + 5) $$
+    <p>Según el axioma, podemos expresar la expresión como la suma de cada término (la \(x\) y el \(5\)) multiplicado por el número de afuera (el \(3\)). Dicho de otra manera, podemos "distribuir" el número de afuera.</p>
+    <div id='axioma-box' class='jxgbox short-graph' <%- graphOpts %> ></div>
+    <p>Entonces, la expresión original es equivalente a: </p>
+    $$ 3 \cdot x + 3 \cdot 5 $$
+    <p>Que se simplifica a: </p>
+    $$ 3x + 15 $$
+</div>
 
 <!-- Práctica de usar el axioma en expresiones con coeficientes enteros, fraccionales, y decimales -->
+<!--TODO-->
 
 <!-- Eg de cómo usar el axioma distributivo (si tenemos dos términos con un factor común, no necesariamente semejantes)-->
+ <div class='intro'>
+    <p>Veamos ahora la segunda forma de usar el axioma distributivo.</p>
+ </div>
+<div class='eg'>
+    <p><i>Ejemplo</i>. Supón que tenenos la suma de dos términos con un factor en común.</p>
+    $$ 4xy + 3yz $$
+    <p>Nota que no son términos semajantes, por lo que no se pueden combinar. Pero sí tienen \( y \) como factor común.</p>
+    $$ 4x{\textcolor{<%= greenHex %>} y} + 3{\textcolor{<%= greenHex %>} y}z $$
+    <p>Entonces, se puede "factorizar" usando el axioma en la dirección opuesta.</p>
+    $$ {\textcolor{<%= greenHex %>} y} \cdot 4x + {\textcolor{<%= greenHex %>} y} \cdot 3z $$
+    <p>Como tenemos una expresión parecida a la del lado derecho, se puede sustituir por una parecida a la del lado izquierdo.</p>
+    $$ {\textcolor{<%= greenHex %>} y} \cdot (4x + 3z) $$
+
+</div>
 
 <!-- Práctica de cómo usar el axioma al simplificar una expresión algebraica -->
+<!--TODO-->
+
+<script>
+    //Constants and helpers
+    const greenHex = '#729170';
+    const orangeHex = '#DA8359';
+    const shortOpts = {
+        boundingbox: [-20, 10, 20, -10],
+        showInfoBox: false,
+        showNavigation: false,
+    };
+    const polygonOpts = fillColor => ({
+        borders: {highlight: false, strokeColor: 'black', strokeWidth: 2},
+        fillColor,
+        fillOpacity: 0.2,
+        highlight: false,
+        vertices: {fixed: true, visible: false}
+    });
+    const textOpts = color => ({
+        color,
+        fontSize: 16,
+        highlight: false
+    });
+    const createMultiSegmentArrow = (myBoard, pntsArr) => {
+        const segOpts = (withArrow) => ({
+            lastArrow: withArrow ? {strokeColor: greenHex, size: 5, type: 2} : false,
+            strokeColor: greenHex
+        })
+        let p1 = pntsArr[0];
+        let p2;
+        for(let i = 1; i < pntsArr.length; i++) {
+            p2 = pntsArr[i];
+            myBoard.create('segment', [p1, p2], segOpts(i === pntsArr.length - 1))
+            p1 = p2;
+        }
+    }
+
+    //R en la recta numérica
+    const recta = JXG.JSXGraph.initBoard('recta-numerica', shortOpts);
+    const rectaY = 0;
+    recta.create('segment', [[-18, rectaY], [18, rectaY]], { //La recta
+        firstArrow: true,
+        fixed: true,
+        highlight: false,
+        lastArrow: true,
+        strokeColor: 'black'
+    });
+    for(let i = -3; i < 4; i++){ //Las marcas para cada número
+        recta.create('segment', [[i * 5, rectaY + 0.5], [i * 5, rectaY - 0.5]], {
+            fixed: true,
+            highlight: false,
+            strokeColor: 'black',
+            strokeWidth: 1.5,
+        });
+        const xOffset = `${i}`.length > 1 ? 0.75 : 0.45
+        recta.create('text', [i * 5 - xOffset, rectaY + 6, `$$${i}$$`], {fontSize: 16});
+    }
+
+    //R como conjuntos y subconjuntos
+    const diagramaR = JXG.JSXGraph.initBoard('diagrama-de-r', shortOpts);
+    diagramaR.create('text', [0, 9, '$$ \\mathbb{R} $$'], textOpts(greenHex));
+    diagramaR.create('polygon', [[-18, 8], [18, 8], [18, -8], [-18, -8]], polygonOpts(greenHex));
+    diagramaR.create('text', [10, 9,'$$ \\mathbb{I} $$'], textOpts(orangeHex));
+    diagramaR.create('polygon', [[5, 7], [17, 7], [17, -7], [5, -7]], polygonOpts(orangeHex));
+    diagramaR.create('text', [-10, 9.5, '$$ \\mathbb{Q} $$'], textOpts(orangeHex));
+    diagramaR.create('polygon', [[-2, 7], [-17, 7], [-17, -7], [-2, -7]], polygonOpts(orangeHex));
+    diagramaR.create('text', [-10, 7, '$$ \\mathbb{Z} $$'], textOpts(greenHex));
+    diagramaR.create('polygon', [[-3, 4.5], [-16, 4.5], [-16, -6], [-3, -6]], polygonOpts(greenHex));
+    diagramaR.create('text', [-10, 4.5, 'N_0'], textOpts(orangeHex));
+    diagramaR.create('polygon', [[-4, 2], [-15, 2], [-15, -5], [-4, -5]], polygonOpts(orangeHex));
+    diagramaR.create('text', [-10, 2, '$$ \\mathbb{N} $$'], textOpts(greenHex));
+    diagramaR.create('polygon', [[-5, -0.5], [-14, -0.5], [-14, -4], [-5, -4]], polygonOpts(greenHex));
+
+    //Axioma distributivo
+    const axiomaBoard = JXG.JSXGraph.initBoard('axioma-box', shortOpts);
+    axiomaBoard.create('text', [-5, 3, '$$ 3 \\, (x \\, + \\, 5) $$'], {
+        fontSize: 22,
+        highlight: false
+    });
+    createMultiSegmentArrow(axiomaBoard, [[-4.5, 1], [-4.5, 3], [-2, 3], [-2, 1]]);
+    createMultiSegmentArrow(axiomaBoard, [[-5, 1], [-5, 4], [2, 4], [2, 1]]);
+</script>
