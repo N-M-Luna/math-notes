@@ -192,6 +192,13 @@ dt {
     margin: 15px 0px;
     padding: 15px;
 }
+.ejercicio-header {
+    background-color: #DA8359;
+    color: white;
+    font-size: 20px;
+    margin: -15px;
+    padding: 15px;
+}
 .ejercicio li {
     margin-top: 10px;
 }

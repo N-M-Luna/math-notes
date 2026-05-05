@@ -64,7 +64,7 @@
 
 <!-- ejercicio de verificar figuras semejantes-->
 <div class='ejercicio'><!-- id 0 -->
-    <h3>Ejercicio. </h3>
+    <p class='ejercicio-header'> Ejercicio. </p>
     <p><b>Verifica que estos dos rectángulos son semejantes.</b></p>
     <div id='ejercicioBox1' class='jxgbox short-graph' <%- graphOpts %> ></div>
     <p class='full-of-answers hidden'> Para verificar... </p>
@@ -78,7 +78,7 @@
 
 <!-- ejercicio de verificar figuras semejantes-->
 <div class='ejercicio'><!-- id 1 -->
-    <h3>Ejercicio. </h3>
+    <p class='ejercicio-header'> Ejercicio. </p>
     <p><b>Verifica que estos dos triángulos son semejantes.</b></p>
     <div id='ejercicioBox2' class='jxgbox short-graph' <%- graphOpts %> ></div>
     <p class='full-of-answers hidden'> Para verificar... </p>
@@ -88,16 +88,17 @@
 
 
 <script>
+    //Constantes
     const greenHex = '#729170';
     const orangeHex = '#DA8359';
     const pointName = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-
-    //Definicion
     const defBoardOpts = {
         boundingbox: [-20, 10, 20, -10],
         showInfoBox: false,
         showNavigation: false
     };
+
+    //Definicion
     const defBoard = JXG.JSXGraph.initBoard('definicionBox', defBoardOpts);
     const polygonOpts = {borders: {highlight: false, strokeColor: 'black', strokeWidth: 2}, highlight: false, vertices: {fillOpacity: 0, highlight: false, strokeWidth: 0}};
     const smallRectCoords = [[-15, 2], [-15, -2], [-7, -2], [-7, 2]];
@@ -111,6 +112,7 @@
         defBoard.create('point', pnt, {fillOpacity: 0, highlight: false, label: {fontSize: 16, offset: [i < 2? -15 : 5, 50]}, name: pointName[i+4], strokeWidth: 0, withLabel: true})
     });
 
+    //Ejemplo 1
     const eg1box1 = JXG.JSXGraph.initBoard('star-box', defBoardOpts);
     const mkStarPolygon = (boardName, centerCoord, l) => {
         const s = l/2;
@@ -131,7 +133,7 @@
     mkStarPolygon(eg1box1, [-10, 0], 8);
     mkStarPolygon(eg1box1, [10, 0], 5);
 
-
+    //Ejemplo 2
     const eg1box2 = JXG.JSXGraph.initBoard('triangles-box', defBoardOpts);
     eg1box2.create('polygon', [[-15, 6], [-15, -5], [-5, -5]], {
         borders: {strokeColor: greenHex, strokeWidth: 2},
