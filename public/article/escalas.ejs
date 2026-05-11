@@ -1,23 +1,116 @@
-<h2> ¿Qué es una escala? (WIP) </h2>
+<h2> ¿Qué es una escala? </h2>
 <hr class='topic-header'>
 
-<p>Definicion de escala, antecedente, y consecuente, con un ejemplo que ilustre(?) el concepto.</p>
+<!-- Def de escala, antecedente, y consecuente -->
+<div class='def'>
+    <p>Una <strong>escala</strong> es la razón entre el tamaño de un objeto y el de una representación del objecto. Se usa mucho en representaciones de objetos muy grandes (como un avión) y de objetos muy pequeños (como una célula).
+        $$ \text{escala} = \frac{\text{tamaño del modelo}}{\text{tamaño del objeto real}} $$
+    </p>
 
-<p>Eg. Dado un objeto y un modelo, encuentra la escala.</p>
+    <p>El primer número en la razón se le llama el <strong>antecedente</strong> y es una medida del objeto. El segundo número se le llama el <strong>consecuente</strong> y es la correspondiente medida en la representación.
+        $$ \text{escala} = \frac{\text{antecedente}}{\text{consecuente}} $$
+    </p>
+</div>
 
-<p>Ejercicio. Dado un objeto y un modelo, encuentra la escala.</p>
+<!-- Eg de una escala -->
+<div class='eg'>
+    <p><i>Ejemplo</i>. Supón que Juanito tiene un submarino de juguete. Su juguete mide \( 6 \) pulgadas de largo. Pero el submarino en el que se ha basado el juguete, el (nombre), mide \( 100 \) pies de largo. ¿Cuál es la escala del juguete?</p>
 
-<p>Definicion de tipos de escala: Numérica, por unidad, y gráfica.</p>
+    <p>La definición de la escala es: $$ \text{antecedente} : \text{consecuente} $$</p>
 
-<p>Eg. Escalas de cada tipo.</p>
+    <p>En este caso, el par de medidas que tenemos es el largo del juguete y el largo del submarino. El antecedente es el largo del juguete y el cosecuente es el largo del submarino: $$ \text{largo del juguete} : \text{largo del submarino} $$ </p>
 
-<p>Definicion de factor de escala, escala de ampliación, natural, y de reducción.</p>
+    <p>Entonces, sustituimos los valores, que son  \( 6 \) pulgadas y \( 100 \) pies. $$ \text{escala} = \text{largo del juguete} : \text{largo del submarino}  = 6 \text{ pulgadas} : 100 \text{ pies} $$</p>
+</div>
 
-<p>Eg. Dado un objeto y un modelo, encuentra la escala y el factor de escala. Determina qué tipo de escala es.</p>
+<!-- Ejercicio. Dado un objeto y un modelo, encuentra la escala -->
+<div class='ejercicio'><!-- id 0 -->
+    <p class='ejercicio-header'> Ejercicio. </p>
 
-<p>Ejercicio. Dado un objeto y un modelo, encuentra la escala y el factor de escala.</p>
+    <p><b>Dado un objeto con una medida y un modelo con otra medida correspondiente, <span class='underlined'>busca la escala</span>.</b></p>
 
-<p>Eg. Dada una escala y el tamaño de un objeto, encuentra el tamaño del modelo.</p>
-<p>Eg. Dada una escala y el tamaño de un modelo, encuentra el tamaño del objeto.</p>
+    <p class='full-of-answers hidden'>......</p>
 
-<p>Ejercicio. Dada una escala y el tamaño de un modelo/objeto, encuentra el tamaño del objeto/modelo.</p>
+    <button class='see-answer-btn' onclick='showAnswers(0)'>Ver la respuesta</button>
+    <!-- TODO -->
+</div>
+
+<!-- Def de factor de escala -->
+<div class='def'>
+    <p>El <strong>factor de escala</strong> es un número positivo que nos dice qué tan grande o pequeño es el modelo comparado al el tamaño del objeto.</p>
+
+    <p>El factor de escala es el número racional proporcional a la escala. Como es un número racional, se puede escribir como fracción o como decimal.</p>
+</div>
+
+<!-- Eg de factor de escala -->
+<div class='eg'>
+    <p><i>Ejemplo</i>. Alguien está haciendo un modelo miniatura de su casa. La puerta de alfrente mide 10 pies de alto. En el modelo de Alguien, la puerta mide 5 pies. </p>
+
+    <p>El antecedente es la altura de la puerta del modelo, que es \( 5 \) pies. El consecuente es la altura de la puerta de la casa de Alguien, que es \( 10 \) pies. Por lo tanto, la escala es \( 5 \) pies a \( 10 \) pies y se puede escribir como: $$ 5 : 10 $$ </p>
+
+    <p>El factor de escala  del model es el número que es proporcional esta escala. Se puede obtener dividiendo: $$ 5 \div 10 = \frac{5}{10} = \frac{\cancel{5}}{2 \cdot \cancel{5}} = \frac{1}{2} = 0.5 $$</p>
+</div>
+
+<h2> ¿Qué tipos de escalas hay? </h2>
+<hr class='topic-header'>
+
+<!-- Def de tipos de escala (Numérica, por unidad, y gráfica) -->
+<div class='intro'>
+    <p>Las escalas se pueden clasificar por su...</p>
+</div>
+<div class='def'>
+    <p>Las <strong>escalas numéricas</strong> son las que el antecedente y el consecuente están medidos con la misma unidad. Por ejemplo, $$ 3 \text{ pies} : 550 \text{ pies} $$ </p>
+    <p>Las <strong>escalas por unidad</strong> son las que el antecedente y el consecuente no tienen la misma unidad. Por ejemplo, $$ 1 \text{ pulgada} : 1 \text{ metro} $$ </p>
+    <p>Las <strong>escalas gráficas</strong> son mapas donde la leyenda nos indica la escala. Por ejemplo, $$ 1 \text{ pulgada} : 1 \text{ yarda} $$ </p>
+</div>
+
+<!-- Def de escala de ampliación, natural, y de reducción -->
+<div class='intro'>
+    <p>Las escalas se pueden clasificar por su...</p>
+</div>
+<div class='def'>
+    <p>Las <strong>escalas de ampliación</strong> son en las que el antecedente es mayor que el consecuente y donde el modelo es más grande que el objeto. $$ \text{antecedente} > \text{consecuente} $$ </p>
+    <p>En estas escalas, el factor de escala es menor que 1.</p>
+    <p>Las <strong>escalas naturales</strong> son en las que el antecedente es igual al consecuente y donde el modelo es una réplica del objeto. $$ \text{antecedente} = \text{consecuente} $$ </p>
+    <p>En estas escalas, el factor de escala es exactamente 1.</p>
+    <p>Las <strong>escalas de reducción</strong> son las que el antecedente es menor que el consecuente y donde el modelo es más pequeño que el objeto. $$ \text{antecedente} < \text{consecuente} $$ </p>
+    <p>En estas escalas, el factor de escala es mayor que 1.</p>
+</div>
+
+
+<h2> ¿Cómo se usan las escalas? </h2>
+<hr class='topic-header'>
+
+<!--Eg. Dado un objeto y un modelo, encuentra la escala y el factor de escala. Determina qué tipo de escala es. -->
+<div class='intro'>
+    <p>Si tenemos un par de medidas correspondientes de un objeto y su modelo, podemos encontrar la escala y el factor de escala.</p>
+</div>
+<div class='eg'>
+    <p><i>Ejemplo</i>. Pepita tiene un lápiz de peluche que mide 3 pies de largo. Asumiendo que un lápiz común mide 8 pulgadas, ¿cuál es la escala y el factor de escala?</p>
+
+    <p>El antecedente es el largo del peluche, que es \( 3 \) pies. El consecuente es el largo de un lápiz común, que es 8 pulgadas. Entonces, la escala del peluche es $$ 3 \text{ pies} : 8 \text{ pulgadas} $$</p>
+
+    <p>Para encontrar el factor de escala, necesitamos poner el antecedente y el consecuente en las mismas unidades. Podemos encontrar cuántos pies son  \( 8 \) pulgadas, que nos daría una fracción. Ó podemos encontrar cuántas pulgadas hay en \( 3 \) pies, que nos va a dar un número grande. Como hay \( 12 \) pulgadas en \( 1 \) pie, $$ 3 \text{ pies} = 3 \cancel{\text{ pies}} \cdot \frac{12 \text{ pulgadas}}{1 \cancel{\text{ pie}}} = 36 \text{ pulgadas }$$ </p>
+
+    <p>Entonces, la escala del peluche también se puede expresar como: $$ 36 \text{ pulgadas} : 8 \text{ pulgadas} $$</p>
+
+    <p>Ahora, podemos encontrar el fractor de escala dividiendo: $$ 36 \div 8 = \frac{36}{8} = \frac{\cancel{2} \cdot \cancel{2} \cdot 3 \cdot 3}{\cancel{2} \cdot \cancel{2} \cdot 2} = \frac{3 \cdot 3}{2} = \frac{9}{2} = 4.5 $$</p>
+
+    <p>Como el peluche es más grande que el objeto que representa, la escala del peluche es una escala de ampliación. Podemos confirmar que es cierto porque el factor de escala es \( 4.5 \), que es mayor que \(1\). Otra forma de confirmar es verificando que el antecedente sea mayor que el consecuente.</p>
+</div>
+
+<!-- Ejercicio. Dado un objeto y un modelo, encuentra la escala y el factor de escala. -->
+<!-- TODO -->
+
+<!--Eg. Dada una escala y el tamaño de un objeto/modelo, encuentra el tamaño del modelo/objeto.-->
+<div class='intro'>
+    <p>Si conocemos la escala, entonces podemos usar el tamaño del objeto para encontrar el tamaño del modelo. O vice versa, podemos usar el tamaño del modelo para encontrar el tamaño del objeto. </p>
+</div>
+<div class='eg'>
+    <p><i>Ejemplo 1</i>. El gatito Gauss juega con un XYZ de juguete, que está hecho a una escala de \( 1: 25 \). Si el juguete mide \( 3 \) pulgadas de largo, ¿cuánto mide el XYZ? </p>
+
+    <p><i>Ejemplo 2</i>. El gatito Euler tiene una casita que es una miniatura de Notre Dame a una escala de \( 1 : 100 \). Si la torre más alta de la iglesia mide \( 40 \) pies, ¿cuánto mide el pico más alto de la casita de Euler? </p>
+</div>
+
+<!--Ejercicio. Dada una escala y el tamaño de un modelo/objeto, encuentra el tamaño del objeto/modelo.-->
+<!--TODO-->

@@ -1,7 +1,7 @@
-<h2> ¿Qué son figuras semejantes? (WIP)</h2>
+<h2> ¿Qué son figuras semejantes?</h2>
 <hr class='topic-header'>
 
-<!-- def de elemento -->
+<!-- def de figuras semejantes -->
 <div class='def'>
     <p>Un par de figuras son <strong>semejantes</strong> si tienen la misma forma, pero no necesariamente el mismo tamaño.</p>
 
@@ -27,10 +27,11 @@
 <hr class='topic-header'>
 
 <div class='intro'>
-    <p>Si dos figuras son semejantes, cada lado de una figura tendrá un lado <strong>correspondiente</strong> en la otra figura. </p>
+    <p>Si dos figuras son semejantes, cada lado de una figura tendrá un lado <strong>correspondiente</strong> en la otra figura. Veamos el siguiente par de figuras: </p>
 
-    <p> Si tenemos estas dos figuras... En este caso:</p>
+    <div id='lados-similares' class='jxgbox short-graph' <%- graphOpts %> ></div>
 
+    <p>En este caso:</p>
     <ul>
         <li>El lado AB corresponde al lado EF </li>
         <li>El lado BC corresponde al lado FG </li>
@@ -38,38 +39,35 @@
         <li>El lado AD corresponde al lado EH </li>
     </ul>
 
-    <p>Para determinar si dos figuras son semejantes, tenemos que comparar las razones de cada par de lados correspondientes. En este caso, las figuras serán semejantes si la sig1iente equivalencia es cierta.</p>
+    <p>Para determinar si dos figuras son semejantes, tenemos que comparar las razones de cada par de lados correspondientes. En este caso, las figuras serán semejantes si la siguiente equivalencia es cierta.</p>
 
     $$ \frac{AB}{EF} = \frac{BC}{FG} = \frac{CD}{GH} = \frac{AD}{EH} $$
 </div>
 
 <!-- eg de verificar figuras semejantes -->
 <div class='eg'>
-    ¿Las siguientes figuras son semejantes?
+    <p><i>Ejemplo</i>. ¿Las siguientes figuras son semejantes?</p>
+
     <div id='eg3box' class='jxgbox short-graph' <%- graphOpts %> ></div>
 
     <p>Primero, tenemos que identificar los pares de lados correspondientes. He aquí una tabla.</p>
 
-    <p>Ahora, podemos definir las razones de cada par de lados correspondientes.</p>
-    $$\begin{align*}
-    \frac{AB}{GH} &= \frac{3}{5} \\
-    \frac{BC}{HI} &= \frac{6}{10} = \frac{3}{5}
-    \end{align*}$$
+    <table>
+        <tr><th>El lado en \( \square ABCD \) ... </th><th>mide...</th><th>y corresponde al lado de \( \square EFGH \) ...</th><th>que mide...</th></tr>
+        <tr><td>\( \overline{AB} \)</td><td>3</td><td>\( \overline{EF} \)</td><td>6</td></tr>
+        <tr><td>\( \overline{BC} \)</td><td>5</td><td>\( \overline{FG} \)</td><td>10</td></tr>
+    </table>
+
+    <p>Ahora, podemos definir las razones de cada par de lados correspondientes. Empezamos con la razón de los lados cortos: </p>
+    $$ \frac{AB}{EF} = \frac{3}{5} $$
+    <p>Y la razón de los lados largos: </p>
+    $$ \frac{BC}{FG} = \frac{6}{10} = \frac{3}{5} $$
 
     <p>Nota que todas las razones son equivalentes:</p>
-    $$ \frac{AB}{GH} = \frac{BC}{HI} = \dots = \frac{3}{5} $$
+    $$ \frac{AB}{EF} = \frac{BC}{FG} = \frac{CD}{GH} = \frac{AD}{EH} = \frac{3}{5} $$
 
     <p>Por lo tanto, las figuras son semejantes.</p>
-</div>
-
-<!-- ejercicio de verificar figuras semejantes-->
-<div class='ejercicio'><!-- id 0 -->
-    <p class='ejercicio-header'> Ejercicio. </p>
-    <p><b>Verifica que estos dos rectángulos son semejantes.</b></p>
-    <div id='ejercicioBox1' class='jxgbox short-graph' <%- graphOpts %> ></div>
-    <p class='full-of-answers hidden'> Para verificar... </p>
-
-    <button class='see-answer-btn' onclick='showAnswers(0)'>Ver la respuesta</button>
+    $$ \square ABCD \sim \square EFGH $$
 </div>
 
 <div class='intro'>
@@ -77,18 +75,31 @@
 </div>
 
 <!-- ejercicio de verificar figuras semejantes-->
+<div class='ejercicio'><!-- id 0 -->
+    <p class='ejercicio-header'> Ejercicio. </p>
+    <p><b>Verifica si estos dos triángulos son semejantes.</b></p>
+    <div id='ejercicioBox1' class='jxgbox short-graph' <%- graphOpts %> ></div>
+    <p class='full-of-answers hidden'> Para verificar... </p>
+
+    <button class='see-answer-btn' onclick='showAnswers(0)'>Ver la respuesta</button>
+    <!--TODO-->
+</div>
+
+<!-- ejercicio de verificar figuras semejantes-->
 <div class='ejercicio'><!-- id 1 -->
     <p class='ejercicio-header'> Ejercicio. </p>
-    <p><b>Verifica que estos dos triángulos son semejantes.</b></p>
+    <p><b>Verifica si estos dos cuadriláteros son semejantes.</b></p>
     <div id='ejercicioBox2' class='jxgbox short-graph' <%- graphOpts %> ></div>
     <p class='full-of-answers hidden'> Para verificar... </p>
 
     <button class='see-answer-btn' onclick='showAnswers(1)'>Ver la respuesta</button>
+    <!--TODO-->
 </div>
 
 
 <script>
     //Constantes
+    //JXG.Options.text.useKatex = true;
     const greenHex = '#729170';
     const orangeHex = '#DA8359';
     const pointName = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
@@ -97,57 +108,162 @@
         showInfoBox: false,
         showNavigation: false
     };
+    const pointOpts = (fillColor) => ({
+        fillColor,
+        fixed: true,
+        highlight: false,
+        strokeWidth: 0,
+        withLabel: false
+    })
+    const polygonOpts = (fillColor, strokeColor = 'black') => ({
+        borders: {highlight: false, strokeColor, strokeWidth: 2},
+        fillColor,
+        fillOpacity: 0.25,
+        fixed: true,
+        highlight: false,
+        vertices: {visible: false}
+    })
+    const midPoint = (p1, p2) => {
+        const x = (p2[0] + p1[0]) / 2
+        const y = (p2[1] + p1[1]) / 2
+        return [x, y]
+    }
+    const mkPolygonPair = (myBoard, verticesA, verticesB, verticesAoffset = null, verticesBoffset = null, lengthsA = [], lengthsB = [], lengthAoffset = [], lengthBoffset = []) => {
+
+        //Plot vertices
+        if (verticesAoffset === null) {
+            verticesA.forEach((v1, i) => {
+                //Vertices for fig A
+                myBoard.create('point', v1, pointOpts(greenHex));
+                //Vertices for fig B
+                myBoard.create('point', verticesB[i], pointOpts(orangeHex));
+            });
+        } else {
+            verticesA.forEach((v1, i) => {
+                //Vertices' names for fig A
+                myBoard.create('point', v1, {
+                    ...pointOpts(greenHex),
+                    label: {color: greenHex, fontSize: 16, offset: verticesAoffset(i)},
+                    name: pointName[i],
+                    withLabel: true
+                });
+                //Vertices' names for fig B
+                const p1 = verticesB[i];
+                myBoard.create('point', p1, {
+                    ...pointOpts(orangeHex),
+                    label: {color: orangeHex, fontSize: 16, offset: verticesBoffset(i)},
+                    name: pointName[i+4],
+                    withLabel: true
+                });
+            });
+        }
+
+        //Label side lengths
+        const n = verticesA.length;
+        lengthsA.forEach((l, i) => {
+            //Side lengths for fig A
+            let v1 = verticesA[i];
+            let v2 = verticesA[(i+1)%n];
+            myBoard.create('point', midPoint(v1, v2), {
+                fillOpacity: 0,
+                label: {fontSize: 16, offset: lengthAoffset[i]},
+                //label: {position: 'bottom'},  y u no work?? =(((
+                name: l.toString(),
+                strokeWidth: 0,
+                useKaTeX: true,
+                withLabel: true,
+            });
+            //Side lengths for fig B
+            v1 = verticesB[i];
+            v2 = verticesB[(i+1)%n];
+            myBoard.create('point', midPoint(v1, v2), {
+                fillOpacity: 0,
+                label: {fontSize: 16, offset: lengthBoffset[i]},
+                name: lengthsB[i].toString(),
+                strokeWidth: 0,
+                useKaTeX: true,
+                withLabel: true,
+            });
+        });
+
+        //Draw polygons
+        myBoard.create('polygon', verticesA, polygonOpts(greenHex, greenHex));
+        myBoard.create('polygon', verticesB, polygonOpts(orangeHex, orangeHex));
+    }
 
     //Definicion
     const defBoard = JXG.JSXGraph.initBoard('definicionBox', defBoardOpts);
-    const polygonOpts = {borders: {highlight: false, strokeColor: 'black', strokeWidth: 2}, highlight: false, vertices: {fillOpacity: 0, highlight: false, strokeWidth: 0}};
-    const smallRectCoords = [[-15, 2], [-15, -2], [-7, -2], [-7, 2]];
-    const smallRect = defBoard.create('polygon', smallRectCoords, {...polygonOpts, fillColor: greenHex});
-    smallRectCoords.forEach((pnt, i) => {
-        defBoard.create('point', pnt, {fillOpacity: 0, highlight: false, label: {fontSize: 16, offset: [i < 2? -15 : 5, 50]}, name: pointName[i], strokeWidth: 0, withLabel: true})
-    });
-    const bigRectCoords = [[0, 4], [0, -4], [16, -4], [16, 4]];
-    const bigRect = defBoard.create('polygon', bigRectCoords, {...polygonOpts, fillColor: orangeHex});
-    bigRectCoords.forEach((pnt, i) => {
-        defBoard.create('point', pnt, {fillOpacity: 0, highlight: false, label: {fontSize: 16, offset: [i < 2? -15 : 5, 50]}, name: pointName[i+4], strokeWidth: 0, withLabel: true})
-    });
+    let verticesA = [[-15, 2], [-15, -2], [-7, -2], [-7, 2]];
+    let verticesAoffset = i => [i < 2? -15 : 5, 50];
+    let verticesB = [[0, 4], [0, -4], [16, -4], [16, 4]];
+    mkPolygonPair(defBoard, verticesA, verticesB, verticesAoffset, verticesAoffset);
 
     //Ejemplo 1
-    const eg1box1 = JXG.JSXGraph.initBoard('star-box', defBoardOpts);
     const mkStarPolygon = (boardName, centerCoord, l) => {
         const s = l/2;
         const theta_l = 2 * Math.PI / 5;
         const vertices = [];
         const getCoords = (theta, r) => [centerCoord[0] + r * Math.cos(theta), centerCoord[1] + r * Math.sin(theta)];
+        const myColor = centerCoord[0] < 0 ? greenHex : orangeHex
         for(let i = 0; i < 2 * Math.PI; i += theta_l) {
             vertices.push(getCoords(i, l)); //Convex v-point
             vertices.push(getCoords(i + (theta_l / 2), s)); //Concave v-point
         }
+        vertices.forEach(v => {
+            boardName.create('point', v, pointOpts(myColor));
+        });
         boardName.create('polygon', vertices, {
-            borders: {strokeColor: centerCoord[0] < 0 ? greenHex : orangeHex, strokeWidth: 2},
-            fillColor: centerCoord[0] < 0 ? greenHex : orangeHex,
+            borders: {strokeColor: myColor, strokeWidth: 2},
+            fillColor: myColor,
             fillOpacity: 0.25,
             vertices: {visible: false}
         });
     };
+    const eg1box1 = JXG.JSXGraph.initBoard('star-box', defBoardOpts);
     mkStarPolygon(eg1box1, [-10, 0], 8);
     mkStarPolygon(eg1box1, [10, 0], 5);
 
     //Ejemplo 2
     const eg1box2 = JXG.JSXGraph.initBoard('triangles-box', defBoardOpts);
-    eg1box2.create('polygon', [[-15, 6], [-15, -5], [-5, -5]], {
-        borders: {strokeColor: greenHex, strokeWidth: 2},
-        fillColor: greenHex,
-        fillOpacity: 0.25,
-        vertices: {visible: false}
-    });
-    eg1box2.create('polygon', [[13, -5], [7, 6], [1, -5]], {
-        borders: {strokeColor: orangeHex, strokeWidth: 2},
-        fillColor: orangeHex,
-        fillOpacity: 0.25,
-        vertices: {visible: false}
-    });
+    mkPolygonPair(eg1box2, [[-15, 6], [-15, -5], [-5, -5]], [[13, -5], [7, 6], [1, -5]]);
 
-    const ejercicio1box1 = JXG.JSXGraph.initBoard('ejercicioBox1', defBoardOpts);
-    const ejercicio1box2 = JXG.JSXGraph.initBoard('ejercicioBox2', defBoardOpts);
+    //Def de lados similares
+    verticesA = [[-7, 5], [-13, 5], [-17, -5], [-3, -5]];
+    verticesAoffset = i => i < 1 ? [0, 65] : i < 2 ? [-10, 65] : [0, 30];
+    verticesB = [[12, 3], [7, 3], [4.5, -3], [14.5, -3]];
+    const ladosSimilaresBox = JXG.JSXGraph.initBoard('lados-similares', defBoardOpts);
+    mkPolygonPair(ladosSimilaresBox, verticesA, verticesB, verticesAoffset, verticesAoffset);
+
+    //Ejemplo 3 (dos rectángulos)
+    const eg3board = JXG.JSXGraph.initBoard('eg3box', defBoardOpts);
+    verticesA = [[-15, 2], [-15, -2], [-7, -2], [-7, 2]];
+    verticesAoffset = i => [i < 2? -15 : 5, 50];
+    let lengthsA = [3, 5];
+    let lengthAoffset = [[-15, 47], [-10, 37]];
+    verticesB = [[0, 4], [0, -4], [16, -4], [16, 4]];
+    let lengthsB = [6, 10];
+    let lengthBoffset = [[-15, 50], [-20, 40]];
+    mkPolygonPair(eg3board, verticesA, verticesB, verticesAoffset, verticesAoffset, lengthsA, lengthsB, lengthAoffset, lengthBoffset);
+
+    //Ejercicio 1 (dos triángulos)
+    const ejercicio1board = JXG.JSXGraph.initBoard('ejercicioBox1', defBoardOpts);
+    verticesA = [[-7, 5], [-13, 5], [-17, -5]];
+    verticesAoffset = i => i < 1 ? [0, 65] : i < 2 ? [-10, 65] : [0, 30];
+    lengthsA = [3, 7, 10];
+    lengthAoffset = [[-10, 60], [-10, 60], [-10, 30]];
+    verticesB = [[12, 3], [7, 3], [4.5, -3]];
+    lengthsB = [1.5, 3.5, 4];
+    lengthBoffset = [[-10, 60], [-25, 60], [-10, 30]];
+    mkPolygonPair(ejercicio1board, verticesA, verticesB, verticesAoffset, verticesAoffset, lengthsA, lengthsB, lengthAoffset, lengthBoffset);
+
+    //Ejercicio 2 (dos trapecios)
+    const ejercicio2board = JXG.JSXGraph.initBoard('ejercicioBox2', defBoardOpts);
+    verticesA = [[-7, 5], [-13, 5], [-17, -5], [-3, -5]];
+    verticesAoffset = i => i < 1 ? [0, 65] : i < 2 ? [-10, 65] : [0, 30];
+    lengthsA = [3, 7, 10, 7];
+    lengthAoffset = [[-10, 60], [-10, 60], [-10, 30], [7, 55]];
+    verticesB = [[12, 3], [7, 3], [4.5, -3], [14.5, -3]];
+    lengthsB = [1.5, 3.5, 5, 3.5];
+    lengthBoffset = [[-10, 60], [-25, 60], [-10, 30], [7, 55]];
+    mkPolygonPair(ejercicio2board, verticesA, verticesB, verticesAoffset, verticesAoffset, lengthsA, lengthsB, lengthAoffset, lengthBoffset);
 </script>

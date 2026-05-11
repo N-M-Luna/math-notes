@@ -228,8 +228,8 @@ export const mate7units = {
         'razones',
         'proporciones',
         'tasa_unitaria',
-        'figuras_semejantes', //outlined
-        'escalas' //outlined
+        'figuras_semejantes',
+        'escalas'
     ],
     'Porcentaje': [//Unidad 7
         'porciento', //outlined
