@@ -131,6 +131,14 @@ export const articleTOC = [
         articleID: 'potencias',
         lang: 'es'
     },
+    {title: 'Probabilidad de un evento simple',
+        articleID: 'probabilidad_evento_simple',
+        lang: 'es'
+    },
+    {title: 'Probabilidad y muestreo',
+        articleID: 'probabilidad_y_muestreo',
+        lang: 'es'
+    },
     {title: 'Propiedades de los números reales',
         articleID: 'numeros_reales',
         lang: 'es'
@@ -248,6 +256,10 @@ export const mate7units = {
         'variacion_directa_indirecta', //outlined
         'interpretacion_grafica_lineal' //outlined
     ],
+    'Probabilidad': [//Unidad 13
+        'probabilidad_evento_simple', //outlined
+        'probabilidad_y_muestreo', //outlined
+    ],
 }
 
 //'Geometría plana': [//Unidad 9
@@ -262,5 +274,3 @@ export const mate7units = {
 //'Análisis de datos': [//Unidad 12
 //],
 
-//'Probabilidad': [//Unidad 13
-//],

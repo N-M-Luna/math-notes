@@ -1,0 +1,174 @@
+<h2> ¿Qué es la probabilidad?</h2>
+<hr class='topic-header'>
+
+<!--Def de probabilidad-->
+<div class='intro'>
+    <p>La probabilidad de puede definir como la función \( P(A) \). </p>
+</div>
+<div class='def'>
+    <p>La <strong>probabilidad</strong> \( P(A) \) es la medida de que ocurra un evento \( A \). </p>
+    <p>La \( P(A) \) es la razón del número de resultados favorables a el número total de resultados posibles:
+        $$ P(A) = \frac{\text{Núm. de resultados favorables}}{\text{Núm total de posibilidades}} $$ </p>
+
+    <p>La probabilidad de cualquier evento siempre estará entre \( 0 \) y \(1\): $$ 0 \geq P(A) \geq 1 $$</p>
+</div>
+
+<!--Eg de probabilidad (con un dado)-->
+<div class='intro'>
+    <p>Vamos a usar esta definición/formula para calcular la probabilidad de un evento. </p>
+</div>
+<div class='eg'>
+    <p><i>Ejemplo 1</i>. Podemos encontrar la probabilidad de que cuando lanzemos un dado, caiga en 3.</p>
+
+    <p>La probabilidad que estamos buscando es $$ P(3) = \frac{\text{Núm. de resultados favorables}}{\text{Núm total de posibilidades}} $$</p>
+
+    <p>Como el dado tiene \(6\) lados, entonces hay 6 posibles resultados: </p>
+    <ol>
+        <li>El dado cae en el número \(1\).</li>
+        <li>El dado cae en el número \(2\).</li>
+        <li>El dado cae en el número \(3\).</li>
+        <li>El dado cae en el número \(4\).</li>
+        <li>El dado cae en el número \(5\).</li>
+        <li>El dado cae en el número \(6\).</li>
+    </ol>
+    <p>Por lo tanto, el denominador de\(P(3)\) es \(6\). </p>
+    <p> De estas 6 posibilidades, solo una es favorable. O sea, en solo uno de los posibles resultados el dado cae en 3. Entonces, el numerador de \(P(3)\) es \(1\). Juntando todo, tenemos: $$ P(3) = \frac{1}{6} $$</p>
+
+    <p><i>Ejemplo 2</i>. Podemos encontrar la probabilidad de que cuando lanzemos un dado, caiga en un número menor que 3.</p>
+
+    <p>Como estamos lanzando un dado, el número total de resultados posibles es \(6\) también. El número de resultados favorables es equivalente al número de lados con valor menor que \(3\), que serían \(1\) y \(2\). Por lo tanto, tenemos 2 resultados favorables.</p>
+
+    <p>Sustituyendo en la fórmula, tenemos $$ P(x < 3) = \frac{2}{6} $$</p>
+</div>
+
+<!--Práctica de probabilidad-->
+<!--TODO-->
+
+<h2> ¿Qué es el espacio muestral?</h2>
+<hr class='topic-header'>
+
+<!--Def de espacio muestral-->
+<div class='def'>
+    <p>El <strong>espacio muestral</strong> es el conjunto de todos los posibles resultados de un experimento.</p>
+
+    <p>Por ejemplo, el espacio muestral de lanzar una moneda al aire consiste de dos elementos: $$ \Omega = \{ \text{sale cara}, \text{sale cruz} \} $$</p>
+</div>
+
+<!--Eg de probabilidad (dado el diagrama de venn)-->
+<div class='intro'>
+    <p>El número total de resultados del experimento siempre es igual al tamaño del espacio muestral (o sea, la cantidad de elementos en este conjunto).</p>
+</div>
+<div class='eg'>
+    <p><i>Ejemplo</i>. Mira este diagrama de Venn. Tiene el conjunto universo, \(S\), y dos conjuntos, \(A\) y \(B\).</p>
+    <div id='vennBox' class='jxgbox square-graph' <%- graphOpts %> ></div>
+    <p>Encuentra el espacio muestral, y las probabilidades de  \( P(A),  P(B), \text{ y } P(S) \)</p>
+
+    <p class='underlined'>Espacio Muestral</p>
+    <p>El espacio muestral consiste en todos los elementos en el universo \(S\). $$ \Omega = \{ 55, 20, 40, 45, 5, 35, 10, 50, 25, 60, 15, 30 \} $$</p>
+
+    <p class='underlined'>Probabilidad \(P(A)\)</p>
+    <p>La probabilidad \(P(A)\) es la probabilidad de que si escogemos un número al azar en el universo \(S\), el número que escogimos está en el conjunto \(A\). </p>
+    <p> El número de resultados favorables es el número de elementos en \(A\). Como $$ A = \{ 45, 5, 35, 10 \}, $$ el número de resultados favorables es \(4\). </p>
+    <p> El número total de posibles resultados es el tamaño del espacio muestral. Como $$ \Omega = \{ 55, 20, 40, 45, 5, 35, 10, 50, 25, 60, 15, 30 \}, $$ el total de posibilidades es \( 12 \).</p>
+    <p>Sustituyendo en la fórmula, tenemos: $$ P(A) = \frac{4}{12} = \frac{1}{3} $$</p>
+
+    <p class='underlined'>Probabilidad \(P(B)\)</p>
+    <p>La probabilidad \(P(B)\) es la probabilidad de que si escogemos un número al azar en el universo \(S\), el número que escogimos está en el conjunto \(B\). </p>
+    <p> El número de resultados favorables es el número de elementos en \(B\). Como $$ B = \{ 35, 10, 50, 25, 60, 15, 30 \}, $$ el número de resultados favorables es \(7\). </p>
+    <p> El número total de posibles resultados es el mismo que en la parte anterior, \( 12 \).</p>
+    <p>Sustituyendo en la fórmula, tenemos: $$ P(B) = \frac{7}{12} $$</p>
+</div>
+
+<!--Eg de probabilidad (dado un contexto, encuentra P(A) y expresa la probabilidad en fraccion, decimal, y porciento)-->
+<div class='intro'>
+    <p>Como la probabilidad es un número racional, se puede expresar como decimal, fracción, y porciento.</p>
+</div>
+<div class='eg'>
+    <p><i>Ejemplo</i>. Encuentra la probabilidad de que si lanzas un dado, cae en un número par. Expresa la probabilidad como decimal, fracción, y porciento. </p>
+
+    <p>Usando la fórmula: $$ P(\text{par}) = \frac{\text{resultados favorables}}{\text{total de resultados}} $$ </p>
+
+    <p>Como el dado tiene 6 lados, hay 6 posibles resultados. Y como hay tres números pares, tenemos tres resultado favorable.</p>
+
+    <p>Sustituyendo en la fórmula, tenemos: $$ P(\text{par}) = \frac{3}{6} = \frac{1}{2} $$ </p>
+
+    <p>Tenemos la probabilidad \( P(\text{par}) \) como fracción. Para convertirlo en decimal, dividimos. $$ \frac{1}{2} = 1 \div 2 = 0.5 $$ </p>
+
+    <p>Para convertirlo en porciento, multiplicamos por \(100 \%\). $$ 0.5 = 0.5 \times 100 \% = 50 \% $$</p>
+
+    <p>Entonces, tenemos los siguientes números para la probabilidad: $$ P(\text{par}) = \frac{1}{2} = 0.5 = 50 \% $$</p>
+</div>
+
+<!--Práctica de probabilidad-->
+<!--TODO-->
+
+<!-- Outro (como interpretar P(A)) -->
+<div class='outro'>
+    <p>Si el evento \(A\) es imposible, $$ P(A) = 0 = 0\%. $$ </p>
+    <p>Si el evento \(A\) es seguro que va a ocurrir, $$ P(A) = 1 = 100\%. $$ </p>
+    <p>Si el evento \(A\) es posible de que ocurra, $$ 0 < P(A) < 1 $$ </p>
+    <p>Escrito como porciento, es $$ 0\% < P(A) < 100\%. $$ </p>
+</div>
+
+<h2> ¿Qué es un evento simple?</h2>
+<hr class='topic-header'>
+
+<!--Def de evento simple-->
+<div class='def'>
+    <p> Un <strong>evento simple</strong> es un evento cuyo número de resultados favorables es \(1\). </p>
+</div>
+
+<!--Eg de evento simple-->
+<div class='eg'>
+    <p><i>Ejemplo</i>. Supón que tenemos una caja con \(6\) lápices de colores: $$ \{ \text{violeta}, \text{rojo}, \text{anaranjado}, \\ \text{amarillo}, \text{verde}, \text{azul} \} $$</p>
+    <p>¿Cuál es la posibilidad de que si sacas un lápiz sin mirar, saques el amarillo?</p>
+
+    <p>Usando la fórmula: $$ P(\text{amarillo}) = \frac{\text{resultados favorables}}{\text{total de resultados}} $$ </p>
+
+    <p>Como hay 6 lápices, tenemos 6 posibles resultados. Y como sólo hay un lápiz amarillo, tenemos solo un resultado favorable.</p>
+
+    <p>Sustituyendo en la fórmula, tenemos: $$ P(\text{amarillo}) = \frac{1}{6} $$ </p>
+</div>
+
+<script>
+    //Constants and helpers
+    const greenHex = '#729170';
+    const orangeHex = '#DA8359';
+    const squareOpts = {
+        boundingbox: [-20, 20, 20, -20],
+        showInfoBox: false,
+        showNavigation: false,
+    };
+    const circleOpts = {
+        fillColor: orangeHex,
+        fillOpacity: 0.5,
+        fixed: true,
+        highlight: false,
+        strokeColor: 'black',
+    };
+    const mkText = (boardName, x, y, nameArr) => {
+        const nameString = '$$' + nameArr.join(' \\newline ') + '$$'
+        boardName.create('text', [x, y, nameString], {fixed: true, fontSize: 16});
+    };
+
+    //Venn diagram for eg
+    const vennBoard = JXG.JSXGraph.initBoard('vennBox', squareOpts);
+    vennBoard.create('polygon', [[-18, 10], [18, 10], [18, -10], [-18, -10]], {
+        borders: {highlight: false, strokeColor: 'black', strokeWidth: 2},
+        fillColor: greenHex,
+        fillOpacity: 0.5,
+        highlight: false,
+        vertices: {fixed: true, highlight: false, visible: false}
+    });
+    mkText(vennBoard, -17, 12, ['S']);
+    vennBoard.create('circle', [[-2, 0], 8], circleOpts);
+    mkText(vennBoard, -3.5, 11, ['A']);
+    vennBoard.create('circle', [[7, 0], 8], circleOpts);
+    mkText(vennBoard, 6, 11, ['B']);
+    mkText(vennBoard, -15, 5, [55, 20, 40]);
+    mkText(vennBoard, -5, 5, [45, 5]);
+    mkText(vennBoard, 1.5, 5, [35, 10]);
+    mkText(vennBoard, 7, 5, [50, 25, 60]);
+    mkText(vennBoard, 10.5, 5, [15, 30]);
+
+</script>

@@ -91,14 +91,13 @@ $$ \begin{align*} \text{lunes} \in & \{ \text{lunes}, \text{martes}, \text{miér
         strokeWidth: 2,
     });
     //text
-    board.create('text', [5, 5, `$$\\frac{a}{b}$$`], {fontSize: 16});
+    board.create('text', [5, 5, `$$\\frac{a}{b}$$`], {fixed: true, fontSize: 16});
     //polygons
     board.create('polygon', [[-5, 5], [10, 5], [10, -5], [-5, -5]], {
-        borders: {strokeColor: 'black'},
+        borders: {highlight: false, strokeColor: 'black'},
         fillColor: greenHex,
         fillOpacity: 0.5,
-        highlight: false,
-        vertices: {visible: false}
+        vertices: {fixed: true, highlight: false, visible: false}
     })
 
 </script>
